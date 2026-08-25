@@ -1,3 +1,7 @@
+/* ================================================= */
+/* STYLE GÉNÉRAL DU SITE */
+/* ================================================= */
+
 body {
     background-color: #f2f5ff;
     font-family: Arial, sans-serif;
@@ -5,6 +9,11 @@ body {
     margin: 0;
     padding: 60px 20px;
 }
+
+
+/* ================================================= */
+/* TITRES ET PARAGRAPHES */
+/* ================================================= */
 
 h1 {
     color: #1e3a8a;
@@ -15,7 +24,14 @@ h1 {
 p {
     color: #444;
     font-size: 20px;
-}button {
+}
+
+
+/* ================================================= */
+/* BOUTONS */
+/* ================================================= */
+
+button {
     background-color: #1e3a8a;
     color: white;
     border: none;
@@ -23,7 +39,18 @@ p {
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
-}section {
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* ================================================= */
+/* SECTIONS */
+/* ================================================= */
+
+section {
     margin-top: 60px;
     padding: 30px;
     background-color: white;
@@ -41,7 +68,14 @@ section h2 {
 section p {
     color: #555;
     line-height: 1.6;
-}nav {
+}
+
+
+/* ================================================= */
+/* NAVIGATION */
+/* ================================================= */
+
+nav {
     background-color: #1e3a8a;
     padding: 15px;
     margin-bottom: 50px;
@@ -57,21 +91,14 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-}@media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+}
 
-    h1 {
-        font-size: 36px;
-    }
 
-    section {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}#contactForm {
+/* ================================================= */
+/* FORMULAIRE DE CONTACT */
+/* ================================================= */
+
+#contactForm {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -100,7 +127,14 @@ nav a:hover {
 
 #contactForm button {
     margin-top: 10px;
-}#competences {
+}
+
+
+/* ================================================= */
+/* COMPÉTENCES */
+/* ================================================= */
+
+#competences {
     margin-top: 60px;
 }
 
@@ -133,7 +167,14 @@ nav a:hover {
 
 .competence:hover {
     transform: translateY(-8px);
-}#projets {
+}
+
+
+/* ================================================= */
+/* PROJETS */
+/* ================================================= */
+
+#projets {
     margin-top: 60px;
 }
 
@@ -166,7 +207,14 @@ nav a:hover {
 
 .projet:hover {
     transform: translateY(-8px);
-}#accueil {
+}
+
+
+/* ================================================= */
+/* ACCUEIL */
+/* ================================================= */
+
+#accueil {
     padding: 80px 20px;
     margin-bottom: 40px;
 }
@@ -181,6 +229,11 @@ nav a:hover {
     color: #555;
 }
 
+
+/* ================================================= */
+/* BOUTONS AVEC LA CLASSE .btn */
+/* ================================================= */
+
 .btn {
     display: inline-block;
     margin-top: 25px;
@@ -191,12 +244,19 @@ nav a:hover {
     border-radius: 8px;
     font-size: 18px;
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+
+/* ================================================= */
+/* PHOTO DE PROFIL */
+/* ================================================= */
+
 .photo-profil {
     width: 100px;
     height: 100px;
@@ -205,7 +265,14 @@ nav a:hover {
     margin-bottom: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-}@keyframes apparition {
+
+
+/* ================================================= */
+/* ANIMATION */
+/* ================================================= */
+
+@keyframes apparition {
+
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -215,6 +282,7 @@ nav a:hover {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 #accueil {
@@ -223,7 +291,14 @@ nav a:hover {
 
 .photo-profil {
     animation: apparition 1.2s ease-out;
-}footer {
+}
+
+
+/* ================================================= */
+/* PIED DE PAGE */
+/* ================================================= */
+
+footer {
     margin-top: 60px;
     padding: 25px;
     background-color: #1e3a8a;
@@ -235,41 +310,190 @@ footer p {
     color: white;
     font-size: 16px;
     margin: 0;
-}/* Mise en forme des cours de correspondance commerciale */
+}
+
+
+/* ================================================= */
+/* CARTES DE COURS */
+/* ================================================= */
+
+.cours {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cours h3 {
+    color: #1e3a8a;
+    font-size: 24px;
+}
+
+.cours p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ================================================= */
+/* CORRESPONDANCE COMMERCIALE */
+/* ================================================= */
+
+/* Paragraphes et listes à gauche */
 
 #cours-correspondance p,
 #cours-correspondance ul,
 #cours-correspondance ol {
     text-align: left;
 }
+
+
+/* Titres centrés */
 
 #cours-correspondance h2,
 #cours-correspondance h3,
 #cours-correspondance h4 {
     text-align: center;
 }
-/* ================================================= */
-/* CORRESPONDANCE COMMERCIALE */
-/* ================================================= */
 
-/* Paragraphes et listes : à gauche */
-#cours-correspondance p,
-#cours-correspondance ul,
-#cours-correspondance ol {
-    text-align: left;
-}
 
-/* Programme : centré */
+/* Programme centré */
+
 #cours-correspondance .programme {
     text-align: center;
 }
 
-/* Chapitres : à gauche */
+
+/* Chapitres à gauche */
+
 #cours-correspondance .chapitre {
     text-align: left;
 }
 
-/* Grands et petits titres du cours : centrés */
+
+/* Titres personnalisés centrés */
+
 #cours-correspondance .titre-cours {
     text-align: center;
+}
+
+
+/* Encadré important */
+
+#cours-correspondance .important {
+    background-color: #f2f5ff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #1e3a8a;
+}
+
+
+/* ================================================= */
+/* DROIT CIVIL */
+/* ================================================= */
+
+#cours-droit-civil p,
+#cours-droit-civil ul,
+#cours-droit-civil ol {
+    text-align: left;
+}
+
+#cours-droit-civil h2,
+#cours-droit-civil h3,
+#cours-droit-civil h4 {
+    text-align: center;
+}
+
+#cours-droit-civil .important {
+    background-color: #f2f5ff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #1e3a8a;
+}
+
+
+/* ================================================= */
+/* TABLEAUX */
+/* ================================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f5ff;
+    color: #1e3a8a;
+}
+
+
+/* ================================================= */
+/* VERSION MOBILE */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    section {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .cours {
+        padding: 20px;
+    }
+
+    .cours h3 {
+        font-size: 21px;
+    }
+
+    .cours p {
+        font-size: 16px;
+    }
+
+    #cours-correspondance h2 {
+        font-size: 24px;
+    }
+
+    #cours-correspondance h3 {
+        font-size: 21px;
+    }
+
+    #cours-correspondance h4 {
+        font-size: 18px;
+    }
+
+    #cours-correspondance p,
+    #cours-correspondance li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
 }
