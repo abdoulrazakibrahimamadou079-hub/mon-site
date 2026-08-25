@@ -248,3 +248,28 @@ footer p {
 #cours-correspondance h4 {
     text-align: center;
 }
+/* ================================================= */
+/* CORRESPONDANCE COMMERCIALE */
+/* ================================================= */
+
+/* Paragraphes et listes : à gauche */
+#cours-correspondance p,
+#cours-correspondance ul,
+#cours-correspondance ol {
+    text-align: left;
+}
+
+/* Programme : centré */
+#cours-correspondance .programme {
+    text-align: center;
+}
+
+/* Chapitres : à gauche */
+#cours-correspondance .chapitre {
+    text-align: left;
+}
+
+/* Grands et petits titres du cours : centrés */
+#cours-correspondance .titre-cours {
+    text-align: center;
+}
