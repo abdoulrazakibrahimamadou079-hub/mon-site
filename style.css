@@ -235,4 +235,16 @@ footer p {
     color: white;
     font-size: 16px;
     margin: 0;
+}/* Mise en forme des cours de correspondance commerciale */
+
+#cours-correspondance p,
+#cours-correspondance ul,
+#cours-correspondance ol {
+    text-align: left;
+}
+
+#cours-correspondance h2,
+#cours-correspondance h3,
+#cours-correspondance h4 {
+    text-align: center;
 }
