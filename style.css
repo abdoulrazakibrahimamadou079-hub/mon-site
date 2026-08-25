@@ -1,0 +1,238 @@
+body {
+    background-color: #f2f5ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 60px 20px;
+}
+
+h1 {
+    color: #1e3a8a;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #444;
+    font-size: 20px;
+}button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}section {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    color: #1e3a8a;
+    font-size: 32px;
+}
+
+section p {
+    color: #555;
+    line-height: 1.6;
+}nav {
+    background-color: #1e3a8a;
+    padding: 15px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color: #333;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+#contactForm button {
+    margin-top: 10px;
+}#competences {
+    margin-top: 60px;
+}
+
+.competences-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.competence {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.competence h3 {
+    color: #1e3a8a;
+    font-size: 24px;
+}
+
+.competence p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.competence:hover {
+    transform: translateY(-8px);
+}#projets {
+    margin-top: 60px;
+}
+
+.projets-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.projet {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.projet h3 {
+    color: #1e3a8a;
+    font-size: 22px;
+}
+
+.projet p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.projet:hover {
+    transform: translateY(-8px);
+}#accueil {
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+#accueil h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+#accueil p {
+    font-size: 20px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.photo-profil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+}@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#accueil {
+    animation: apparition 3s ease-out;
+}
+
+.photo-profil {
+    animation: apparition 1.2s ease-out;
+}footer {
+    margin-top: 60px;
+    padding: 25px;
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 10px;
+}
+
+footer p {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
