@@ -1,499 +1,342 @@
-/* ================================================= */
-/* STYLE GÉNÉRAL DU SITE */
-/* ================================================= */
-
-body {
-    background-color: #f2f5ff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 60px 20px;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+background-color: #f2f5ff;
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 60px 20px;
+}
 
-/* ================================================= */
-/* TITRES ET PARAGRAPHES */
-/* ================================================= */
-
+/* Titres */
 h1 {
-    color: #1e3a8a;
-    font-size: 48px;
-    margin-bottom: 20px;
+color: #1e3a8a;
+font-size: 48px;
+margin-bottom: 20px;
 }
 
 p {
-    color: #444;
-    font-size: 20px;
+color: #444;
+font-size: 20px;
 }
 
-
-/* ================================================= */
-/* BOUTONS */
-/* ================================================= */
-
+/* Boutons */
 button {
-    background-color: #1e3a8a;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
+background-color: #1e3a8a;
+color: white;
+border: none;
+padding: 15px 30px;
+font-size: 18px;
+border-radius: 8px;
+cursor: pointer;
 }
 
-button:hover {
-    opacity: 0.9;
-}
-
-
-/* ================================================= */
-/* SECTIONS */
-/* ================================================= */
-
-section {
-    margin-top: 60px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 15px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section h2 {
-    color: #1e3a8a;
-    font-size: 32px;
-}
-
-section p {
-    color: #555;
-    line-height: 1.6;
-}
-
-
-/* ================================================= */
-/* NAVIGATION */
-/* ================================================= */
-
+/* Navigation */
 nav {
-    background-color: #1e3a8a;
-    padding: 15px;
-    margin-bottom: 50px;
-    border-radius: 10px;
+background-color: #1e3a8a;
+padding: 15px;
+margin-bottom: 50px;
+border-radius: 10px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
+color: white;
+text-decoration: none;
+margin: 0 20px;
+font-size: 18px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
+/* Sections */
+section {
+margin-top: 60px;
+padding: 30px;
+background-color: white;
+border-radius: 15px;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
 
-/* ================================================= */
-/* FORMULAIRE DE CONTACT */
-/* ================================================= */
+section h2 {
+color: #1e3a8a;
+font-size: 32px;
+}
 
+section p {
+color: #555;
+line-height: 1.6;
+}
+
+/* Page d'accueil */
+#accueil {
+padding: 80px 20px;
+margin-bottom: 40px;
+}
+
+#accueil h1 {
+font-size: 52px;
+margin-bottom: 20px;
+}
+
+#accueil p {
+font-size: 20px;
+color: #555;
+}
+
+/* Boutons avec lien */
+.btn {
+display: inline-block;
+margin-top: 25px;
+padding: 15px 30px;
+background-color: #1e3a8a;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-size: 18px;
+transition: transform 0.3s;
+}
+
+.btn:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Photo de profil */
+.photo-profil {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 50%;
+margin-bottom: 25px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Compétences */
+#competences {
+margin-top: 60px;
+}
+
+.competences-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.competence {
+background-color: white;
+padding: 25px;
+border-radius: 15px;
+width: 220px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+}
+
+.competence h3 {
+color: #1e3a8a;
+font-size: 24px;
+}
+
+.competence p {
+font-size: 16px;
+line-height: 1.5;
+}
+
+.competence:hover {
+transform: translateY(-8px);
+}
+
+/* Projets */
+#projets {
+margin-top: 60px;
+}
+
+.projets-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.projet {
+background-color: white;
+padding: 25px;
+border-radius: 15px;
+width: 220px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+}
+
+.projet h3 {
+color: #1e3a8a;
+font-size: 22px;
+}
+
+.projet p {
+font-size: 16px;
+line-height: 1.5;
+}
+
+.projet:hover {
+transform: translateY(-8px);
+}
+
+/* Formulaire de contact */
 #contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 20px auto 0;
-    text-align: left;
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 500px;
+margin: 20px auto 0;
+text-align: left;
 }
 
 #contactForm label {
-    font-weight: bold;
-    color: #333;
+font-weight: bold;
+color: #333;
 }
 
 #contactForm input,
 #contactForm textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 16px;
+font-family: Arial, sans-serif;
 }
 
 #contactForm textarea {
-    resize: vertical;
+resize: vertical;
 }
 
 #contactForm button {
-    margin-top: 10px;
+margin-top: 10px;
 }
 
-
-/* ================================================= */
-/* COMPÉTENCES */
-/* ================================================= */
-
-#competences {
-    margin-top: 60px;
-}
-
-.competences-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.competence {
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 220px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.competence h3 {
-    color: #1e3a8a;
-    font-size: 24px;
-}
-
-.competence p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.competence:hover {
-    transform: translateY(-8px);
-}
-
-
-/* ================================================= */
-/* PROJETS */
-/* ================================================= */
-
-#projets {
-    margin-top: 60px;
-}
-
-.projets-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.projet {
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 220px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.projet h3 {
-    color: #1e3a8a;
-    font-size: 22px;
-}
-
-.projet p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.projet:hover {
-    transform: translateY(-8px);
-}
-
-
-/* ================================================= */
-/* ACCUEIL */
-/* ================================================= */
-
-#accueil {
-    padding: 80px 20px;
-    margin-bottom: 40px;
-}
-
-#accueil h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-#accueil p {
-    font-size: 20px;
-    color: #555;
-}
-
-
-/* ================================================= */
-/* BOUTONS AVEC LA CLASSE .btn */
-/* ================================================= */
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 30px;
-    background-color: #1e3a8a;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-/* ================================================= */
-/* PHOTO DE PROFIL */
-/* ================================================= */
-
-.photo-profil {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-/* ================================================= */
-/* ANIMATION */
-/* ================================================= */
-
-@keyframes apparition {
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-#accueil {
-    animation: apparition 3s ease-out;
-}
-
-.photo-profil {
-    animation: apparition 1.2s ease-out;
-}
-
-
-/* ================================================= */
-/* PIED DE PAGE */
-/* ================================================= */
-
-footer {
-    margin-top: 60px;
-    padding: 25px;
-    background-color: #1e3a8a;
-    color: white;
-    border-radius: 10px;
-}
-
-footer p {
-    color: white;
-    font-size: 16px;
-    margin: 0;
-}
-
-
-/* ================================================= */
-/* CARTES DE COURS */
-/* ================================================= */
+/* ========================================
+PAGE COMPTABILITÉ
+======================================== */
 
 .cours {
-    background-color: #ffffff;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+background-color: #f8faff;
+padding: 25px;
+margin: 25px auto;
+border-radius: 15px;
+max-width: 650px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cours:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .cours h3 {
-    color: #1e3a8a;
-    font-size: 24px;
+color: #1e3a8a;
+font-size: 24px;
+margin-top: 0;
 }
 
 .cours p {
-    font-size: 17px;
-    line-height: 1.6;
+font-size: 17px;
+line-height: 1.6;
 }
 
-
-/* ================================================= */
-/* CORRESPONDANCE COMMERCIALE */
-/* ================================================= */
-
-/* Paragraphes et listes à gauche */
-
-#cours-correspondance p,
-#cours-correspondance ul,
-#cours-correspondance ol {
-    text-align: left;
+.cours .btn {
+margin-top: 15px;
 }
 
-
-/* Titres centrés */
-
-#cours-correspondance h2,
-#cours-correspondance h3,
-#cours-correspondance h4 {
-    text-align: center;
+/* En-tête de la page Comptabilité */
+header {
+margin-bottom: 30px;
 }
 
-
-/* Programme centré */
-
-#cours-correspondance .programme {
-    text-align: center;
+header h1 {
+margin-bottom: 10px;
 }
 
-
-/* Chapitres à gauche */
-
-#cours-correspondance .chapitre {
-    text-align: left;
+header p {
+font-size: 20px;
 }
 
-
-/* Titres personnalisés centrés */
-
-#cours-correspondance .titre-cours {
-    text-align: center;
+/* Pied de page */
+footer {
+margin-top: 60px;
+padding: 25px;
+background-color: #1e3a8a;
+color: white;
+border-radius: 10px;
 }
 
-
-/* Encadré important */
-
-#cours-correspondance .important {
-    background-color: #f2f5ff;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    border-left: 5px solid #1e3a8a;
+footer p {
+color: white;
+font-size: 16px;
+margin: 0;
 }
 
-
-/* ================================================= */
-/* DROIT CIVIL */
-/* ================================================= */
-
-#cours-droit-civil p,
-#cours-droit-civil ul,
-#cours-droit-civil ol {
-    text-align: left;
+/* Animation */
+@keyframes apparition {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
-#cours-droit-civil h2,
-#cours-droit-civil h3,
-#cours-droit-civil h4 {
-    text-align: center;
+#accueil {
+animation: apparition 3s ease-out;
 }
 
-#cours-droit-civil .important {
-    background-color: #f2f5ff;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    border-left: 5px solid #1e3a8a;
+.photo-profil {
+animation: apparition 1.2s ease-out;
 }
 
-
-/* ================================================= */
-/* TABLEAUX */
-/* ================================================= */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-th {
-    background-color: #f2f5ff;
-    color: #1e3a8a;
-}
-
-
-/* ================================================= */
-/* VERSION MOBILE */
-/* ================================================= */
-
+/* Adaptation aux téléphones */
 @media (max-width: 600px) {
+body {
+    padding: 30px 10px;
+}
 
-    body {
-        padding: 30px 10px;
-    }
+nav a {
+    display: block;
+    margin: 10px 0;
+}
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+h1 {
+    font-size: 36px;
+}
 
-    h1 {
-        font-size: 36px;
-    }
+#accueil h1 {
+    font-size: 36px;
+}
 
-    section {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 20px;
-    }
+section {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+}
 
-    section h2 {
-        font-size: 26px;
-    }
+.cours {
+    padding: 20px;
+}
 
-    .cours {
-        padding: 20px;
-    }
+.cours h3 {
+    font-size: 21px;
+}
 
-    .cours h3 {
-        font-size: 21px;
-    }
-
-    .cours p {
-        font-size: 16px;
-    }
-
-    #cours-correspondance h2 {
-        font-size: 24px;
-    }
-
-    #cours-correspondance h3 {
-        font-size: 21px;
-    }
-
-    #cours-correspondance h4 {
-        font-size: 18px;
-    }
-
-    #cours-correspondance p,
-    #cours-correspondance li {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
+.cours p {
+    font-size: 16px;
+}
 }
