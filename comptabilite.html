@@ -1,2839 +1,634 @@
+```html
 <!DOCTYPE html>
-
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes matières - Abdoul Razak</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Révision Scolaire - 2nde Comptabilité</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1565c0;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        main {
+            width: 92%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .titre {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .titre h2 {
+            color: #1565c0;
+            font-size: 28px;
+        }
+
+        .matieres {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .matiere {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+            text-align: center;
+        }
+
+        .matiere h3 {
+            font-size: 22px;
+            color: #1565c0;
+            margin-top: 0;
+        }
+
+        .matiere p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            border: none;
+            background: #1565c0;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #0d47a1;
+        }
+
+        .btn-fermer {
+            background: #e53935;
+        }
+
+        .btn-fermer:hover {
+            background: #b71c1c;
+        }
+
+        /* LES COURS SONT CACHÉS AU DÉPART */
+        .cours {
+            display: none;
+            margin-top: 25px;
+            text-align: left;
+            background: #f8fbff;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 5px solid #1565c0;
+        }
+
+        .cours h4 {
+            color: #1565c0;
+        }
+
+        .chapitre {
+            background: white;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 25px;
+            background: #1565c0;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
-```
 <header>
-    <h1>📚 Mes matières</h1>
-    <p>Retrouve ici mes cours et mes documents scolaires.</p>
+    <h1>📚 Révision Scolaire</h1>
+    <p>Programme de révision - 2nde Comptabilité</p>
 </header>
 
 <nav>
-    <a href="index.html">Accueil</a>
-    <a href="comptabilite.html">Matières</a>
+    <a href="index.html">🏠 Accueil</a>
+    <a href="comptabilite.html">📚 Matières</a>
 </nav>
 
 <main>
 
-    <section>
+    <div class="titre">
         <h2>📖 Mes matières</h2>
+        <p>
+            Choisis une matière puis appuie sur
+            « Voir les cours » pour accéder à son contenu.
+        </p>
+    </div>
 
-        <div class="cours">
+    <div class="matieres">
+
+
+        <!-- ================= COMPTABILITÉ ================= -->
+
+        <div class="matiere">
+
             <h3>📘 Comptabilité</h3>
-            <p>Mes cours de comptabilité générale, exercices et documents.</p>
-            <a href="#" class="btn">Voir les cours</a>
+
+            <p>
+                Cours de comptabilité générale,
+                exercices et documents.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('comptabilite')">
+                👀 Voir les cours
+            </button>
+
+            <div id="comptabilite" class="cours">
+
+                <h4>📘 Comptabilité</h4>
+
+                <div class="chapitre">
+                    <h4>Chapitre 1</h4>
+                    <p>
+                        Le cours de comptabilité sera ajouté ici.
+                    </p>
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('comptabilite')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
         </div>
 
-        <div class="cours" style="max-width: 800px; text-align: left;">
-    <h3 style="text-align: center;">Programme de Mathématiques Financières - Niveau 2nde Comptabilité</h3>
-    
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
 
-    <!-- ================= CHAPITRE 1 ================= -->
-    <h4>Chapitre 1 : Opération sur les fractions</h4>
-    
-    <h5>I. Rappel :</h5>
-    <p>
-        <strong>1. Le plus petit multiple commun (PPMC) :</strong><br>
-        Le PPMC est le Plus Petit Multiple Commun, le plus petit nombre exact divisible par chacun de ces nombres. Pour calculer le PPMC il existe trois (3) étapes :
-        <ul>
-            <li>Décomposer chacun de ces nombres en facteur premier ;</li>
-            <li>Prendre tous les facteurs premiers communs et non communs, apparaissant dans la décomposition des nombres en prenant la puissance la plus élevée ;</li>
-            <li>Les multiplier entre eux.</li>
-        </ul>
-        <strong>Exemple :</strong> Calculer le PPMC des nombres (6 ; 20 ; 18) et (12 ; 15 ; 27).<br><br>
-        <em>Correction :</em><br>
-        Calculons le PPMC des nombres :<br>
-        - PPMC de (6 ; 20 ; 18)<br>
-        &nbsp;&nbsp;6 = 2 × 3<br>
-        &nbsp;&nbsp;20 = 2² × 5<br>
-        &nbsp;&nbsp;18 = 3² × 2<br>
-        &nbsp;&nbsp;<strong>PPMC de (6 ; 20 ; 18) = 2² × 3² × 5 = 180</strong><br><br>
-        - PPMC de (12 ; 15 ; 27)<br>
-        &nbsp;&nbsp;12 = 2² × 3<br>
-        &nbsp;&nbsp;15 = 3 × 5<br>
-        &nbsp;&nbsp;27 = 3² × 3 (ou 3³)<br>
-        &nbsp;&nbsp;<strong>PPMC de (12 ; 15 ; 27) = 2² × 3² × 5 = 540</strong>
-    </p>
+        <!-- ============== MATHÉMATIQUES FINANCIÈRES ============== -->
 
-    <p>
-        <strong>2. Les fractions :</strong><br><br>
-        <strong>a. Règle de l’addition sur les fractions :</strong><br>
-        Une fraction représente une portion de quelque chose. Pour additionner une fraction il faut que les dénominateurs soient les mêmes. Donc on cherche un dénominateur commun pour chacune des fractions.<br>
-        <em>Exemple :</em> Calculer les fractions : <sup>2</sup>/<sub>3</sub> + <sup>5</sup>/<sub>3</sub> ; <sup>4</sup>/<sub>5</sub> + <sup>1</sup>/<sub>4</sub><br>
-        <em>Correction :</em><br>
-        <sup>2</sup>/<sub>3</sub> + <sup>5</sup>/<sub>3</sub> = <sup>(2 + 5)</sup>/<sub>3</sub> = <sup>7</sup>/<sub>3</sub><br>
-        <sup>4</sup>/<sub>5</sub> + <sup>1</sup>/<sub>4</sub> = <sup>(4 × 4 + 1 × 5)</sup> / <sub>(5 × 4)</sub> = <sup>(16 + 5)</sup>/<sub>20</sub> = <sup>21</sup>/<sub>20</sub><br><br>
+        <div class="matiere">
 
-        <strong>b. Règle de soustraction sur les fractions :</strong><br>
-        Pour soustraire deux (2) fractions on multiplie le numérateur du premier par le dénominateur du second, moins le numérateur du second par le dénominateur du premier.<br>
-        <em>Exemple :</em> <sup>7</sup>/<sub>6</sub> - <sup>1</sup>/<sub>4</sub> ; <sup>2</sup>/<sub>5</sub> - <sup>3</sup>/<sub>6</sub><br>
-        <em>Correction :</em><br>
-        <sup>7</sup>/<sub>6</sub> - <sup>1</sup>/<sub>4</sub> = <sup>(7 × 4 - 1 × 6)</sup> / <sub>(6 × 4)</sub> = <sup>(28 - 6)</sup>/<sub>24</sub> = <sup>11</sup>/<sub>12</sub><br>
-        <sup>2</sup>/<sub>5</sub> - <sup>3</sup>/<sub>6</sub> = <sup>(2 × 6 - 3 × 5)</sup> / <sub>(5 × 6)</sub> = <sup>(12 - 15)</sup>/<sub>30</sub> = <sup>-3</sup>/<sub>30</sub> = <sup>-1</sup>/<sub>10</sub><br><br>
+            <h3>💰 Mathématiques financières</h3>
 
-        <strong>c. Règle de multiplication sur les fractions :</strong><br>
-        Pour multiplier deux fractions, on multiplie les numérateurs entre eux et les dénominateurs entre eux.<br>
-        <em>Exemple :</em> <sup>5</sup>/<sub>3</sub> × <sup>4</sup>/<sub>6</sub> ; <sup>-7</sup>/<sub>3</sub> × <sup>-5</sup>/<sub>2</sub><br>
-        <em>Correction :</em><br>
-        <sup>5</sup>/<sub>3</sub> × <sup>4</sup>/<sub>6</sub> = <sup>(5 × 4)</sup> / <sub>(3 × 6)</sub> = <sup>20</sup>/<sub>18</sub> = <sup>10</sup>/<sub>9</sub><br>
-        <sup>-7</sup>/<sub>3</sub> × <sup>-5</sup>/<sub>2</sub> = <sup>(-7 × -5)</sup> / <sub>(3 × 2)</sub> = <sup>35</sup>/<sub>6</sub>
-    </p>
+            <p>
+                Fractions, grandeurs proportionnelles,
+                intérêt simple et escompte commercial.
+            </p>
 
-    <h5>II. Le pourcentage :</h5>
-    <p>
-        Un pourcentage est une notion composée de deux (2) petits ronds et qui permet d’exprimer la proportion d’une chose par rapport à l’autre.<br>
-        Considérons que :<br>
-        - <strong>P</strong> → Pourcentage<br>
-        - <strong>N</strong> → Total de chiffre exprimé<br>
-        - <strong>n</strong> → Le nombre souhaité en %<br>
-        On a : <strong>P = <sup>n</sup>/<sub>N</sub></strong><br><br>
-        
-        <em>Exemple 1 :</em> Une classe est composée de 480 élèves dont 108 sont externes. Calculer le pourcentage des élèves externes.<br>
-        <em>Correction 1 :</em><br>
-        P = <sup>n</sup>/<sub>N</sub> = <sup>108</sup>/<sub>480</sub> = 0,225<br>
-        En % : 0,225 × 100 = 22,5<br>
-        <strong>P = 22,5%</strong><br><br>
+            <button class="btn"
+                    onclick="afficherCours('mathFin')">
+                👀 Voir les cours
+            </button>
 
-        <em>Exemple 2 :</em> Une cité composée d’un ensemble d’étudiants dont 40% sont des élèves et 60% sont des garçons. Exprimer le chiffre en %<br>
-        <em>Correction 2 :</em><br>
-        P = n × N<br>
-        n = 40% ⇒ <sup>40</sup>/<sub>100</sub> = 0,4<br>
-        N = 60% ⇒ <sup>60</sup>/<sub>100</sub> = 0,6<br>
-        P = 0,4 × 0,6 = 0,24<br>
-        P = 0,24 × 100 = 24<br>
-        <strong>P = 24%</strong>
-    </p>
+            <div id="mathFin" class="cours">
 
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+                <h4>💰 Mathématiques financières</h4>
 
-    <!-- ================= CHAPITRE 2 ================= -->
-    <h4>Chapitre 2 : Grandeurs proportionnelles</h4>
-    <p>
-        <strong>Introduction :</strong><br>
-        On appelle grandeurs proportionnelles, la répartition d’une part dans un ensemble. On distingue deux (2) types de partage :
-        <ul>
-            <li>Le partage proportionnel simple ;</li>
-            <li>Le partage proportionnel complexe.</li>
-        </ul>
-    </p>
+                <div class="chapitre">
+                    <h4>Chapitre 1 : Opérations sur les fractions</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
 
-    <h5>I. Les partages proportionnels simples :</h5>
-    <p>
-        <strong>a. Partage directement proportionnel :</strong><br>
-        Partager une somme S proportionnellement aux réels x, y, z si et seulement si a, b et c sont des coefficients de proportionnalité.<br>
-        <sup>x</sup>/<sub>a</sub> = <sup>y</sup>/<sub>b</sub> = <sup>z</sup>/<sub>c</sub> = <sup>S</sup>/<sub>(a + b + c)</sub><br>
-        a + b + c = K ; K est le coefficient.<br><br>
+                <div class="chapitre">
+                    <h4>Chapitre 2 : Grandeur proportionnelle</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
 
-        <em>Exemple 1 :</em> Partager une somme de 30 000F en parts proportionnelles à 2, 4 et 6.<br>
-        <em>Correction 1 :</em><br>
-        S = 30 000F ; a = 2 ; b = 4 ; et c = 6<br>
-        <sup>x</sup>/<sub>2</sub> = <sup>y</sup>/<sub>4</sub> = <sup>z</sup>/<sub>6</sub> = <sup>30 000</sup>/<sub>(2 + 4 + 6)</sub><br>
-        2 + 4 + 6 = 12 ⇒ K = 12<br>
-        <sup>30 000</sup>/<sub>12</sub> = 2 500 ⇒ K = 2 500 (valeur d'une part unitaire)<br>
-        - X = 2 × 2 500 = 5 000F<br>
-        - Y = 4 × 2 500 = 10 000F<br>
-        - Z = 6 × 2 500 = 15 000F<br>
-        <strong>Vérification :</strong> X + Y + Z = 5 000 + 10 000 + 15 000 = 30 000F.<br><br>
+                <div class="chapitre">
+                    <h4>Chapitre 3 : Intérêt simple</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
 
-        <em>Exemple 2 :</em> Mr Farouk décide de partager une prime de 50 000F à ses trois employés Amina, Fati et Ali respectivement proportionnellement aux nombres 20, 13 et 7.<br>
-        <em>Correction 2 :</em><br>
-        S = 50 000F ; a = 20 ; b = 13 et c = 7<br>
-        20 + 13 + 7 = 40 (K)<br>
-        <sup>50 000</sup>/<sub>40</sub> = 1 250<br>
-        - X (Amina) = 20 × 1 250 = 25 000F<br>
-        - Y (Fati) = 13 × 1 250 = 16 250F<br>
-        - Z (Ali) = 7 × 1 250 = 8 750F<br>
-        <strong>Vérification :</strong> 25 000 + 16 250 + 8 750 = 50 000F.<br><br>
+                <div class="chapitre">
+                    <h4>Chapitre 4 : Escompte commercial</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
 
-        <strong>b. Partage inversement proportionnel :</strong><br>
-        Un partage inversement proportionnel est un partage directement proportionnel à l'inverse des nombres proportionnels.<br>
-        Partager une somme S en parties inversement proportionnelles aux nombres a, b et c revient à trouver x, y et z avec : x = <sup>1</sup>/<sub>a</sub> ; y = <sup>1</sup>/<sub>b</sub> et z = <sup>1</sup>/<sub>c</sub>.<br><br>
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('mathFin')">
+                    ✖ Fermer les cours
+                </button>
 
-        <em>Exemple 1 :</em> Partager une somme de 350 000F à x et y en parts inversement proportionnelles à 2 et 5.<br>
-        <em>Solution 1 :</em><br>
-        S = 350 000F ; a = 2 et b = 5<br>
-        <sup>x</sup>/<sub>(1/2)</sub> = <sup>y</sup>/<sub>(1/5)</sub> = <sup>S</sup>/<sub>(1/2 + 1/5)</sub> = K<br>
-        <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>5</sub> = <sup>(5 + 2)</sup>/<sub>10</sub> = <sup>7</sup>/<sub>10</sub><br>
-        K = <sup>350 000</sup> / <sub>(7/10)</sub> = 350 000 × <sup>10</sup>/<sub>7</sub> = <sup>3 500 000</sup>/<sub>7</sub> = 500 000<br>
-        - X = <sup>1</sup>/<sub>2</sub> × 500 000 = 250 000F<br>
-        - Y = <sup>1</sup>/<sub>5</sub> × 500 000 = 100 000F<br>
-        <strong>Vérification :</strong> 250 000 + 100 000 = 350 000F.<br><br>
+            </div>
 
-        <em>Exemple 2 :</em> Fati décide de partager une prime de 1 770 800F à ses trois (3) meilleurs ouvriers : Aicha, Ali et Moussa. Pour cela, elle partage cette somme en parts inversement proportionnelles à 5, 4 et 2. Calculer la part de chacun d’eux.<br>
-        <em>Solution 2 :</em><br>
-        S = 1 770 800F ; a = 5 ; b = 4 ; c = 2<br>
-        Somme des inverses : <sup>1</sup>/<sub>5</sub> + <sup>1</sup>/<sub>4</sub> + <sup>1</sup>/<sub>2</sub> = <sup>(4 + 5)</sup>/<sub>20</sub> + <sup>1</sup>/<sub>2</sub> = <sup>9</sup>/<sub>20</sub> + <sup>1</sup>/<sub>2</sub> = <sup>(9 × 2 + 20 × 1)</sup>/<sub>40</sub> = <sup>(18 + 20)</sup>/<sub>40</sub> = <sup>38</sup>/<sub>40</sub> = <sup>19</sup>/<sub>20</sub><br>
-        K = <sup>1 770 800</sup> / <sub>(19/20)</sub> = 1 770 800 × <sup>20</sup>/<sub>19</sub> = 1 864 000<br>
-        - X (Aicha) = <sup>1</sup>/<sub>5</sub> × 1 864 000 = 372 800F<br>
-        - Y (Ali) = <sup>1</sup>/<sub>4</sub> × 1 864 000 = 466 000F<br>
-        - Z (Moussa) = <sup>1</sup>/<sub>2</sub> × 1 864 000 = 932 000F<br>
-        <strong>Vérification :</strong> 372 800 + 466 000 + 932 000 = 1 770 800F.
-    </p>
-
-    <h5>II. Partage proportionnel complexe :</h5>
-    <p>
-        On distingue trois (3) partages :
-        <ul>
-            <li>Partage proportionnel composé ;</li>
-            <li>Partage proportionnel mixte ;</li>
-            <li>Partage proportionnel chroné.</li>
-        </ul>
-        
-        <strong>1. Partage proportionnel composé :</strong><br>
-        Il y a un partage composé lorsqu’une somme est partagée de manière directement proportionnelle aux grandeurs A, B et C et à la fois aux grandeurs D, E et F.<br>
-        Formule : <sup>x</sup>/<sub>(A×D)</sub> = <sup>y</sup>/<sub>(B×E)</sub> = <sup>z</sup>/<sub>(C×F)</sub> = K<br><br>
-        <em>Exemple :</em> Un employé partage une somme de 7 260 000F entre trois (3) employés de manière directement proportionnelle à leurs âges et à leurs anciennetés.<br>
-        - Employé X : Âge = 21, Ancienneté = 5 (Produit = 105)<br>
-        - Employé Y : Âge = 25, Ancienneté = 8 (Produit = 200)<br>
-        - Employé Z : Âge = 30, Ancienneté = 10 (Produit = 300)<br>
-        <em>Solution :</em><br>
-        Somme des produits = 105 + 200 + 300 = 605<br>
-        K = <sup>7 260 000</sup>/<sub>605</sub> = 12 000<br>
-        - X = 105 × 12 000 = 1 260 000F<br>
-        - Y = 200 × 12 000 = 2 400 000F<br>
-        - Z = 300 × 12 000 = 3 600 000F<br><br>
-
-        <strong>2. Partage proportionnel mixte :</strong><br>
-        Il y a un partage mixte lorsqu’une somme S est partagée de manière directement proportionnelle aux réels a, b et c et à la fois inversement proportionnelle aux réels d, e et f.<br>
-        Formule : <sup>x</sup>/<sub>(a × 1/d)</sub> = <sup>y</sup>/<sub>(b × 1/e)</sub> = <sup>z</sup>/<sub>(c × 1/f)</sub> = K
-    </p>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= CHAPITRE 3 ================= -->
-    <h4>Chapitre 3 : Intérêts simples</h4>
-    <p>
-        <strong>I. Généralités :</strong><br>
-        L’intérêt est la rémunération d’un prêt ou d’un capital pendant une durée déterminée. C’est le loyer de l’argent ou le prix payé par l’emprunteur au prêteur pour l’utilisation d’un capital pendant une durée donnée.<br>
-        - Pour l’emprunteur, l’intérêt constitue une dépense.<br>
-        - Pour le prêteur, l’intérêt constitue un revenu.<br>
-        Les intérêts utilisés pour les placements à court terme s’appellent <strong>Intérêts Simples</strong> (durée inférieure à 1 an).<br><br>
-
-        <strong>II. Calcul de l’intérêt simple :</strong><br>
-        Soit C le montant du capital placé, t le taux de placement, n la durée du placement et I l’intérêt rapporté :
-        <ul>
-            <li><strong>I = <sup>(C × t × n)</sup> / <sub>36 000</sub></strong> (si n est en <strong>jours</strong> — Année commerciale de 360 jours)</li>
-            <li><strong>I = <sup>(C × t × n)</sup> / <sub>1 200</sub></strong> (si n est en <strong>mois</strong>)</li>
-            <li><strong>I = <sup>(C × t × n)</sup> / <sub>100</sub></strong> (si n est en <strong>années</strong>)</li>
-        </ul>
-        
-        <em>Exemple 1 :</em> Calculer l’intérêt produit par un capital de 54 000F à 5% du 9 septembre N au 27 janvier N+1.<br>
-        <em>Correction :</em><br>
-        C = 54 000 ; t = 5% ; Calcul de n (jours exacts de date à date) :<br>
-        - Septembre : 30 - 9 = 21 jours<br>
-        - Octobre : 31 jours<br>
-        - Novembre : 30 jours<br>
-        - Décembre : 31 jours<br>
-        - Janvier : 27 jours<br>
-        Total n = 21 + 31 + 30 + 31 + 27 = 140 jours.<br>
-        I = <sup>(54 000 × 5 × 140)</sup> / <sub>36 000</sub> = <strong>1 050F</strong><br><br>
-
-        <em>Exemple 2 :</em> Calculer l’intérêt produit par un capital de 100 000F à 6% pendant 2 mois.<br>
-        <em>Correction :</em><br>
-        I = <sup>(100 000 × 6 × 2)</sup> / <sub>1 200</sub> = <strong>1 000F</strong><br><br>
-
-        <strong>Remarque :</strong> On retient l’année commerciale (360 jours, soit 30 jours par mois). Si l'année est bissextile (366 jours), le mois de février compte 29 jours.<br><br>
-
-        <strong>1. Calcul du capital (C) :</strong><br>
-        Formule : <strong>C = <sup>(I × 36 000)</sup> / <sub>(n × t)</sub></strong><br>
-        <em>Exemple :</em> Un capital a produit un intérêt de 620F au taux de 10% l’an du 16 août au 14 novembre. Calculer le montant du capital.<br>
-        <em>Correction :</em><br>
-        - n (du 16 août au 14 novembre) : Août (31-16=15) + Septembre (30) + Octobre (31) + Novembre (14) = 90 jours.<br>
-        - C = <sup>(620 × 36 000)</sup> / <sub>(90 × 10)</sub> = <sup>22 320 000</sup> / <sub>900</sub> = <strong>24 800F</strong><br><br>
-
-        <strong>2. Calcul du taux de placement (t) :</strong><br>
-        Formule : <strong>t = <sup>(I × 36 000)</sup> / <sub>(C × n)</sub></strong><br>
-        <em>Exemple :</em> Un capital de 94 000F a produit du 16 octobre au 03 mars 2020 un intérêt de 180,95F. Calculer le taux de placement.<br>
-        <em>Correction :</em><br>
-        - n : Oct (15) + Nov (30) + Déc (31) + Jan (31) + Fév (29, année 2020 bissextile) + Mars (3) = 139 jours.<br>
-        - t = <sup>(180,95 × 36 000)</sup> / <sub>(94 000 × 139)</sub> = <sup>6 514 200</sup> / <sub>13 066 000</sub> = <strong>4,98%</strong><br><br>
-
-        <strong>3. Calcul de la durée de placement (n) :</strong><br>
-        Formule : <strong>n = <sup>(I × 36 000)</sup> / <sub>(C × t)</sub></strong><br>
-        <em>Exemple :</em> Un capital de 10 000F placé le 10 septembre au taux de 12% a produit un intérêt de 100F. À quelle date cet intérêt a-t-il été retiré ?<br>
-        <em>Correction :</em><br>
-        - n = <sup>(100 × 36 000)</sup> / <sub>(10 000 × 12)</sub> = <sup>3 600 000</sup> / <sub>120 000</sub> = 30 jours.<br>
-        - Date de retrait : 10 septembre + 30 jours = 10 octobre.
-    </p>
-
-    <div style="text-align: center; margin-top: 25px;">
-        <a href="#" class="btn">Fermer / Retour</a>
-    </div>
-</div>
-<div class="cours" style="max-width: 800px; text-align: left;">
-    <h3 style="text-align: center;">Programme de Mathématiques - Niveau 2nde Comptabilité</h3>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= CHAPITRE 1 ================= -->
-    <h4>Chapitre I : Calcul dans IR</h4>
-
-    <h5>I. Notion des ensembles :</h5>
-    <p>
-        <strong>a. Ensemble des entiers naturels ($\mathbb{N}$) :</strong><br>
-        $\mathbb{N} = \{0 ; 1 ; 2 ; 3… ; 100 ; 1000…\}$<br><br>
-
-        <strong>b. Ensemble des entiers relatifs ($\mathbb{Z}$) :</strong><br>
-        $\mathbb{Z} = \{… ; -10 ; -9 ; 0 ; 1 ; 100…\}$<br><br>
-
-        <strong>c. Ensemble des décimaux relatifs ($\mathbb{D}$) :</strong><br>
-        $\mathbb{D} = \{… ; -0,10 ; -0,09 ; 0 ; 1 ; 10 ; 3,5…\}$<br><br>
-
-        <strong>d. Ensemble des nombres rationnels ($\mathbb{Q}$) :</strong><br>
-        $\mathbb{Q}$ contient les nombres sous forme de fractions ou décimaux (ex : 2 ; 52 ; 3,5 ; -4,6…)<br><br>
-
-        <strong>e. Ensemble des nombres réels ($\mathbb{R}$) :</strong><br>
-        $\mathbb{R}$ regroupe tous ces ensembles (ex : 1 ; 2 ; -2 ; 0 ; 9 ; 510 ; -35…)
-    </p>
-
-    <h5>II. Propriété des opérations dans $\mathbb{R}$ :</h5>
-    <p>
-        <strong>a. Addition :</strong><br>
-        Soient $a$, $b$ et $c$ des réels :
-        <ul>
-            <li>$(a + b) + c = a + (b + c)$ : L’addition est associative.</li>
-            <li>$a + 0 = 0 + a$ : Zéro (0) est l’élément neutre.</li>
-            <li>Chaque réel ($a$) admet un opposé unique noté $-a$ ($a + (-a) = 0$).</li>
-            <li>$a + b = b + a$ : L’addition est commutative.</li>
-        </ul>
-
-        <strong>b. Multiplication :</strong><br>
-        Soient $a$, $b$ et $c$ des réels :
-        <ul>
-            <li>$(a \times b) \times c = a \times (b \times c)$ : La multiplication est associative.</li>
-            <li>$a \times 1 = 1 \times a = a$ : Un (1) est l’élément neutre.</li>
-            <li>Chaque réel non nul '$a$' admet un inverse unique noté <sup>1</sup>/<sub>a</sub>.</li>
-            <li>$a \times b = b \times a$ : La multiplication est commutative.</li>
-        </ul>
-
-        <strong>Application & Correction :</strong><br>
-        Pour $a = 10$, $b = 15$, $c = 5$ :<br>
-        - $a + (b + c) = 10 + (15 + 5) = 30$<br>
-        - $(a \times b) \times c = (10 \times 15) \times 5 = 750$<br>
-        - Inverses : <sup>1</sup>/<sub>10</sub>, <sup>1</sup>/<sub>15</sub>, <sup>1</sup>/<sub>5</sub><br>
-        - Opposés : -10, -15, -5
-    </p>
-
-    <h5>c. La division et les fractions :</h5>
-    <p>
-        Règles de calcul sur les fractions :<br>
-        - <sup>a</sup>/<sub>b</sub> + <sup>c</sup>/<sub>d</sub> = <sup>(ad + bc)</sup> / <sub>bd</sub><br>
-        - <sup>a</sup>/<sub>b</sub> × <sup>c</sup>/<sub>d</sub> = <sup>ac</sup> / <sub>bd</sub><br>
-        - <sup>(a/b)</sup> / <sub>(c/d)</sub> = <sup>a</sup>/<sub>b</sub> × <sup>d</sup>/<sub>c</sub> = <sup>ad</sup> / <sub>bc</sub><br><br>
-        <strong>Égalité de deux quotients :</strong> Si <sup>a</sup>/<sub>b</sub> = <sup>c</sup>/<sub>d</sub> alors $ad = bc$ (Le produit des extrêmes est égal au produit des moyens).<br>
-        <strong>Simplification :</strong> <sup>ac</sup> / <sub>bc</sub> = <sup>a</sup>/<sub>b</sub> (avec $c \neq 0$).
-    </p>
-
-    <h5>d. Les puissances :</h5>
-    <p>
-        Pour $a$ réel et $n$ entier naturel : $a^n = a \times a \times a \times ...$ ($n$ facteurs)<br>
-        Règles : 
-        <ul>
-            <li>$a^n \times a^p = a^{n+p}$</li>
-            <li><sup>a<sup>n</sup></sup> / <sub>a<sup>p</sup></sub> = $a^{n-p}$</li>
-            <li>$(a^n)^p = a^{n \times p}$</li>
-            <li>$(a \times b)^n = a^n \times b^n$</li>
-        </ul>
-    </p>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= CHAPITRE 2 ================= -->
-    <h4>Chapitre II : Équations et inéquations à une variable dans $\mathbb{R}$</h4>
-
-    <h5>I. Équation du premier degré à une inconnue ($ax + b = 0$) :</h5>
-    <p>
-        - Si $a = 0$ et $b = 0$ : Indéterminée ($S_{\mathbb{R}} = \mathbb{R}$)<br>
-        - Si $a = 0$ et $b \neq 0$ : Impossible ($S_{\mathbb{R}} = \emptyset$)<br>
-        - Si $a \neq 0$ : Solution unique $x = $ <sup>-b</sup>/<sub>a</sub>
-    </p>
-
-    <h5>II. Autres types d'équations :</h5>
-    <p>
-        <strong>a. Équations simples ($ax + b = c$)</strong><br>
-        <strong>b. Équations produit nul :</strong> $(ax + b)(cx + d) = 0 \iff ax + b = 0$ ou $cx + d = 0$<br>
-        <strong>c. Équations avec Valeur Absolue :</strong> $|ax + b| = c$ ou $|ax + b| = |cx + d|$<br>
-        <strong>d. Équations avec racines carrées :</strong> $\sqrt{ax + b} = c$ (nécessite de poser le domaine d'existence $ax + b \geq 0$).
-    </p>
-
-    <div style="text-align: center; margin-top: 25px;">
-        <a href="#" class="btn">Fermer / Retour</a>
-    </div>
-</div>
-       <div class="cours" style="max-width: 800px; text-align: left;">
-    <h3 style="text-align: center;">✉️ Correspondance Commerciale</h3>
-    <p>Mes cours et documents de correspondance commerciale.</p>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= PROGRAMME ================= -->
-    <h4>📚 Programme de Correspondance Commerciale 2nde Comptabilité</h4>
-    <ul>
-        <li>Chapitre I : Généralité sur la communication</li>
-        <li>Chapitre II : Communication Professionnelle Orale</li>
-        <li>Chapitre III : Communication Professionnelle Écrite</li>
-        <li>Chapitre IV : Correspondance Commerciale</li>
-        <li>Chapitre V : La lettre Commerciale</li>
-    </ul>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= CHAPITRE 1 ================= -->
-    <h4>📖 Chapitre I : Généralité sur la communication</h4>
-
-    <h5>Introduction :</h5>
-    <p>
-        Quel que soit l’endroit où nous sommes, nous pouvons communiquer soit oralement, soit à l’écrit, ou soit à travers les normes qui ont fait leurs preuves dans la mise en valeur des personnes en situation professionnelle.
-    </p>
-
-    <h5>I. Définition :</h5>
-    <p>
-        La communication est la transmission ou la réception des informations ou des messages d’une personne à une autre ou entre plusieurs personnes.
-    </p>
-
-    <h5>II. Les différents types de communication :</h5>
-    <p>
-        Il existe deux (2) grands types de communication :
-        <ul>
-            <li>La communication verbale</li>
-            <li>La communication non verbale</li>
-        </ul>
-        <strong>1. La communication verbale :</strong> Consiste à transmettre des informations à travers la langue verbale.<br>
-        <strong>2. La communication non verbale :</strong> Consiste à transmettre des informations à l’écrit ou à travers des signes.
-    </p>
-
-    <p>
-        <strong>NB : À ces types de communication s’ajoutent :</strong>
-        <ul>
-            <li><strong>a. La communication directe et indirecte :</strong> Elle est directe lorsque le canal est naturel et indirecte lorsque le canal est artificiel.</li>
-            <li><strong>b. La communication orale et écrite :</strong> Elle est orale lorsque l’échange est fait oralement et directe, tandis qu'elle est écrite lorsque les facteurs de communication reposent sur des supports bien déterminés.</li>
-            <li><strong>c. La communication interpersonnelle, de groupe et de masse :</strong>
-                <ul>
-                    <li><em>c.1 Interpersonnelle :</em> Le nombre de personnes ne dépasse pas deux (2), à l'oral ou à l'écrit.</li>
-                    <li><em>c.2 De groupe et de masse :</em> Pour le groupe, le nombre de personnes est supérieur à deux (2) ; la communication de masse est quant à elle faite à travers les mass médias.</li>
-                </ul>
-            </li>
-        </ul>
-    </p>
-
-    <h5>III. Les facteurs de communication :</h5>
-    <p>
-        Tout acte de communication suppose nécessairement :
-        <ul>
-            <li><strong>Un émetteur :</strong> Celui qui envoie le message (destinateur, codeur, expéditeur, locuteur).</li>
-            <li><strong>Le récepteur :</strong> Celui qui reçoit le message (destinataire, receveur, interlocuteur, décodeur).</li>
-            <li><strong>Le message :</strong> L’ensemble des informations échangées entre l’émetteur et le récepteur.</li>
-            <li><strong>Le code :</strong> L’ensemble des indices ou symboles utilisés (images, dessins, langue ou dialecte, gestes, regards, panneaux de signalisation…).</li>
-            <li><strong>Le canal :</strong> Les supports utilisés pour communiquer (Ex à l’oral : le téléphone ; Ex à l’écrit : écran, feuille).</li>
-            <li><strong>Le référent :</strong> Le contexte dans lequel la communication s’est produite (lieu, date, code...).</li>
-        </ul>
-    </p>
-
-    <h5>IV. Schéma de la communication :</h5>
-    <p style="text-align: center;">
-        <strong>Code / Canal</strong><br>
-        [ Émetteur ] ─── ( Message ) ───&gt; [ Récepteur ]<br>
-        <strong>Référent</strong>
-    </p>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= CHAPITRE 2 ================= -->
-    <h4>📖 Chapitre II : Communication Professionnelle Orale</h4>
-
-    <h5>I. Définition :</h5>
-    <p>
-        La communication professionnelle orale est l’ensemble des informations échangées entre l’émetteur et le récepteur ou d’une société à une autre dans la vie professionnelle.
-    </p>
-
-    <h5>II. Les outils de la communication professionnelle orale :</h5>
-    <p>
-        <strong>1. Le langage :</strong> Ensemble des sons et articulations émis pour exprimer ses pensées, désirs et émotions. Il existe 3 types :
-        <ul>
-            <li><em>a. Le langage familier :</em> Utilisé par les personnes l'ayant créé en remplacement du langage soutenu.</li>
-            <li><em>b. Le langage courant :</em> Couramment utilisé d’un individu ou d’une société à une autre, recommandé entre interlocuteurs.</li>
-            <li><em>c. Le langage soutenu :</em> Langage correct, soigné et propre, choisi selon les interlocuteurs et les sociétés.</li>
-        </ul>
-        <strong>2. Le para-langage :</strong> Utilisé en complément de la langue verbale (gestes, signes, mimiques, regards, sourires).
-    </p>
-
-    <h5>III. Les freins liés à la communication professionnelle orale :</h5>
-    <p>
-        Un frein est un élément qui empêche d’avoir une bonne communication. Ils sont regroupés en deux catégories : <strong>les bruits</strong> et <strong>les barrières</strong>.
-        <br><br>
-        <strong>a. Les bruits :</strong>
-        <ul>
-            <li><strong>Techniques :</strong> Liés au canal (ex: friture sur les lignes téléphoniques).</li>
-            <li><strong>Sémantiques :</strong> Liés au code (ex: phrase codée).</li>
-            <li><strong>Organisationnels :</strong> Liés au temps (ex: coupure d’électricité, manque de réseau).</li>
-            <li><strong>Sémiologiques :</strong> Liés aux attitudes ou modes de conduite (ex: bavardages en plein cours).</li>
-        </ul>
-        <strong>b. Les barrières :</strong>
-        <ul>
-            <li><strong>Culturelles ou sociologiques :</strong> Liées au mode de penser, au langage ou à l’opinion (ex: sujet mal interprété).</li>
-            <li><strong>Psychologiques :</strong> Liées aux interlocuteurs (ex: voix trop faible ou trop forte).</li>
-        </ul>
-    </p>
-
-    <h5>📌 Remarque (Outils artificiels modernes) :</h5>
-    <p>
-        Téléphone, radio (informer, former, divertir), télévision, accueil, réunion, réseaux sociaux, site internet, blog, webinaire, newsletters et intranet.
-    </p>
-
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-
-    <!-- ================= CHAPITRE 3 ================= -->
-    <h4>📖 Chapitre III : Communication Professionnelle Écrite</h4>
-
-    <h5>I. Définition :</h5>
-    <p>
-        Consiste à transmettre un message sur des supports physiques. Elle permet d’établir une relation à distance et à travers le temps. Elle joue deux fonctions : développement du personnel et fonctionnement du groupe.
-    </p>
-
-    <h5>II. Les outils de la communication professionnelle écrite :</h5>
-    <p>
-        <strong>1. La note de service :</strong> Écrit numéroté, conservé et archivé pour passer une information entre membres d’un même service.<br>
-        <strong>2. La note d’information :</strong> Non numérotée (généralement), utilisée pour informer le personnel, les clients et les fournisseurs.<br>
-        <strong>3. Le courrier :</strong> Écrit envoyé ou reçu par la poste ou transporté.
-        <ul>
-            <li><em>a. Électronique (e-mail) :</em> Performant, nécessite un destinataire précis, un objet et un corps de texte court.</li>
-            <li><em>b. Classique :</em> Ancien, mentionnant la date, le lieu, l’objet et la formule de politesse.</li>
-        </ul>
-        <strong>4. Le compte rendu :</strong> Rapport de référence clair et précis de ce qui s'est dit en réunion.<br>
-        <strong>5. Le rapport :</strong> Répond précisément à une problématique avec concision sur le fond et la forme.<br>
-        <strong>6. La présentation écrite :</strong> Document laissé au destinataire en complément de l'oral.
-    </p>
-
-    <h5>III. Les freins liés à la communication professionnelle écrite :</h5>
-    <p>
-        <strong>1. Freins matériels et physiques :</strong>
-        <ul>
-            <li><em>Matériels :</em> Mauvaise qualité du message, écrit illisible, mauvais choix du canal, transmissions visuelles défectueuses.</li>
-            <li><em>Physiques :</em> Langage mal connu, voix trop basse.</li>
-        </ul>
-        <strong>2. Freins individuels et collectifs :</strong>
-        <ul>
-            <li><em>Individuels :</em> Mauvaise analyse du récepteur, manque de motivation, habitudes et préjugés.</li>
-            <li><em>Collectifs (techniques) :</em> Moment mal choisi, temps court, lieu inconfortable ou mal adapté.<br>
-            <em>Collectifs (organisationnels) :</em> Organisation du groupe, manque de moyens de communication.</li>
-        </ul>
-    </p>
-
-    <div style="text-align: center; margin-top: 25px;">
-        <a href="#" class="btn">Fermer / Retour</a>
-    </div>
-</div>
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme d'Économie Générale - 2nde Comptabilité</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            background-color: #ecf0f1;
-            padding: 10px;
-            border-left: 5px solid #3498db;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #2980b9;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        .example {
-            background-color: #e8f8f5;
-            border-left: 4px solid #1abc9c;
-            padding: 10px 15px;
-            margin: 15px 0;
-        }
-        .formula {
-            font-weight: bold;
-            color: #d35400;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Programme d'Économie Générale - Niveau 2nde Comptabilité</h1>
-
-    <!-- CHAPITRE 1 -->
-    <div class="section">
-        <h2>Chapitre 1 : Les ménages</h2>
-        
-        <h3>Introduction</h3>
-        <p>L’économie est une science qui étudie la coordination entre les agents économiques : les ménages, les entreprises et les administrations[cite: 3]. Le mot vient du Grec <em>Eco</em> (maison, domaine, milieu) et <em>Nomie</em> (règle, norme, méthode). C'est la loi de la bonne gestion du milieu permettant d'atteindre les objectifs avec un minimum de ressources[cite: 3].</p>
-
-        <h3>Définition et types de ménages</h3>
-        <p>Un ménage est une personne physique (individu) ou un groupe d'individus vivant ensemble dans un même logement avec ou sans lien de parenté, mettant en commun des ressources et coordonnés par un chef[cite: 3]. On distingue[cite: 3] :</p>
-        <ul>
-            <li><strong>Le ménage ordinaire :</strong> Personnes occupant une même unité d'habitation avec un lien de parenté (ex. : la famille)[cite: 3].</li>
-            <li><strong>Le ménage institutionnel :</strong> Personnes vivant en collectivité (ex. : orphelinat, internat, prison, maison de retraite)[cite: 3].</li>
-        </ul>
-
-        <h3>La fonction des ménages</h3>
-        <p>La fonction principale des ménages est la <strong>consommation</strong> de biens (objets matériels) et de services (choses immatérielles) pour satisfaire leurs besoins[cite: 3].</p>
-        <p>Selon <strong>Abraham Maslow</strong>, les besoins sont classés en 5 niveaux dans une pyramide[cite: 3] :</p>
-        <ul>
-            <li>Besoin de se réaliser (être maître de son destin)[cite: 3]</li>
-            <li>Besoin d’estime de soi (être à même de se payer des objets : voitures, maisons)[cite: 3]</li>
-            <li>Besoin d’amour et d’appartenance (être aimé)[cite: 3]</li>
-            <li>Besoin de protection et de sécurité (être à l’abri du danger)[cite: 3]</li>
-            <li>Besoins vitaux et psychologiques (manger, boire, dormir, s’habiller)[cite: 3]</li>
-        </ul>
-
-        <h3>II. Les revenus</h3>
-        <p>Un revenu est un ensemble de ressources ou droits perçus sur une période donnée (en nature ou en numéraire). Il peut provenir d’un travail (salaire), d'un capital placé (intérêt) ou d’une entreprise (profit)[cite: 3].</p>
-        <ul>
-            <li><strong>Le revenu d’activité :</strong> Composé du salaire et de l'excédent brut d'exploitation[cite: 3].</li>
-            <li><strong>Le revenu de la propriété (ou du capital) :</strong> Composé des loyers, dividendes, intérêts personnels et transferts sociaux[cite: 3].</li>
-        </ul>
-        <p class="formula">Formules clés :<br>
-        Revenu Total (RT) = Revenu d’activité + Revenu de la propriété + Revenu primaire (ex. : bourse)[cite: 3]<br>
-        Revenu Disponible (RD) = RT – Impôt (I)[cite: 3]<br>
-        Affectation du revenu : R = RD = Consommation (C) + Épargne (E)[cite: 3]</p>
-
-        <h3>Les propensions</h3>
-        <p>La propension mesure la part d'un revenu consacrée à la consommation ou à l'épargne[cite: 3].</p>
-        <ul>
-            <li><strong>Propension Moyenne à Consommer (PMC) :</strong> $PMC = \frac{C}{R}$[cite: 3]</li>
-            <li><strong>Propension Moyenne à Épargner (PME) :</strong> $PME = \frac{E}{R}$[cite: 3] (Avec $PMC + PME = 1$)[cite: 3]</li>
-            <li><strong>Propension Marginale à Consommer (Pmc) :</strong> Variation de la consommation suite à la variation du revenu ($Pmc = \frac{\Delta C}{\Delta R}$)[cite: 3].</li>
-            <li><strong>Propension Marginale à Épargner (Pme) :</strong> Variation de l'épargne suite à la variation du revenu ($Pme = \frac{\Delta E}{\Delta R}$)[cite: 3] (Avec $Pmc + Pme = 1$)[cite: 3].</li>
-        </ul>
-
-        <h3>III. Le budget familial</h3>
-        <p>Le budget familial est l’ensemble des recettes et dépenses prévues pour une période donnée[cite: 3].</p>
-        <ul>
-            <li>Si $D – R > 0$ : Le budget est <strong>déficitaire</strong> (perte)[cite: 3].</li>
-            <li>Si $D – R < 0$ : Le budget est <strong>excédentaire</strong> (gain)[cite: 3].</li>
-            <li>Si $D – R = 0$ : <strong>Équilibre budgétaire</strong> (Recettes = Dépenses)[cite: 3].</li>
-        </ul>
-    </div>
-
-    <!-- CHAPITRE 2 -->
-    <div class="section">
-        <h2>Chapitre 2 : L’entreprise</h2>
-        
-        <h3>Définition</h3>
-        <p>Une entreprise est une entité juridique, économique et autonome dont la fonction principale est de produire des biens et services pour le marché afin de dégager un profit[cite: 3].</p>
-
-        <h3>Classification des entreprises</h3>
-        <ul>
-            <li><strong>Critère juridique :</strong> Entreprises <em>publiques</em> (appartiennent à l'État) et <em>privées</em> (appartiennent à des particuliers : SNC, SARL, SA)[cite: 3].</li>
-            <li><strong>Critère de dimension :</strong> 
-                <ul>
-                    <li>Petites entreprises : 0 à 10 salariés[cite: 3].</li>
-                    <li>Moyennes entreprises : 10 à 500 salariés, CA < 100 000 000 F CFA[cite: 3].</li>
-                    <li>Grandes entreprises : Plus de 500 salariés, CA important[cite: 3].</li>
-                </ul>
-            </li>
-            <li><strong>Secteur d’activité :</strong> Agricoles, Industrielles (transformation, mines, énergie) et de Distribution/Commerciales ou de services[cite: 3].</li>
-        </ul>
-
-        <h3>La production et les facteurs de production</h3>
-        <p>La production consiste à combiner des facteurs pour créer des biens et services[cite: 3]. On retient deux grands facteurs[cite: 3] :</p>
-        <ul>
-            <li><strong>Le facteur travail (W) :</strong> Activités humaines, intellectuelles et manuelles[cite: 3].</li>
-            <li><strong>Le facteur capital (K) :</strong> Ensemble des moyens ou richesses utilisés dans le processus[cite: 3].</li>
-        </ul>
-        <p class="formula">
-        Production moyenne = $\frac{\text{Production totale}}{\text{Nombre de facteurs variables}}$[cite: 3]<br>
-        Production marginale = $\frac{\text{Variation de la production totale}}{\text{Variation des facteurs variables}}$[cite: 3]
-        </p>
-    </div>
-
-    <!-- CHAPITRE 3 -->
-    <div class="section">
-        <h2>Chapitre 3 : Les administrations</h2>
-        
-        <h3>Définition et classification</h3>
-        <p>Une administration est une direction politique sous autorité gouvernementale produisant des biens non marchands[cite: 3]. On distingue[cite: 3] :</p>
-        <ul>
-            <li><strong>Administrations publiques :</strong> Gérées par l’État, produisent des biens non marchands financés par la fiscalité (impôts, taxes)[cite: 3].</li>
-            <li><strong>Administrations privées :</strong> Organismes à but non lucratif financés par les cotisations des membres (associations, mosquées)[cite: 3].</li>
-            <li><strong>Administrations semi-publiques :</strong> Capital partagé entre l'État et des particuliers (ex. : NIGELEC, SONIDEP)[cite: 3].</li>
-        </ul>
-
-        <h3>Le budget de l’État</h3>
-        <p>Élaboré par les lois de finances, voté au parlement et publié par le président[cite: 3]. Il comprend les recettes (fiscales et non fiscales) et les dépenses[cite: 3].</p>
-        <ul>
-            <li>Si $R = D$ : Équilibre[cite: 3].</li>
-            <li>Si $R < D$ : Budget <strong>déficitaire</strong> (nécessité d'emprunt)[cite: 3].</li>
-            <li>Si $R > D$ : Budget <strong>excédentaire</strong>[cite: 3].</li>
-        </ul>
-    </div>
-
-    <!-- CHAPITRE 4 -->
-    <div class="section">
-        <h2>Chapitre 4 : Les institutions financières</h2>
-        
-        <h3>Types et fonctions</h3>
-        <p>Ce sont des organismes spécialisés dans les transactions d’argent et l’intermédiation financière (octroi de crédits)[cite: 3]. Exemples[cite: 3] :</p>
-        <ul>
-            <li>FMI (Fonds Monétaire International)[cite: 3]</li>
-            <li>Banque Centrale (ex. : BCEAO)[cite: 3]</li>
-            <li>Banques commerciales (BOA, ECOBANK, ORABANK, etc.)[cite: 3]</li>
-            <li>Microfinances (BAGRI, ASUSU, etc.)[cite: 3]</li>
-        </ul>
-
-        <h3>La monnaie</h3>
-        <p>Moyen d’échange, instrument de mesure (unité de compte) et réserve de valeur[cite: 3]. Ses formes ont évolué : monnaie marchandise (troc), monnaie métallique, monnaie fiduciaire (billets), monnaie scripturale (comptes) et monnaie électronique[cite: 3].</p>
-    </div>
-
-    <!-- CHAPITRE 5 -->
-    <div class="section">
-        <h2>Chapitre 5 : L’extérieur et le reste du monde</h2>
-        
-        <h3>Balance commerciale et parité</h3>
-        <ul>
-            <li><strong>Balance commerciale :</strong> Différence entre exportations ($X$) et importations ($M$)[cite: 3]. 
-                <ul>
-                    <li>Si $X - M < 0$ : Déficitaire[cite: 3].</li>
-                    <li>Si $X - M > 0$ : Excédentaire[cite: 3].</li>
-                </ul>
-            </li>
-            <li><strong>Parité monétaire :</strong> Rapport de valeur d’échange entre deux monnaies[cite: 3].</li>
-        </ul>
-
-        <h3>Le Franc CFA</h3>
-        <p>Monnaie utilisée dans l'UEMOA (8 pays) et la CEMAC (6 pays)[cite: 3]. 
-        <br>Repères de change : 1 Euro = 665,95 F CFA | 1 Dollar $\approx$ 616,707 F CFA[cite: 3].</p>
-    </div>
-
-</body>
-</html>
-
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme d'Économie et Organisation des Entreprises - 2nde Comptabilité</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            border-bottom: 2px solid #27ae60;
-            padding-bottom: 10px;
-        }
-        h2 {
-            background-color: #e8f8f5;
-            padding: 10px;
-            border-left: 5px solid #27ae60;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #16a085;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .definition {
-            background-color: #fef9e7;
-            border-left: 4px solid #f1c40f;
-            padding: 10px 15px;
-            margin: 15px 0;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Programme d'Économie et Organisation des Entreprises (E.O.E.) - Niveau 2nde Comptabilité</h1>
-
-    <!-- CHAPITRE 1 -->
-    <div class="section">
-        <h2>Chapitre 1 : L’entreprise, Agent Économique</h2>
-        
-        <h3>Généralités et Définition</h3>
-        <p>L'Économie et Organisation des Entreprises est une discipline qui permet aux entreprises d'organiser leurs activités dans le cycle de leur production, rendant le travail plus rationnel pour atteindre leurs objectifs[cite: 4].</p>
-        <div class="definition">
-            <p><strong>Définition :</strong> L'entreprise est une unité économique et autonome qui regroupe des facteurs de production pour produire des biens et/ou des services destinés à être vendus sur le marché dans un but lucratif (recherche du profit)[cite: 4]. Certaines entreprises peuvent toutefois avoir un but non lucratif axé sur la satisfaction de l'intérêt général[cite: 4].</p>
         </div>
 
-        <h3>Classification des entreprises</h3>
-        <ul>
-            <li><strong>Selon les critères juridiques :</strong> 
-                <ul>
-                    <li><em>Entreprises publiques :</em> Appartenant en totalité à l'État ou à un groupe d'États (ex. : EAMAC)[cite: 4].</li>
-                    <li><em>Entreprises privées :</em> Entreprises individuelles (artisan, coiffeur) ou sociétaires (SA, SNC, SARL comme SEEN, AIRTEL, SONIBANK, STM)[cite: 4].</li>
-                    <li><em>Entreprises semi-publiques :</em> L'État détient la plus grande partie du capital (ex. : NIGELEC)[cite: 4].</li>
-                    <li><em>Entreprises semi-privées :</em> La plus grande partie du capital appartient aux particuliers (ex. : AIRTEL)[cite: 4].</li>
-                </ul>
-            </li>
-            <li><strong>Selon la dimension :</strong> Petites entreprises (1 à 10 salariés), moyennes entreprises (10 à 500 salariés), grandes entreprises (plus de 500 salariés)[cite: 4].</li>
-            <li><strong>Selon le secteur d'activité :</strong> Secteur agricole (riziculture, élevage), secteur secondaire (industrie, transformation) et secteur tertiaire ou commercial (achat-revente sans transformation, services)[cite: 4].</li>
-        </ul>
 
-        <h3>L'environnement de l'entreprise</h3>
-        <p>L'environnement est l'ensemble des forces et agents économiques en relation avec l'entreprise[cite: 4]. Il comprend le <strong>macro-environnement</strong> (général : démographique, juridique, économique, technologique) et le <strong>micro-environnement</strong> (spécifique : clients, fournisseurs, concurrents)[cite: 4]. L'entreprise interagit directement avec son personnel, l'État, ses clients, ses fournisseurs et les institutions financières[cite: 4].</p>
-    </div>
+        <!-- ================= MATHÉMATIQUES ================= -->
 
-    <!-- CHAPITRE 2 -->
-    <div class="section">
-        <h2>Chapitre 2 : Rôle de l’entreprise</h2>
-        
-        <h3>Le rôle économique</h3>
-        <p>Sur le plan économique, l'entreprise agit à trois niveaux :</p>
-        <ul>
-            <li><strong>Agent consommateur :</strong> Elle achète et consomme des matières premières, fournitures, machines et force de travail auprès de ses fournisseurs[cite: 4].</li>
-            <li><strong>Agent producteur :</strong> Elle transforme les matières premières en produits finis, intermédiaires ou consommables[cite: 4].</li>
-            <li><strong>Agent distributeur :</strong> Elle redistribue ses recettes monétaires aux fournisseurs, aux salariés (via les salaires et la CNSS), à l'État (impôts, taxes, TVA) et aux associés sous forme de dividendes[cite: 4].</li>
-        </ul>
+        <div class="matiere">
 
-        <h3>Le rôle social et socioculturel</h3>
-        <ul>
-            <li><strong>Cadre formateur et social :</strong> Elle crée des emplois, lutte contre le chômage et améliore les conditions de vie du personnel[cite: 4].</li>
-            <li><strong>Activités socioculturelles et environnementales :</strong> Elle participe à la gestion d'activités sportives et culturelles, à la protection de l'environnement et aux questions d'intérêt général[cite: 4].</li>
-        </ul>
-    </div>
+            <h3>📐 Mathématiques</h3>
 
-    <!-- CHAPITRE 3 -->
-    <div class="section">
-        <h2>Chapitre 3 : L’approvisionnement</h2>
-        
-        <h3>Définition et étapes</h3>
-        <p>L'approvisionnement englobe les processus permettant à l'entreprise de se procurer en quantité, qualité et au prix le plus bas les biens nécessaires pour éviter les ruptures de stock[cite: 4].</p>
-        <p><strong>Les 4 étapes clés de l'achat :</strong></p>
-        <ul>
-            <li>1. Collecte et expression du besoin (bon d'achat en double exemplaire)[cite: 4].</li>
-            <li>2. Sélection des informations et recherche des fournisseurs (catalogues, internet, salons, appel d'offres)[cite: 4].</li>
-            <li>3. Achat proprement dit (signature d'un bon de commande fixant les conditions)[cite: 4].</li>
-            <li>4. Réception et contrôle qualitatif et quantitatif des marchandises par le magasinier[cite: 4].</li>
-        </ul>
-    </div>
+            <p>
+                Cours et exercices de mathématiques
+                pour la 2nde Comptabilité.
+            </p>
 
-    <!-- CHAPITRE 5 -->
-    <div class="section">
-        <h2>Chapitre 5 : La distribution</h2>
-        
-        <h3>Circuits de distribution</h3>
-        <p>La distribution assure le transfert des produits finis du fabricant jusqu'au consommateur final[cite: 4]. On distingue :</p>
-        <ul>
-            <li><strong>Circuit direct :</strong> Relation directe entre le producteur et le consommateur[cite: 4].</li>
-            <li><strong>Circuit court :</strong> Comporte un seul intermédiaire (le détaillant)[cite: 4].</li>
-            <li><strong>Circuit long (traditionnel) :</strong> Fait intervenir des grossistes et des détaillants[cite: 4].</li>
-        </ul>
+            <button class="btn"
+                    onclick="afficherCours('mathematiques')">
+                👀 Voir les cours
+            </button>
 
-        <h3>La vente et les modalités de livraison</h3>
-        <p>La vente est un contrat synallagmatique de transfert de propriété contre un prix convenu[cite: 4]. Les ventes peuvent être au comptant (comptant compté ou d'usage), à crédit ou à terme, et s'effectuer par différents moyens (magasin, représentant, correspondance)[cite: 4].</p>
-        <p>Pour la livraison, on distingue le <strong>port dû</strong> (aux charges et risques de l'acheteur) et le <strong>port payé ou franco</strong> (à la charge et responsabilité du vendeur jusqu'au lieu désigné)[cite: 4].</p>
-    </div>
+            <div id="mathematiques" class="cours">
 
-    <!-- CHAPITRE 6 -->
-    <div class="section">
-        <h2>Chapitre 6 : Le règlement</h2>
-        <p>Ce chapitre examine les conditions et les délais de paiement des transactions commerciales réalisées par l'entreprise, distinguant les règlements immédiats au comptant des règlements différés à terme[cite: 4].</p>
-    </div>
+                <h4>📐 Mathématiques</h4>
 
-</body>
-</html>
+                <div class="chapitre">
+                    <h4>Chapitre I : Calcul dans IR</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
 
-       <div class="cours">
-    <h3>⚖️ Droit civil</h3>
-    <p>Mes cours et documents de droit civil.</p>
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('mathematiques')">
+                    ✖ Fermer les cours
+                </button>
 
-    <button class="btn" onclick="afficherDroitCivil()">
-        Voir les cours
-    </button>
+            </div>
 
-    <div id="cours-droit-civil" style="display: none; margin-top: 25px;">
-
-        <h2>📚 Programme Droit 2nde Comptabilité</h2>
-
-        <h3>Introduction générale</h3>
-
-        <h4>1ère Partie : Le droit objectif</h4>
-
-        <h4>Titre 1 : Les sources directes de la règle de droit</h4>
-
-        <ul>
-            <li>Chapitre 1 : La loi</li>
-            <li>Chapitre 2 : La coutume</li>
-        </ul>
-
-        <h4>Titre 2 : Les sources indirectes du droit</h4>
-
-        <ul>
-            <li>Chapitre 1 : La jurisprudence</li>
-            <li>Chapitre 2 : La doctrine</li>
-        </ul>
-
-        <h4>2ème Partie : Le droit subjectif</h4>
-
-        <h4>Titre 1 : Titulaires, objet et contenu des droits subjectifs</h4>
-
-        <ul>
-            <li>Chapitre 1 : Les titulaires des droits subjectifs</li>
-            <li>Chapitre 2 : Objet et contenu des droits subjectifs</li>
-        </ul>
-
-
-        <hr>
-
-
-        <h2>⚖️ Droit civil</h2>
-
-        <h3>Introduction générale</h3>
-
-        <h4>I. Droit et droits</h4>
-
-        <p>
-            <strong>Droit :</strong>
-            C'est un ensemble de règles de contrôle qui, dans une société
-            donnée, plus ou moins organisée, régissent les rapports entre
-            les hommes et dont l'inobservation ou le non-respect entraîne
-            des sanctions. À cet ensemble, on applique l'expression
-            <strong>droit objectif</strong>.
-        </p>
-
-        <p>
-            <strong>Droits :</strong>
-            Les droits sont les prérogatives reconnues à un individu ou à
-            un groupe d'individus et dont ceux-ci peuvent se prévaloir dans
-            leurs relations avec les autres en invoquant, au besoin, la
-            protection et l'aide des pouvoirs publics de l'État.
-            On appelle cet ensemble <strong>droits subjectifs</strong>.
-        </p>
-
-
-        <h4>II. La subdivision du droit</h4>
-
-        <p>
-            Ici, le droit se subdivise en trois (3) grandes catégories :
-        </p>
-
-        <h4>1. Subdivision du droit public</h4>
-
-        <ul>
-            <li>
-    <strong>Le droit constitutionnel :</strong>
-    Il réunit les règles relatives à l'État et aux pouvoirs publics.
-    Autrement dit, il s'agit de l'ensemble des règles qui président
-    à l'organisation politique de l'État et à son fonctionnement.
-</li>
-
-            <li>
-                <strong>Le droit administratif :</strong>
-                Il s'agit de l'ensemble des règles conçues pour régir
-                les organes et les activités de l'État.
-            </li>
-        </ul>
-
-
-        <h4>2. Subdivision du droit privé</h4>
-
-        <ul>
-            <li>
-                <strong>Le droit commercial :</strong>
-                Il s'agit de l'ensemble des règles juridiques régissant
-                l'activité des commerçants entre eux ou entre commerçants,
-                producteurs et particuliers.
-            </li>
-
-            <li>
-                <strong>Le droit civil :</strong>
-                Il rassemble l'ensemble des règles organisant les principaux
-                rapports de la vie en société : la famille, le mariage,
-                la naissance, le divorce et la filiation.
-            </li>
-        </ul>
-
-
-        <h4>3. Subdivision du droit mixte</h4>
-
-        <ul>
-            <li>
-                <strong>Le droit du travail :</strong>
-                C'est l'ensemble des règles recouvrant les conditions des
-                travailleurs ou salariés, ainsi que leurs rapports avec
-                leurs employeurs.
-            </li>
-
-            <li>
-                <strong>Le droit pénal :</strong>
-                Il a pour principal objectif de définir les comportements
-                constitutifs d'infractions et de fixer les sanctions
-                applicables à leurs auteurs.
-            </li>
-        </ul>
-
-
-        <h3>1ère Partie : Droit objectif</h3>
-
-        <p>
-            Dans l'étude consacrée à la notion de droit, il est impératif
-            de mettre l'accent sur les différentes sources du droit.
-        </p>
-
-        <p>
-            Il existe deux catégories de sources du droit :
-        </p>
-
-        <ul>
-            <li>Les sources directes de la règle de droit ;</li>
-            <li>Les sources indirectes de la règle de droit.</li>
-        </ul>
-
-
-        <h3>Titre 1 : Les sources directes de la règle de droit</h3>
-
-        <p>
-            Elles se constituent de la loi et de la coutume.
-        </p>
-
-
-        <h3>Chapitre 1 : La loi</h3>
-
-        <p>
-            Au sens formel, la loi désigne les seules règles émanant du
-            Parlement (Assemblée nationale).
-        </p>
-
-        <p>
-            Autrement dit, la loi est l'expression de la volonté générale
-            d'un peuple.
-        </p>
-
-
-        <h4>Section n°1 : Les caractères de la loi</h4>
-
-        <h4>1. La loi est une règle obligatoire</h4>
-
-        <p>
-            La loi est obligatoire en ce sens qu'elle s'impose à chacun.
-            L'inobservation de la loi entraîne des sanctions.
-        </p>
-
-
-        <h4>2. La loi est une règle générale</h4>
-
-        <p>
-            La règle de droit est rédigée en termes abstraits. Elle ne
-            s'applique pas à telle ou telle personne désignée, mais à
-            toutes les personnes, sans distinction.
-        </p>
-
-
-        <h4>3. La loi est une règle émanant du Parlement</h4>
-
-        <p>
-            Étant l'expression de la volonté générale, la loi est votée
-            par le Parlement.
-        </p>
-
-        <p>
-            Lorsque la loi est préparée par le gouvernement, on parle de
-            <strong>projet de loi</strong>. Lorsqu'elle est préparée par
-            les parlementaires, on parle de <strong>proposition de loi</strong>.
-        </p>
-
-
-        <h4>4. La loi est une règle permanente</h4>
-
-        <p>
-            La permanence signifie l'application constante de la règle
-            de droit pendant son existence.
-        </p>
-
-
-        <h4>Section n°2 : La naissance et la disparition de la loi</h4>
-
-        <h4>Paragraphe 1 : La naissance de la loi</h4>
-
-        <p>
-            En plus du vote, deux événements marquent la naissance de la loi :
-        </p>
-
-        <ul>
-            <li>La promulgation ;</li>
-            <li>La publication.</li>
-        </ul>
-
-
-        <h4>A. La promulgation</h4>
-
-        <p>
-            C'est l'acte par lequel le Président de la République donne
-            l'ordre d'exécuter la loi.
-        </p>
-
-
-        <h4>B. La publication</h4>
-
-        <p>
-            Par la publication, la loi est portée à la connaissance des
-            citoyens qui se trouvent alors obligés par elle.
-        </p>
-
-
-        <h4>Paragraphe 2 : La disparition de la loi</h4>
-
-        <p>
-            La disparition de la loi met l'accent sur la notion
-            d'<strong>abrogation</strong>.
-        </p>
-
-        <p>
-            <strong>L'abrogation expresse :</strong>
-            elle résulte d'un texte formel abrogeant la loi ancienne.
-        </p>
-
-        <p>
-            <strong>L'abrogation tacite :</strong>
-            elle intervient lorsqu'un nouveau texte est contraire aux
-            dispositions anciennes sans préciser qu'il les abroge.
-        </p>
-
-
-        <h4>
-            Section n°3 : Les conflits des lois
-        </h4>
-
-        <h4>Paragraphe 1 : L'application de la loi dans le temps</h4>
-
-        <p>
-            L'application de la loi dans le temps pose notamment le problème
-            de la non-rétroactivité de la loi.
-        </p>
-
-        <h4>
-            A. Le principe de la non-rétroactivité de la loi
-        </h4>
-
-        <p>
-            Selon l'article 2 du Code civil, la loi ne dispose que pour
-            l'avenir ; elle n'a point d'effet rétroactif.
-        </p>
-
-
-        <h4>B. Les exceptions</h4>
-
-        <ul>
-            <li>
-                <strong>La loi interprétative :</strong>
-                elle a pour but d'interpréter ou d'expliquer une loi
-                antérieure.
-            </li>
-
-            <li>
-                <strong>La loi pénale douce :</strong>
-                elle a notamment pour but d'assurer la sécurité et la
-                protection des libertés individuelles.
-            </li>
-        </ul>
-
-
-        <h4>Paragraphe 2 : L'application de la loi dans l'espace</h4>
-
-        <p>
-            La loi nigérienne s'applique sur tout le territoire national.
-            Elle s'applique également aux étrangers qui se trouvent sur
-            le territoire national.
-        </p>
-
-
-        <h3>Chapitre 2 : La coutume</h3>
-
-        <h4>Section I : La notion</h4>
-
-        <p>
-            La coutume (usage, tradition) est une règle de droit qui
-            s'établit non pas par la volonté de l'État, mais par une
-            pratique répétée des citoyens eux-mêmes.
-        </p>
-
-        <p>
-            Pour qu'il y ait coutume, celle-ci doit comporter deux éléments :
-        </p>
-
-        <ul>
-            <li>Un élément matériel ;</li>
-            <li>Un élément psychologique.</li>
-        </ul>
-
-
-        <h4>Paragraphe 1 : Élément matériel de la coutume</h4>
-
-        <p>
-            La coutume n'est pas un acte isolé. C'est une répétition qui
-            a une certaine durée dans l'espace et dans le temps.
-        </p>
-
-
-        <h4>Paragraphe 2 : Élément psychologique de la coutume</h4>
-
-        <p>
-            C'est la conviction que la règle observée est obligatoire.
-        </p>
-
-
-        <h4>
-            Section II : L'application de la coutume dans le contexte nigérien
-        </h4>
-
-        <p>
-            Selon la loi n° 2018-37 du 1er juin 2018 portant organisation
-            et fixant la composition des juridictions au Niger, les
-            juridictions nigériennes appliquent la coutume des parties
-            notamment dans certaines affaires concernant la famille,
-            le mariage, le divorce, la filiation, les donations,
-            les testaments ainsi que la propriété et la possession
-            des immeubles.
-        </p>
-        
-           <!-- ================================================= -->
-<!-- SUITE DU COURS DE DROIT CIVIL -->
-<!-- ================================================= -->
-
-<h3>Titre II : Les sources indirectes du droit</h3>
-
-<p>
-    Parmi les sources indirectes du droit, on peut citer d'abord
-    la jurisprudence (chapitre 1), puis la doctrine (chapitre 2).
-</p>
-
-
-<h3>Chapitre 1 : La jurisprudence</h3>
-
-<h4>Section I : La notion</h4>
-
-<p>
-    On appelle jurisprudence l'ensemble des décisions rendues
-    par les cours et les tribunaux.
-</p>
-
-<p>
-    Ces décisions sont appelées <strong>arrêts</strong> lorsqu'elles
-    sont rendues par une cour, et <strong>jugements</strong> lorsqu'elles
-    sont rendues par un tribunal.
-</p>
-
-<div class="important">
-    <strong>NB :</strong>
-    La jurisprudence n'est pas une source directe du droit ;
-    c'est une source indirecte.
-</div>
-
-<p>
-    La jurisprudence interprète et complète la loi.
-</p>
-
-
-<h4>Section II : Le contexte nigérien de la production de la jurisprudence</h4>
-
-<h4>
-    Paragraphe 1 : Les principes de base de l'OJN
-    (Organisation judiciaire au Niger)
-</h4>
-
-<p>
-    Deux principes majeurs méritent d'être étudiés :
-</p>
-
-<ul>
-    <li>Le principe du double degré de juridiction ;</li>
-    <li>Le principe de la dualité de juridiction.</li>
-</ul>
-
-
-<h4>A. Le principe du double degré de juridiction</h4>
-
-<p>
-    Ce principe permet à un justiciable qui n'est pas satisfait
-    de la décision rendue par une juridiction inférieure de porter
-    l'affaire devant une juridiction plus élevée.
-</p>
-
-<p>
-    Cette possibilité est désignée sous le nom d'<strong>appel</strong>.
-</p>
-
-
-<h4>B. Le principe de la dualité de juridiction</h4>
-
-<p>
-    Il signifie la coexistence de deux ordres de juridictions :
-</p>
-
-<ul>
-    <li>
-        Les juridictions judiciaires, qui traitent exclusivement
-        des contestations entre particuliers ;
-    </li>
-
-    <li>
-        Les juridictions administratives, qui connaissent des
-        contestations dans lesquelles l'administration est intervenue.
-    </li>
-</ul>
-
-
-<h4>
-    Paragraphe 2 : L'organisation judiciaire proprement dite au Niger
-</h4>
-
-<p>
-    La loi n° 2018-37 du 1er juin 2018 portant organisation judiciaire
-    comprend les juridictions prévues au Niger, qu'elles soient
-    judiciaires, administratives ou constitutionnelles.
-</p>
-
-
-<h4>
-    A. Les différents types de juridictions prévus par la loi
-    n° 2018-37 du 1er juin 2018
-</h4>
-
-<p>
-    Au terme de la loi portant organisation judiciaire,
-    les juridictions suivantes sont créées au Niger :
-</p>
-
-<ul>
-    <li>Les juridictions de l'ordre judiciaire ;</li>
-    <li>Les juridictions de l'ordre administratif ;</li>
-    <li>Les juridictions de l'ordre constitutionnel.</li>
-</ul>
-
-
-<h4>1. Les juridictions de l'ordre judiciaire</h4>
-
-<p>
-    Parmi ces juridictions, on distingue :
-</p>
-
-<ul>
-    <li>Les grandes juridictions, appelées cours ;</li>
-    <li>Les juridictions de droit commun ;</li>
-    <li>Les juridictions spécialisées.</li>
-</ul>
-
-
-<h4>a) Les grandes juridictions : les cours</h4>
-
-<p>
-    Parmi les grandes juridictions, il y a :
-</p>
-
-<ul>
-    <li>La Cour de cassation ;</li>
-    <li>La Cour d'appel.</li>
-</ul>
-
-
-<h4>a.1) La Cour de cassation</h4>
-
-<p>
-    La Cour de cassation est la plus haute juridiction de l'État
-    en matière judiciaire.
-</p>
-
-<p>
-    Elle a des pouvoirs de cassation contre les décisions rendues
-    en dernier ressort par les juridictions inférieures, notamment
-    les cours d'appel.
-</p>
-
-
-<h4>a.2) Les cours d'appel</h4>
-
-<p>
-    Il existe trois (3) cours d'appel sur l'ensemble du territoire
-    national :
-</p>
-
-<ul>
-    <li>
-        La Cour d'appel de Tahoua, qui couvre les régions
-        de Tahoua et Agadez ;
-    </li>
-
-    <li>
-        La Cour d'appel de Niamey, qui couvre les régions
-        de Niamey, Tillabéry et Dosso ;
-    </li>
-
-    <li>
-        La Cour d'appel de Zinder, qui couvre les régions
-        de Zinder, Maradi et Diffa.
-    </li>
-</ul>
-
-<div class="important">
-    <strong>NB :</strong>
-    Les cours d'appel statuent sur les appels interjetés contre
-    les décisions rendues par les juridictions inférieures.
-</div>
-
-
-<h4>b) Les juridictions de droit commun</h4>
-
-<p>
-    Il s'agit des tribunaux de grande instance (TGI) et des
-    tribunaux d'instance (TI).
-</p>
-
-<p>
-    Les tribunaux de grande instance (TGI) sont implantés à :
-</p>
-
-<ul>
-    <li>Agadez ;</li>
-    <li>Diffa ;</li>
-    <li>Dosso ;</li>
-    <li>Maradi ;</li>
-    <li>Niamey ;</li>
-    <li>Tahoua ;</li>
-    <li>Tillabéry ;</li>
-    <li>Zinder ;</li>
-    <li>Arlit ;</li>
-    <li>Konni.</li>
-</ul>
-
-<p>
-    S'agissant des tribunaux d'instance (TI), ils sont installés
-    dans chaque chef-lieu de département.
-</p>
-
-
-<h4>Les nouvelles juridictions</h4>
-
-<p>
-    Avec la loi portant organisation judiciaire de 2018,
-    de nouvelles juridictions ont vu le jour :
-</p>
-
-<ul>
-    <li>Les tribunaux d'arrondissement (TA) ;</li>
-    <li>Les tribunaux d'arrondissement communal (TAC).</li>
-</ul>
-
-
-<h4>c) Les juridictions spécialisées</h4>
-
-<p>
-    Comme leur nom l'indique, ces juridictions sont spécialisées
-    dans certaines affaires déterminées par la loi.
-</p>
-
-<p>À titre indicatif, on peut citer :</p>
-
-<ul>
-    <li>Le tribunal du travail ;</li>
-    <li>Le tribunal de commerce ;</li>
-    <li>Les tribunaux administratifs ;</li>
-    <li>Les tribunaux pour mineurs ;</li>
-    <li>Les tribunaux du foncier rural ;</li>
-    <li>Le tribunal militaire ;</li>
-    <li>
-        Le pôle spécialisé en matière économique et financière ;
-    </li>
-    <li>
-        Le pôle judiciaire spécialisé dans la lutte contre le
-        terrorisme et la criminalité transnationale organisée.
-    </li>
-</ul>
-
-
-<h4>2. Les juridictions de l'ordre administratif</h4>
-
-<p>
-    On peut les classer en deux (2) catégories :
-</p>
-
-<ul>
-    <li>
-        Celles dont le ressort territorial couvre l'ensemble
-        du territoire national ;
-    </li>
-
-    <li>
-        Celles dont le ressort territorial est limité.
-    </li>
-</ul>
-
-
-<h4>
-    a) Les juridictions administratives à ressort territorial national
-</h4>
-
-<p>Il s'agit :</p>
-
-<ul>
-    <li>Du Conseil d'État ;</li>
-    <li>De la Cour des comptes.</li>
-</ul>
-
-
-<h4>a.1) Le Conseil d'État</h4>
-
-<p>
-    Le Conseil d'État est la juridiction suprême en matière
-    administrative.
-</p>
-
-<p>
-    Il connaît des pourvois en cassation formés contre les décisions
-    rendues en dernier ressort par les juridictions statuant en
-    matière administrative.
-</p>
-
-
-<h4>a.2) La Cour des comptes</h4>
-
-<p>
-    La Cour des comptes est la juridiction supérieure chargée
-    du contrôle des finances publiques.
-</p>
-
-<p>
-    Elle exerce notamment :
-</p>
-
-<ul>
-    <li>Une compétence juridictionnelle ;</li>
-    <li>Une compétence de contrôle ;</li>
-    <li>Une compétence consultative.</li>
-</ul>
-
-
-<h4>
-    b) Les juridictions administratives à ressort territorial limité
-</h4>
-
-<p>
-    Il est institué un tribunal administratif au siège de chaque
-    Tribunal de Grande Instance (TGI), ayant le même ressort territorial.
-</p>
-
-<p>
-    Ces tribunaux administratifs connaissent des contentieux
-    administratifs.
-</p>
-
-
-<h4>3. Les juridictions de l'ordre constitutionnel</h4>
-
-<p>
-    Les juridictions constitutionnelles exercent notamment les
-    attributions suivantes :
-</p>
-
-<ul>
-    <li>
-        Assurer le contrôle de constitutionnalité des lois ;
-    </li>
-
-    <li>
-        Vérifier la régularité et la sincérité des opérations
-        électorales.
-    </li>
-</ul>
-
-
-<h4>
-    Paragraphe 3 : L'état de la personne et son patrimoine
-</h4>
-
-<p>
-    <strong>L'état de la personne :</strong>
-    c'est d'abord la place qu'elle occupe dans l'ordre politique
-    (étranger ou national), son statut familial (marié, célibataire,
-    divorcé, veuf ou veuve), ainsi que ses relations de mariage,
-    de parenté et d'alliance.
-</p>
-
-<p>
-    <strong>Le patrimoine :</strong>
-    c'est l'ensemble des droits et obligations d'une personne,
-    qu'elle soit physique ou morale.
-</p>
-
-<p>
-    Le patrimoine revêt trois (3) caractères :
-</p>
-
-<ul>
-    <li>
-        Le patrimoine est une universalité juridique ;
-    </li>
-
-    <li>
-        Le patrimoine est lié à la personne ;
-    </li>
-
-    <li>
-        Seuls les droits pécuniaires figurent dans le patrimoine,
-        à l'exclusion des droits de la personnalité.
-    </li>
-</ul>
-
-
-<h4>A. Le corps judiciaire</h4>
-
-<p>
-    Le corps judiciaire regroupe plusieurs catégories d'acteurs
-    qui interviennent dans le fonctionnement de la justice.
-</p>
-
-
-<h4>1. Les magistrats</h4>
-
-<p>
-    Un magistrat est une personne appartenant au corps judiciaire,
-    exerçant la profession de rendre la justice ou de requérir
-    l'application de la loi au nom de l'État.
-</p>
-
-<p>
-    On distingue principalement les magistrats du siège et les
-    magistrats du parquet.
-</p>
-
-
-<h4>a. Les magistrats du siège</h4>
-
-<p>
-    Les magistrats du siège sont communément appelés les juges.
-    Leur rôle est de juger et de dire le droit en toute indépendance.
-</p>
-
-
-<h4>b. Les magistrats du parquet</h4>
-
-<p>
-    Établis auprès des cours et tribunaux, ils sont chargés de
-    requérir l'application de la loi et de défendre les intérêts
-    de la société.
-</p>
-
-
-<h4>2. Les greffiers</h4>
-
-<p>
-    Le greffier assure l'ensemble des services administratifs
-    des juridictions. Il conserve notamment les actes et assure
-    la preuve authentique des actes de la justice.
-</p>
-
-
-<h4>3. Les auxiliaires de justice</h4>
-
-<p>
-    Ils existent plusieurs auxiliaires de justice :
-</p>
-
-<ul>
-    <li>L'avocat ;</li>
-    <li>Le notaire ;</li>
-    <li>L'huissier de justice ;</li>
-    <li>Les techniciens judiciaires.</li>
-</ul>
-
-
-<h4>a. L'avocat</h4>
-
-<p>
-    Il assure notamment la défense orale des prétentions soumises
-    au juge ainsi que le conseil juridique et la rédaction d'actes.
-</p>
-
-
-<h4>b. Le notaire</h4>
-
-<p>
-    Il rédige les actes authentiques pour le compte des particuliers.
-</p>
-
-
-<h4>c. L'huissier de justice</h4>
-
-<p>
-    Il est chargé de porter à la connaissance des parties à un procès
-    les actes de procédure.
-</p>
-
-<p>
-    Il peut également dresser des procès-verbaux et procéder à
-    certains actes d'exécution.
-</p>
-
-
-<h4>d. Les techniciens judiciaires</h4>
-
-<p>
-    Ils sont chargés par les tribunaux de procéder à des investigations
-    techniques et d'en faire un rapport au juge.
-</p>
-
-<p>
-    Il peut notamment s'agir de médecins, comptables, architectes, etc.
-</p>
-
-
-<h4>4. Hiérarchie des textes législatifs et réglementaires</h4>
-
-<p>
-    En matière juridique, les textes n'ont pas le même pouvoir,
-    le même champ d'application ni la même portée.
-    Les textes législatifs et réglementaires sont donc hiérarchisés.
-</p>
-
-
-<h4>a. La Constitution</h4>
-
-<p>
-    La Constitution constitue le texte fondamental de l'État.
-</p>
-
-
-<h4>b. La loi</h4>
-
-<p>
-    Les projets de loi établis par le gouvernement sont soumis
-    au vote de l'Assemblée nationale.
-</p>
-
-
-<h4>c. L'ordonnance</h4>
-
-<p>
-    L'ordonnance est un acte émanant du pouvoir exécutif et portant
-    sur des matières relevant du domaine législatif, dans les
-    conditions prévues par les règles constitutionnelles.
-</p>
-
-
-<h4>d. Le décret</h4>
-
-<p>
-    Au Niger, les décrets émanent du chef de l'État, qui est
-    l'autorité compétente en la matière.
-</p>
-
-<ul>
-    <li>Décret pris en Conseil des ministres ;</li>
-    <li>Décret pris en dehors du Conseil des ministres.</li>
-</ul>
-
-
-<h4>e. L'arrêté</h4>
-
-<p>
-    L'arrêté est un acte pris notamment par les autorités
-    administratives compétentes.
-</p>
-
-<ul>
-    <li>Les ministres ;</li>
-    <li>Les maires ;</li>
-    <li>Les préfets ;</li>
-    <li>Les sous-préfets.</li>
-</ul>
-
-
-<h4>f. La décision</h4>
-
-<p>
-    La décision est un acte administratif pris par une autorité
-    administrative dans les domaines où elle dispose d'un pouvoir
-    de décision.
-</p>
-
-
-<h4>g. La circulaire</h4>
-
-<p>
-    La circulaire est un acte pris notamment en application
-    d'un arrêté ou d'une décision et permettant de donner
-    des instructions.
-</p>
-
-
-<h4>h. La note de service</h4>
-
-<p>
-    La note de service est un acte administratif interne pris
-    par un responsable ou un chef de service.
-</p>
-
-
-<!-- DOCTRINE -->
-
-<h3>Chapitre 2 : La doctrine</h3>
-
-<h4>Section 1 : La notion</h4>
-
-<p>
-    On entend par doctrine les opinions émises par les auteurs
-    dans leurs ouvrages.
-</p>
-
-<p>
-    Autrement dit, la doctrine est l'ensemble des ouvrages juridiques,
-    la littérature du droit ou, selon certains auteurs,
-    la critique du droit.
-</p>
-
-<p>
-    Étant une source indirecte, elle joue un rôle important dans
-    l'application et l'évolution du droit.
-</p>
-
-
-<h4>Section 2 : Rôle de la doctrine</h4>
-
-<p>
-    La doctrine n'est certainement pas une source immédiate du droit.
-    Sa mission est notamment de mettre en ordre les règles de droit,
-    de les critiquer et de proposer des évolutions.
-</p>
-
-
-<h4>1. La doctrine n'est pas une source officielle du droit</h4>
-
-<p>
-    La loi, la Constitution, les traités et les autres sources
-    reconnues créent le droit et s'imposent aux juges dans les
-    conditions prévues par le droit.
-</p>
-
-<p>
-    La doctrine, elle, n'oblige personne.
-    Elle influence et éclaire, mais un juge n'est pas tenu de la suivre.
-</p>
-
-
-<h4>2. À quoi sert la doctrine ?</h4>
-
-<p>
-    La doctrine, en tant qu'ensemble des écrits, analyses,
-    commentaires et opinions des juristes sur le droit, sert à :
-</p>
-
-<ul>
-    <li>
-        <strong>Expliquer :</strong>
-        rendre compréhensible une loi complexe ou une décision de justice ;
-    </li>
-
-    <li>
-        <strong>Critiquer :</strong>
-        analyser une loi ou une décision de justice ;
-    </li>
-
-    <li>
-        <strong>Proposer :</strong>
-        suggérer des réformes et combler les vides juridiques ;
-    </li>
-
-    <li>
-        <strong>Systématiser :</strong>
-        regrouper les règles éparses pour en dégager des principes ;
-    </li>
-
-    <li>
-        <strong>Anticiper :</strong>
-        prévoir comment les tribunaux pourraient trancher un cas nouveau.
-    </li>
-</ul>
-
-
-<h4>3. Doctrine, jurisprudence et loi</h4>
-
-<table style="width:100%; border-collapse:collapse; margin-top:15px;">
-
-    <tr>
-        <th style="border:1px solid #ccc; padding:10px;">
-            Notion
-        </th>
-
-        <th style="border:1px solid #ccc; padding:10px;">
-            Qui la produit
-        </th>
-
-        <th style="border:1px solid #ccc; padding:10px;">
-            Force obligatoire
-        </th>
-
-        <th style="border:1px solid #ccc; padding:10px;">
-            Rôle
-        </th>
-    </tr>
-
-    <tr>
-        <td style="border:1px solid #ccc; padding:10px;">
-            Loi
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Parlement
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Oui
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Crée la règle
-        </td>
-    </tr>
-
-    <tr>
-        <td style="border:1px solid #ccc; padding:10px;">
-            Jurisprudence
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Juges et tribunaux
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Selon les règles applicables
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Interprète et applique les règles
-        </td>
-    </tr>
-
-    <tr>
-        <td style="border:1px solid #ccc; padding:10px;">
-            Doctrine
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Juristes et auteurs
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Non
-        </td>
-
-        <td style="border:1px solid #ccc; padding:10px;">
-            Commente, explique et propose
-        </td>
-    </tr>
-
-</table>
-
-
-<!-- DEUXIEME PARTIE -->
-
-<h3>2ème Partie : Le droit subjectif</h3>
-
-<p>
-    Les droits subjectifs sont des prérogatives reconnues aux individus.
-    Dans cette deuxième partie du cours, un accent particulier est mis
-    sur les titulaires, les objets et les contenus des droits subjectifs.
-</p>
-
-
-<h3>
-    Titre 1 : Titulaires, objet et contenu des droits subjectifs
-</h3>
-
-<p>
-    Nous verrons d'abord les titulaires des droits subjectifs
-    (chapitre 1), ensuite le contenu et l'objet des droits subjectifs
-    (chapitre 2).
-</p>
-
-
-<h3>
-    Chapitre 1 : Les titulaires des droits subjectifs
-</h3>
-
-
-<h4>
-    Section 1 : Les personnes physiques : la personnalité juridique
-</h4>
-
-<p>
-    Tous les êtres humains ont la personnalité juridique.
-</p>
-
-<p>
-    En effet, la personnalité juridique est liée au corps de l'individu
-    et non à sa conscience ou à sa volonté.
-</p>
-
-<p>
-    Ainsi, l'enfant en bas âge et la personne atteinte de troubles
-    mentaux sont juridiquement des personnes malgré leur immaturité
-    ou leur perception différente.
-</p>
-
-
-<h4>Paragraphe 1 : Le début de la personnalité juridique</h4>
-
-
-<h4>A. La naissance</h4>
-
-<p>
-    L'enfant acquiert la personnalité juridique dès lors qu'il est né,
-    c'est-à-dire dès qu'il cesse d'être partie intégrante du système
-    biologique de sa mère.
-</p>
-
-<p>
-    Il devient autonome et, de ce fait, sujet de droit, pourvu qu'il
-    soit né vivant et viable.
-</p>
-
-
-<h4>B. La conception</h4>
-
-<p>
-    Par dérogation, la naissance n'est pas toujours une condition
-    de la personnalité juridique.
-</p>
-
-<p>
-    Chaque fois qu'il y va de l'intérêt de l'enfant, on peut faire
-    débuter la personnalité juridique dès la conception, dans les
-    conditions prévues par le droit.
-</p>
-
-
-<h4>
-    Paragraphe 2 : La fin de la personnalité juridique
-</h4>
-
-<p>
-    La mort met fin à la personnalité juridique.
-</p>
-
-<p>
-    À côté de cette situation, il existe d'autres situations qui
-    laissent planer un doute quant à l'existence de la personne :
-    l'absence et la disparition.
-</p>
-
-
-<p>
-    <strong>L'absence :</strong>
-    c'est la situation de l'individu qui a cessé de paraître au lieu
-    de son domicile ou de sa résidence sans que l'on ait de ses nouvelles.
-</p>
-
-<p>
-    <strong>La disparition :</strong>
-    elle vise la situation de la personne dont on n'a pas retrouvé
-    le corps, mais qui était exposée à un péril lors de la dernière
-    fois où elle a été vue.
-</p>
-
-
-<h4>
-    Paragraphe 3 : L'état de la personne et son patrimoine
-</h4>
-
-<p>
-    <strong>L'état de la personne :</strong>
-    c'est notamment la place qu'elle occupe dans l'ordre politique
-    ainsi que son statut familial et ses relations de parenté et d'alliance.
-</p>
-
-<p>
-    <strong>Le patrimoine :</strong>
-    c'est l'ensemble des droits et obligations d'une personne,
-    qu'elle soit physique ou morale.
-</p>
-
-<p>
-    Le patrimoine revêt notamment trois caractères :
-</p>
-
-<ul>
-    <li>
-        Le patrimoine est une universalité juridique ;
-    </li>
-
-    <li>
-        Le patrimoine est lié à la personne ;
-    </li>
-
-    <li>
-        Les droits pécuniaires figurent dans le patrimoine,
-        à l'exclusion des droits de la personnalité.
-    </li>
-</ul>
-
-
-<h4>Section 2 : Les personnes morales</h4>
-
-<p>
-    On désigne sous cette appellation des regroupements très variés
-    de personnes et de biens qui, par la spécificité de leur but et
-    de leur intérêt, ont vocation à une activité autonome distincte
-    de celle des personnes qui les composent.
-</p>
-
-<p>
-    Les personnes morales peuvent relever du droit public,
-    du droit privé ou présenter un caractère mixte.
-</p>
-
-
-<h4>
-    Paragraphe 1 : Les personnes morales du droit public
-</h4>
-
-<p>
-    En tête des personnes morales du droit public, il convient
-    d'abord de citer l'État.
-</p>
-
-<p>
-    En deuxième lieu, prennent place les collectivités territoriales
-    et les circonscriptions administratives : régions, départements
-    et communes.
-</p>
-
-<p>
-    En troisième lieu, il y a les établissements publics, qui sont
-    des organismes chargés d'un service public et dotés d'une
-    organisation et d'une gestion propres.
-</p>
-
-
-<h4>
-    Paragraphe 2 : Les personnes morales du droit privé
-</h4>
-
-<p>
-    Cette seconde catégorie regroupe notamment :
-</p>
-
-<ul>
-    <li>Les associations ;</li>
-    <li>Les sociétés ;</li>
-    <li>Les syndicats ;</li>
-    <li>Les groupements d'intérêt économique ;</li>
-    <li>Les fondations.</li>
-</ul>
-
-
-<h4>
-    Paragraphe 3 : Les personnes morales du droit mixte
-</h4>
-
-<p>
-    Un certain nombre des personnes morales répugnent à être placées
-    dans l’une ou dans l’autre des catégories, procédant, car elles
-    relèvent à la fois du droit public et du droit privé.
-    Il va ainsi des sociétés d’économie mixte où l’Etat détient une
-    part généralement majoritaire du capital (SORAZ, SONIBANK…)
-    et des entreprises nationalisées dont tous les capitaux appartiennent
-    à l’Etat (SNE → SEEN → NDE).
-</p>
-
-<div class="important">
-
-    <strong>📌 Fin de la partie actuellement intégrée.</strong>
-
-    <p>
-        Le chapitre suivant du programme concerne :
-    </p>
-
-    <ul>
-        <li>Chapitre 2 : Objet et contenu des droits subjectifs</li>
-    </ul>
-
-</div>
-           <!-- ================================================= -->
-<!-- FIN DU COURS FOURNI -->
-<!-- ================================================= -->
-
-<div class="important">
-
-    <h3>📚 Fin du cours disponible</h3>
-
-    <p>
-        Le cours fourni présente actuellement les notions suivantes :
-    </p>
-
-    <ul>
-        <li>Le droit objectif et le droit subjectif</li>
-        <li>Les subdivisions du droit</li>
-        <li>Les sources directes du droit</li>
-        <li>La loi</li>
-        <li>La coutume</li>
-        <li>La jurisprudence</li>
-        <li>L'organisation judiciaire au Niger</li>
-        <li>La doctrine</li>
-        <li>Les titulaires des droits subjectifs</li>
-        <li>Les personnes physiques</li>
-        <li>Les personnes morales</li>
-    </ul>
-
-    <p>
-        <strong>À suivre :</strong>
-        Chapitre 2 — Objet et contenu des droits subjectifs.
-    </p>
-
-</div>
-</div>
-
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme de Français - 2nde Comptabilité</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            border-bottom: 2px solid #8e44ad;
-            padding-bottom: 10px;
-        }
-        h2 {
-            background-color: #f4ecf7;
-            padding: 10px;
-            border-left: 5px solid #8e44ad;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #7d3c98;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .definition {
-            background-color: #fef9e7;
-            border-left: 4px solid #f1c40f;
-            padding: 10px 15px;
-            margin: 15px 0;
-        }
-        .exercise {
-            background-color: #eaf2f8;
-            border-left: 4px solid #3498db;
-            padding: 10px 15px;
-            margin: 15px 0;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Programme de Français - Niveau 2nde Comptabilité</h1>
-
-    <!-- CHAPITRE 1 -->
-    <div class="section">
-        <h2>Chapitre 1 : La communication</h2>
-        
-        <h3>I. Définition</h3>
-        <p>La communication est l’ensemble des manières utilisées pour transmettre une information[cite: 5].</p>
-
-        <h3>II. Les types de communication</h3>
-        <p>Il existe deux (2) types de communications[cite: 5] :</p>
-        <ul>
-            <li>La communication verbale[cite: 5]</li>
-            <li>La communication non verbale[cite: 5]</li>
-        </ul>
-        <ol>
-            <li><strong>La communication verbale :</strong> Elle permet de transmettre clairement une information dans toute sorte de situation à l’orale comme à l’écrit[cite: 5].</li>
-            <li><strong>La communication non verbale :</strong> Elle comporte l’ensemble des signes permettant de transmettre un message à travers des signes non verbaux et paraverbaux[cite: 5].
-                <ul>
-                    <li><em>Les signes non verbaux :</em> Ce sont les indices, signal, symbole…[cite: 5]</li>
-                    <li><em>Les signes paraverbaux :</em> Ce sont les signes qui accompagnent consciemment ou inconsciemment les langages, les iconographies, les images publicitaires[cite: 5].</li>
-                </ul>
-            </li>
-        </ol>
-
-        <h3>III. Les éléments de la communication</h3>
-        <p>Six (6) facteurs constituent les éléments de la communication[cite: 5] :</p>
-        <ul>
-            <li><strong>L’émetteur :</strong> C'est celui qui transmet le message[cite: 5]</li>
-            <li><strong>Le récepteur :</strong> Est celui qui reçoit le message[cite: 5]</li>
-            <li><strong>Le code :</strong> Sont les différents signes émis par l’émetteur[cite: 5]</li>
-            <li><strong>Le message :</strong> Est l’information transmise[cite: 5]</li>
-            <li><strong>Le référent :</strong> Est le sujet contenu dans le message[cite: 5]</li>
-            <li><strong>Le canal :</strong> Est le moyen de la transmission du message[cite: 5]</li>
-        </ul>
-
-        <h3>IV. Les fonctions de la communication</h3>
-        <p>On distingue six (6) fonctions de la communication[cite: 5] :</p>
-        <ul>
-            <li><strong>Expressive :</strong> centrée sur l’émetteur[cite: 5]</li>
-            <li><strong>Conative :</strong> centrée sur le récepteur[cite: 5]</li>
-            <li><strong>Métalinguistique (Code) :</strong> centrée sur le code[cite: 5]</li>
-            <li><strong>Poétique (Message) :</strong> centrée sur le message[cite: 5]</li>
-            <li><strong>Référentielle (Référent) :</strong> centrée sur le référent[cite: 5]</li>
-            <li><strong>Phatique (Canal) :</strong> centrée sur le canal[cite: 5]</li>
-        </ul>
-
-        <h3>V. Le registre de langue</h3>
-        <p>C’est l’ensemble des différentes manières de transmettre un même message selon le récepteur, selon le contexte et le degré de rapprochement entre deux individus[cite: 5]. On distingue trois (3) registres au niveau de langue[cite: 5] :</p>
-        <ol>
-            <li><strong>Le registre familier :</strong> Il est utilisé entre amis, collègues ou personnes de la même génération[cite: 5].</li>
-            <li><strong>Le registre courant :</strong> Il est utilisé entre deux individus qui se respectent beaucoup, mais sans effort du vocabulaire à l’oral comme à l’écrit[cite: 5].</li>
-            <li><strong>Le registre soutenu :</strong> Il est utilisé en situation hiérarchique où l’émetteur s’adresse au récepteur avec beaucoup de respect, des bonnes manières et un bon vocabulaire[cite: 5].</li>
-        </ol>
-
-        <div class="exercise">
-            <p><strong>Exercice d’application :</strong> Identifier les différents registres de langue utilisés dans ces phrases[cite: 5] :</p>
-            <ol>
-                <li>J’ai une copine qui est dingue des olives.</li>
-                <li>J’ai une amie qui aime bien les olives.</li>
-                <li>Mes chaussures sont brillantes car je les ai brillées.</li>
-                <li>Mes souliers luisent parce que je les ai cirés.</li>
-                <li>Toute la soirée à frémir.</li>
-                <li>Elle a passé toute la soirée à jacasser.</li>
-                <li>Qu’est-ce qu’il est veinard cet homme.</li>
-                <li>C'est pas quand il est venu ?</li>
-            </ol>
-            <p><strong>Correction :</strong></p>
-            <ol>
-                <li>C’est le registre familier[cite: 5]</li>
-                <li>C’est le registre soutenu[cite: 5]</li>
-                <li>C’est le registre familier[cite: 5]</li>
-                <li>C’est le registre soutenu[cite: 5]</li>
-                <li>C’est le registre familier[cite: 5]</li>
-                <li>C’est le registre courant[cite: 5]</li>
-                <li>C’est le registre courant[cite: 5]</li>
-                <li>C’est le registre familier[cite: 5]</li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- CHAPITRE 2 -->
-    <div class="section">
-        <h2>Chapitre 2 : Sémantique</h2>
-        
-        <h3>Leçon 1 : Origine et formation des mots</h3>
-        <p><strong>Définition :</strong> Un mot est une unité de sens avec lequel s’élabore une phrase oralement qu’à l’écrit. Le rôle du mot dépend ainsi à la fois de sa signification, de sa nature et surtout de son histoire[cite: 5].</p>
-
-        <h3>I. Étymologie</h3>
-        <p>On appelle étymologie l’étude de l’histoire et de l’origine d’un mot. Le français fait partie des langues romanes qui font référence à un groupe de langues issues du latin vulgaire. Ces langues ont évolué avec le temps et se sont diversifiées en plusieurs branches : le français, l'espagnol, l'italien, le roumain, le catalan, l'occitan, le sarde…[cite: 5]</p>
-        <p>La langue française est constituée à 80% de latin d’origine et emprunte aussi des mots à certaines langues comme l’arabe, l’italien, l’espagnol…[cite: 5]</p>
-
-        <h3>II. La dérivation</h3>
-        <p>La dérivation est un procédé de formation de mot permettant d’ajouter un préfixe ou un suffixe à un mot de base (radical). Le mot ainsi formé s’appelle dérivé[cite: 5].</p>
-        <ul>
-            <li><strong>Le préfixe :</strong> Il se place au début du mot sans changer sa classe grammaticale (Exemple : <em>impossible, incapable, indisponible</em>)[cite: 5].</li>
-            <li><strong>Le suffixe :</strong> Il est placé à la fin du mot et change sa classe grammaticale[cite: 5]. Il peut ainsi transformer :
-                <ul>
-                    <li>Un nom en verbe (Exemple : <em>téléphoner</em>)[cite: 5]</li>
-                    <li>Un verbe en adjectif (Exemple : <em>profitable, utilisable</em>)[cite: 5]</li>
-                    <li>Un adjectif en nom (Exemple : <em>fière → fierté</em>)[cite: 5]</li>
-                    <li>Un adjectif en adverbe (Exemple : <em>joli → joliment</em>)[cite: 5]</li>
-                    <li>Un verbe en nom (Exemple : <em>fumer → fumeur</em>)[cite: 5]</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h3>III. La composition</h3>
-        <p>La composition de mot est un procédé linguistique consistant à créer de nouveaux mots en combinant des mots existants. Les mots nouvellement créés s’appellent mots composés (Exemple : <em>bonhomme, porte-monnaie</em>)[cite: 5].</p>
-        <p>La composition d’un mot peut se faire en reliant les deux (2) mots par un trait d’union (-) ou sans trait d’union[cite: 5]. Le mot composé peut être formé de :</p>
-        <ul>
-            <li>Deux noms : <em>Timbre-fiscal, Nigéro-Algérienne, New-York</em>[cite: 5]</li>
-            <li>Deux adjectifs : <em>Vert-clair, Rose-clair</em>[cite: 5]</li>
-            <li>Deux verbes : <em>Un laisser-passer, Un faire-part</em>[cite: 5]</li>
-            <li>Un verbe et un pronom : <em>Regardez-vous, Puis-je, Levez-vous</em>[cite: 5]</li>
-            <li>Une préposition et un nom : <em>Un sous-titre, Un sous-préfet</em>[cite: 5]</li>
-        </ul>
-
-        <h3>IV. La dénotation et la connotation</h3>
-        <ul>
-            <li><strong>La dénotation :</strong> C’est le sens littéral d’un mot, son premier sens tel qu’il est défini dans un dictionnaire[cite: 5].</li>
-            <li><strong>La connotation :</strong> C’est l’ensemble des idées, des émotions ou des significations qu’on peut ajouter ou donner à un mot en plus de sa dénotation. C’est donc l’ensemble des sens figurés que peut avoir le mot[cite: 5].</li>
-        </ul>
-        <p><em>Exemple :</em> Fleur (une plante) / Rouge (couleur, un danger)[cite: 5]</p>
-
-        <h3>V. Les mots de la même famille</h3>
-        <p>Lorsqu’un ensemble de mots est issu d’une même origine, alors il appartient à la même famille[cite: 5].</p>
-        <p><em>Exemple :</em> Classe : <em>classement, classer, classification</em> / Journal : <em>journalier, journaliste</em>[cite: 5]</p>
-        <p>On peut ajouter un suffixe ou un préfixe pour obtenir des mots de la même famille et on peut faire recours aux mots de la même famille pour chercher le sens d’un mot[cite: 5].</p>
-
-        <h3>VI. Champ lexical d’un mot</h3>
-        <p>Le champ lexical d’un mot est l’ensemble des mots qui se rapportent, qui font référence à ce mot[cite: 5].</p>
-        <p><em>Exemple :</em> Champ lexical de la comptabilité : <em>ordinateur, argent…</em>[cite: 5]</p>
-    </div>
-
-    <!-- CHAPITRE 3 -->
-    <div class="section">
-        <h2>Chapitre 3 : Notions sur la littérature</h2>
-        
-        <h3>I. Qu’est-ce que la littérature ?</h3>
-        <p>La littérature est un art du langage qui vise à créer des œuvres ayant une valeur esthétique et remplissant diverses fonctions culturelles et sociales[cite: 5].</p>
-
-        <h3>II. Sémantique – Naissance – Évolution de la littérature</h3>
-        <p>Le mot littérature vient du latin <em>litteratura</em>, qui est dérivé de <em>littera</em> (lettre), et qui désigne à l’origine l’écriture, la grammaire et la culture générale[cite: 5]. Avec le temps, le terme a évolué pour désigner les productions intellectuelles selon les époques, en se diversifiant à travers les continents[cite: 5].</p>
-
-        <h3>III. Les types de littérature</h3>
-        <p>Il existe plusieurs catégories de littérature, selon la forme d’expression[cite: 5] :</p>
-        <ul>
-            <li>La littérature orale[cite: 5]</li>
-            <li>La littérature écrite[cite: 5]</li>
-            <li>La littérature numérique[cite: 5]</li>
-        </ul>
-        <p>Ou selon le genre littéraire, qui est la classification la plus courante. On distingue ainsi plusieurs genres littéraires[cite: 5] :</p>
-        <ul>
-            <li><strong>Le roman :</strong> une œuvre narrative généralement longue[cite: 5]</li>
-            <li><strong>La nouvelle :</strong> un récit de fiction plus court, avec un nombre limité de personnages[cite: 5]</li>
-            <li><strong>Le conte :</strong> un récit court, avec des éléments souvent fantastiques ou merveilleux[cite: 5]</li>
-            <li><strong>La fable :</strong> un récit court dont les personnages sont souvent des animaux[cite: 5]</li>
-            <li><strong>La poésie :</strong> utilise un langage rythmé pour exprimer des idées et des émotions[cite: 5]</li>
-            <li><strong>Le théâtre :</strong> conçu pour être joué. Il met en scène des personnages et des dialogues[cite: 5]</li>
-            <li><strong>La non-fiction :</strong> comprend la biographie, l’autobiographie, le journal de l’auteur ainsi que l’essai[cite: 5]</li>
-            <li><strong>La littérature de jeunesse :</strong> destinée à un jeune public[cite: 5]</li>
-            <li><strong>La littérature de l’imaginaire :</strong> présente des univers et des scènes imaginaires[cite: 5]</li>
-        </ul>
-
-        <h3>IV. Les différents mouvements littéraires</h3>
-        <p>La littérature a débuté avec l’oralité, plusieurs millénaires avant l’invention de l’écriture[cite: 5]. Cependant, les premiers écrits étaient souvent de nature administrative et religieuse avant de prendre une forme narrative, marquant les débuts de la littérature[cite: 5].</p>
-        <ul>
-            <li><strong>La Renaissance :</strong> Premier grand mouvement littéraire, marqué par une redécouverte de l’Antiquité, le développement de l’humanisme et l’apparition de nouveaux genres littéraires[cite: 5].</li>
-            <li><strong>Le Classicisme :</strong> Époque où l’ordre et la raison s’imposent, avec de grands auteurs comme La Fontaine, Molière et Corneille[cite: 5].</li>
-            <li><strong>Les Lumières :</strong> Marquées par le progrès et la critique sociale. Des écrivains comme Voltaire et Rousseau diffusent des idées de liberté, d’égalité et dénoncent les injustices[cite: 5].</li>
-            <li><strong>Le Romantisme :</strong> Au début du XIXᵉ siècle, ce mouvement rejette la raison et les règles au profit des sentiments, de la passion et de l’imagination[cite: 5].</li>
-            <li><strong>Autres mouvements :</strong> Le Réalisme, le Naturalisme, le Symbolisme, l’Avant-garde et la littérature contemporaine[cite: 5].</li>
-        </ul>
-    </div>
-
-    <!-- CHAPITRE 4 -->
-    <div class="section">
-        <h2>Chapitre 4 : Construction des phrases</h2>
-        
-        <h3>I. Définition</h3>
-        <p>Une phrase est une suite de mots ordonnés avec un sens[cite: 5]. Elle peut être de plusieurs formes et présenter des structures différentes[cite: 5].</p>
-
-        <h3>II. Les types de phrase</h3>
-        <p>En français, il existe essentiellement quatre (4) types de phrases[cite: 5] :</p>
-        <ul>
-            <li><strong>La phrase déclarative</strong> (ou assertive) : donne une information, elle énonce un fait[cite: 5].</li>
-            <li><strong>La phrase exclamative :</strong> exprime un sentiment fort (la joie, la colère, la déception, l’admiration…)[cite: 5].</li>
-            <li><strong>La phrase impérative :</strong> exprime un ordre ou un conseil[cite: 5].</li>
-            <li><strong>La phrase interrogative :</strong> permet de poser une question[cite: 5].</li>
-        </ul>
-        <p>Ces quatre types de phrases peuvent se présenter sous plusieurs formes (affirmative, négative, interrogative) ou structures. Il existe quatre (4) structures de phrases[cite: 5] :</p>
-        <ol>
-            <li><strong>Phrase simple :</strong> C’est une proposition indépendante (Exemple : <em>Je viens à l’école / Toi, viens ici</em>)[cite: 5].</li>
-            <li><strong>Phrase composée :</strong> Formée de deux (2) ou plusieurs propositions indépendantes qui peuvent être coordonnées ou juxtaposées (Exemple : <em>Madame explique la leçon et les élèves ne comprennent pas bien</em>)[cite: 5].</li>
-            <li><strong>Phrase complexe :</strong> Présente au moins une proposition principale qui dépend d’une proposition subordonnée (Exemple : <em>Il pensait qu’elle ne viendra pas</em>)[cite: 5].</li>
-            <li><strong>Phrase composée et complexe :</strong> Construite autour d’une proposition principale, d’une proposition indépendante et d’une proposition subordonnée (Exemple : <em>Je reste à la maison, j’étudie quand les cours sont finis / J’espère qu’il viendra et je serai contente</em>)[cite: 5].</li>
-        </ol>
-        <p><em>NB :</em> On appelle structure d’une phrase la manière d’écrire les mots dans une phrase. Elle varie selon les différents types de phrases[cite: 5].</p>
-    </div>
-
-    <!-- CHAPITRE 5 -->
-    <div class="section">
-        <h2>Chapitre 5 : Rédaction d’une correspondance</h2>
-        
-        <h3>I. Définition</h3>
-        <p>La correspondance est un texte écrit par une personne adressée à une autre (ou plusieurs destinataires) dans le but de s’informer ou de présenter des vœux[cite: 5].</p>
-
-        <h3>II. Les différents types de correspondance</h3>
-        <ul>
-            <li><strong>La correspondance administrative :</strong> Échange entre un particulier et une administration ou bien entre les administrations (réclamation, demande de renseignement…)[cite: 5].</li>
-            <li><strong>La correspondance commerciale :</strong> Concerne les échanges entre les entreprises ou entre les entreprises et les clients (offres commerciales, facture, services)[cite: 5].</li>
-            <li><strong>La correspondance personnelle :</strong> Forme d’échange entre deux (2) personnes (lettres ou messages adressés à des amis ou à la famille)[cite: 5].</li>
-        </ul>
-
-        <h3>III. La rédaction d’un compte rendu</h3>
-        <p>C’est un texte par lequel on expose, on rend compte d’un fait ou d’un événement[cite: 5]. Il en existe plusieurs types : verbatim, analytique, synthétique, procès-verbal…[cite: 5]</p>
-        <p>Le compte rendu a pour but d’informer et de garder une trace écrite légale sur un événement déroulé[cite: 5]. C’est pourquoi il est très important d’être clair et précis dans sa rédaction afin de faciliter la compréhension en restant fidèle aux échanges[cite: 5]. Le compte rendu est neutre sans interprétation personnelle et doit être structuré de manière logique[cite: 5].</p>
-
-        <h3>IV. La rédaction d’un curriculum vitae (CV)</h3>
-        <p>Le CV est une carte de visite professionnelle, un document crucial pour décrocher un stage ou un emploi[cite: 5]. Il doit être clair, concis et percutant pour donner envie au recruteur d’en savoir plus[cite: 5]. On y note[cite: 5] :</p>
-        <ul>
-            <li><strong>Les informations personnelles (État civil) :</strong> Nom, prénom, date et lieu de naissance, situation matrimoniale, contrat, nationalité, profession[cite: 5].</li>
-            <li><strong>La formation (Cursus scolaire) :</strong> Énumération de votre formation scolaire[cite: 5].</li>
-            <li><strong>Les expériences professionnelles :</strong> Postes occupés, entreprises, dates de début et de fin, compétences acquises[cite: 5].</li>
-            <li><strong>Vos compétences :</strong> Informatiques, linguistiques ou comportementales[cite: 5].</li>
-        </ul>
-    </div>
-
-    <!-- CHAPITRE 6 -->
-    <div class="section">
-        <h2>Chapitre 6 : Contraction du texte</h2>
-        
-        <h3>I. Le résumé</h3>
-        <p><strong>Définition :</strong> Le résumé d’un texte consiste à contracter, à réduire le nombre de mots qui se trouvent dans le texte tout en restant fidèle à celui-ci[cite: 5]. Ce qui veut dire faire attention à ne pas changer le sens du contenu[cite: 5].</p>
-        <p>Pour un travail de résumé, il faut d’abord procéder au décompte des mots (Exemple : <em>ONU</em> est un seul mot, <em>1947</em> est un seul mot, <em>l’enfant</em> constitue deux mots…)[cite: 5]. Certains termes peuvent être remplacés par d’autres[cite: 5] :</p>
-        <ul>
-            <li>Les vélos, les véhicules, les trains, les avions → <em>Moyens de transport</em>[cite: 5]</li>
-            <li>Les chanteurs, les danseurs, les musiciens → <em>Les artistes</em>[cite: 5]</li>
-        </ul>
-        <p><em>NB :</em> Pour réussir un bon résumé, il faut bien comprendre le texte afin de ne pas supprimer les mots clés[cite: 5].</p>
-
-        <h3>II. Le commentaire composé</h3>
-        <p><strong>Définition :</strong> Le commentaire composé est un exercice littéraire qui consiste à expliquer, à donner des détails sur un texte précis[cite: 5].</p>
-        <p>Il s’agit donc de donner des informations concernant l’auteur, son œuvre, l’année d’édition, le mouvement littéraire ainsi que le contenu du texte, tout en expliquant clairement l’intention de l’auteur[cite: 5].</p>
-    </div>
-
-</body>
-</html>
-
-        <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme de Monde Contemporain - 2nde Comptabilité</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            border-bottom: 2px solid #e67e22;
-            padding-bottom: 10px;
-        }
-        h2 {
-            background-color: #fef5e7;
-            padding: 10px;
-            border-left: 5px solid #e67e22;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #d35400;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        ul {
-            padding-left: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #e67e22;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Programme annuel de Monde Contemporain - Niveau 2nde Comptabilité</h1>
-
-    <!-- CHAPITRE I -->
-    <div class="section">
-        <h2>Chapitre I : Les grandes découvertes et inventions</h2>
-        
-        <h3>Introduction</h3>
-        <p>Ces expressions datent du 15ème siècle et étaient utilisées par les puissances européennes pour mieux connaître le monde[cite: 6]. Elles désignaient les explorations, la cartographie et l'établissement de liens entre nations grâce à l'intelligence et à la science[cite: 6].</p>
-
-        <h3>I. Définition et quelques exemples de découverte et invention</h3>
-        <ul>
-            <li><strong>La découverte :</strong> Désigne ce qui existe déjà, identifiant une chose ou un phénomène établi (fortuite ou issue d'une intuition/raisonnement)[cite: 6].</li>
-            <li><strong>L'invention :</strong> Méthode, technique ou moyen permettant de résoudre un problème pratique donné[cite: 6].</li>
-        </ul>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Année</th>
-                    <th>Inventeur</th>
-                    <th>Explorateur</th>
-                    <th>Découverte</th>
-                    <th>Invention</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Christophe Colomb[cite: 6]</td>
-                    <td>1492[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>Amérique[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>James Watt[cite: 6]</td>
-                    <td>1736-1819[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>Machine à vapeur[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Diogo Gomez[cite: 6]</td>
-                    <td>1456-1458[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>Gambie, Surie[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Henri Barth[cite: 6]</td>
-                    <td>1415[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>Afrique[cite: 6]</td>
-                    <td>Caravelle[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Flavio Gioja[cite: 6]</td>
-                    <td>1300[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>Boussole[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Marco Polo[cite: 6]</td>
-                    <td>13ème siècle[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>Chine[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Edward Jenner[cite: 6]</td>
-                    <td>1796[cite: 6]</td>
-                    <td>X[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>_[cite: 6]</td>
-                    <td>Vaccin[cite: 6]</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>II. Les progrès scientifiques et techniques</h3>
-        <p>Vers le 19ème siècle, de grandes découvertes ont transformé l'économie et la société européenne[cite: 6].</p>
-        <ul>
-            <li><strong>Progrès scientifique :</strong> Évolution des connaissances fondamentales (physique, chimie, biologie)[cite: 6].</li>
-            <li><strong>Progrès technique :</strong> Mise en pratique des connaissances scientifiques pour créer de nouvelles machines ou méthodes de production[cite: 6].</li>
-        </ul>
-        <p><strong>Facteurs de progrès :</strong> La spécialisation des chercheurs, la collaboration entre chercheurs, les subventions accordées à la recherche et le scientisme[cite: 6].</p>
-        <p><strong>Le machinisme :</strong> Emploi généralisé des machines dans l'agriculture, les transports et l'économie[cite: 6].</p>
-
-        <h3>III. La révolution industrielle et ses conséquences</h3>
-        <p>Processus historique du 19ème siècle faisant basculer une société agraire vers une société commerciale et industrielle, tiré par le boom ferroviaire des années 1840[cite: 6].</p>
-        <ul>
-            <li><strong>Révolution agricole :</strong> Utilisation de machines (moissonneuses-lieuses, batteuses), d'engrais chimiques et sélection des plantes pour des rendements élevés[cite: 6].</li>
-            <li><strong>Révolution économique :</strong> Création d'usines, standardisation et taylorisation[cite: 6].</li>
-            <li><strong>Révolution des transports :</strong> Usage de moyens modernes facilitant les échanges et la création d'entreprises[cite: 6].</li>
-        </ul>
-    </div>
-
-    <!-- CHAPITRE II -->
-    <div class="section">
-        <h2>Chapitre II : Le capitalisme et le socialisme</h2>
-        
-        <h3>I. Le capitalisme</h3>
-        <p>Système économique fondé sur la propriété privée des moyens de production, la recherche de profit et la liberté de marché[cite: 6].</p>
-        <ul>
-            <li><strong>Origine :</strong> Prend racine dans le commerce au long cours au Moyen Âge, se développe avec le mercantilisme (16ème-18ème siècle) et s'oriente vers le capitalisme industriel au 19ème siècle[cite: 6].</li>
-            <li><strong>Organisation :</strong> Repose sur 6 piliers (propriété privée, intérêt personnel, concurrence, mécanisme du marché, liberté de choix, rôle de l'État) et le salariat[cite: 6].</li>
-        </ul>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Forme</th>
-                    <th>Période</th>
-                    <th>Observation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Commerciale[cite: 6]</td>
-                    <td>16ème au 18ème siècle[cite: 6]</td>
-                    <td>Basé sur le négoce[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Industrielle[cite: 6]</td>
-                    <td>19ème siècle[cite: 6]</td>
-                    <td>Basé sur l'usine et la machine[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Financière[cite: 6]</td>
-                    <td>Fin 19ème et début 20ème siècle[cite: 6]</td>
-                    <td>Concentration des entreprises[cite: 6]</td>
-                </tr>
-                <tr>
-                    <td>Néo-capitalisme[cite: 6]</td>
-                    <td>20ème siècle à nos jours[cite: 6]</td>
-                    <td>Basé sur la régulation et la mondialisation des échanges[cite: 6]</td>
-                </tr>
-            </tbody>
-        </table>
-        <p><strong>Conséquences :</strong> Naissance de la bourgeoisie et du prolétariat (social), naissance du socialisme (politique), surproduction et chômage (économique)[cite: 6].</p>
-
-        <h3>II. Le socialisme</h3>
-        <p>Système économique fondé sur la propriété collective ou sociale des moyens de production[cite: 6]. Né au 19ème siècle en réaction aux conséquences de la révolution industrielle[cite: 6].</p>
-        <p><strong>Organisation :</strong> Absence de classes, égalité des chances, justice sociale, répartition équitable, solidarité et intérêt général (divisé en 5 types : utopique, scientifique, réformiste, démocratique, autogestionnaire)[cite: 6].</p>
-    </div>
-
-    <!-- CHAPITRE III -->
-    <div class="section">
-        <h2>Chapitre III : La Première Guerre mondiale (1914-1918)</h2>
-        
-        <h3>I. Les causes</h3>
-        <ul>
-            <li><strong>Causes lointaines :</strong> Territoriales (revendication de l'Alsace-Lorraine par la France), politiques (division en blocs : Triple Entente et Triple Alliance), économiques (concurrence liée à la 1ère place de l'Allemagne) et militaires (militarisme)[cite: 6].</li>
-            <li><strong>Cause immédiate :</strong> Assassinat de l'archiduc François-Ferdinand à Sarajevo le 28 juin 1914, entraînant un engrenage de déclarations de guerre[cite: 6].</li>
-        </ul>
-
-        <h3>II. Les conséquences</h3>
-        <ul>
-            <li><strong>Humaines :</strong> 9,7 millions de militaires tués, 8,9 millions de civils péris, 21 millions de blessés[cite: 6].</li>
-            <li><strong>Économiques :</strong> Destruction massive des industries et terres agricoles, arrêt du commerce, endettement[cite: 6].</li>
-            <li><strong>Politiques :</strong> Perte des colonies allemandes, déclin de la supériorité européenne, création de la SDN (Société des Nations)[cite: 6].</li>
-        </ul>
-    </div>
-
-    <!-- CHAPITRE IV -->
-    <div class="section">
-        <h2>Chapitre IV : La crise économique de 1929</h2>
-        <p>Ce chapitre aborde les causes, les différentes phases et les répercussions de la grande crise économique mondiale de 1929[cite: 6].</p>
-    </div>
-
-</body>
-</html>
-
-        <div class="cours">
-            <h3>💻 Informatique</h3>
-            <p>Mes futurs cours, exercices et documents d'informatique.</p>
-            <a href="#" class="btn">Voir les cours</a>
         </div>
 
-        <div class="cours">
-            <h3>🇬🇧 Anglais</h3>
-            <p>Mes futurs cours, exercices et documents d'anglais.</p>
-            <a href="#" class="btn">Voir les cours</a>
+
+        <!-- ================= CORRESPONDANCE COMMERCIALE ================= -->
+
+        <div class="matiere">
+
+            <h3>✉️ Correspondance commerciale</h3>
+
+            <p>
+                Cours de communication et
+                de correspondance professionnelle.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('correspondance')">
+                👀 Voir les cours
+            </button>
+
+            <div id="correspondance" class="cours">
+
+                <h4>✉️ Correspondance commerciale</h4>
+
+                <div class="chapitre">
+                    <h4>Chapitre 1</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('correspondance')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
         </div>
 
-    </section>
+
+        <!-- ================= ÉCONOMIE GÉNÉRALE ================= -->
+
+        <div class="matiere">
+
+            <h3>💼 Économie générale</h3>
+
+            <p>
+                Cours d'économie générale
+                pour la 2nde Comptabilité.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('economie')">
+                👀 Voir les cours
+            </button>
+
+            <div id="economie" class="cours">
+
+                <h4>💼 Économie générale</h4>
+
+                <div class="chapitre">
+                    <h4>Chapitre 1 : Les ménages</h4>
+
+                    <p>
+                        L'économie est une science qui étudie
+                        la coordination entre les agents économiques.
+                    </p>
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('economie')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= E.O.E. ================= -->
+
+        <div class="matiere">
+
+            <h3>🏢 E.O.E.</h3>
+
+            <p>
+                Économie et Organisation
+                des Entreprises.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('eoe')">
+                👀 Voir les cours
+            </button>
+
+            <div id="eoe" class="cours">
+
+                <h4>🏢 Économie et Organisation des Entreprises</h4>
+
+                <div class="chapitre">
+                    <h4>Chapitre 1</h4>
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('eoe')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DROIT CIVIL ================= -->
+
+        <div class="matiere">
+
+            <h3>⚖️ Droit civil</h3>
+
+            <p>
+                Programme et cours de droit civil
+                de la 2nde Comptabilité.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('droit')">
+                👀 Voir les cours
+            </button>
+
+            <div id="droit" class="cours">
+
+                <h4>⚖️ Droit civil</h4>
+
+                <div class="chapitre">
+
+                    <h4>Introduction générale</h4>
+
+                    <h4>1ère Partie : Le droit objectif</h4>
+
+                    <h4>
+                        Titre 1 : Les sources directes
+                        de la règle de droit
+                    </h4>
+
+                    <ul>
+                        <li>Chapitre 1 : La loi</li>
+                        <li>Chapitre 2 : La coutume</li>
+                    </ul>
+
+                    <h4>
+                        Titre 2 : Les sources indirectes
+                        du droit
+                    </h4>
+
+                    <ul>
+                        <li>Chapitre 1 : La jurisprudence</li>
+                        <li>Chapitre 2 : La doctrine</li>
+                    </ul>
+
+                    <h4>2ème Partie : Le droit subjectif</h4>
+
+                    <ul>
+                        <li>
+                            Chapitre 1 :
+                            Les titulaires des droits subjectifs
+                        </li>
+
+                        <li>
+                            Chapitre 2 :
+                            Objet et contenu des droits subjectifs
+                        </li>
+                    </ul>
+
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('droit')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= FRANÇAIS ================= -->
+
+        <div class="matiere">
+
+            <h3>📚 Français</h3>
+
+            <p>
+                Cours de français,
+                expression et communication.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('francais')">
+                👀 Voir les cours
+            </button>
+
+            <div id="francais" class="cours">
+
+                <h4>📚 Français</h4>
+
+                <div class="chapitre">
+
+                    <h4>Chapitre 1</h4>
+
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('francais')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MONDE CONTEMPORAIN ================= -->
+
+        <div class="matiere">
+
+            <h3>🌍 Monde contemporain</h3>
+
+            <p>
+                Programme de Monde contemporain
+                pour la 2nde Comptabilité.
+            </p>
+
+            <button class="btn"
+                    onclick="afficherCours('monde')">
+                👀 Voir les cours
+            </button>
+
+            <div id="monde" class="cours">
+
+                <h4>🌍 Monde contemporain</h4>
+
+                <div class="chapitre">
+
+                    <h4>Chapitre 1</h4>
+
+                    <p>
+                        Le cours sera placé ici.
+                    </p>
+
+                </div>
+
+                <button class="btn btn-fermer"
+                        onclick="fermerCours('monde')">
+                    ✖ Fermer les cours
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </main>
 
+
 <footer>
-    <p>© 2026 Abdoul Razak — Mes cours</p>
+
+    <p>
+        📚 Révision Scolaire — 2nde Comptabilité
+    </p>
+
+    <p>
+        Bon courage pour tes révisions ! 💪
+    </p>
+
 </footer>
-```
+
+
 <script>
-function afficherDroitCivil() {
-    const cours = document.getElementById("cours-droit-civil");
 
-    if (cours.style.display === "none") {
-        cours.style.display = "block";
-    } else {
-        cours.style.display = "none";
-    }
-}
-</script>
-    <script>
-function afficherCorrespondance() {
-    const cours = document.getElementById("cours-correspondance");
+    function afficherCours(id) {
 
-    if (cours.style.display === "none") {
-        cours.style.display = "block";
-    } else {
-        cours.style.display = "none";
+        // Fermer tous les cours
+        const tousLesCours = document.querySelectorAll(".cours");
+
+        tousLesCours.forEach(function(cours) {
+            cours.style.display = "none";
+        });
+
+        // Ouvrir uniquement le cours choisi
+        const cours = document.getElementById(id);
+
+        if (cours) {
+
+            cours.style.display = "block";
+
+            cours.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
     }
-}
+
+
+    function fermerCours(id) {
+
+        const cours = document.getElementById(id);
+
+        if (cours) {
+            cours.style.display = "none";
+        }
+
+    }
+
 </script>
+
 </body>
 </html>
+```
