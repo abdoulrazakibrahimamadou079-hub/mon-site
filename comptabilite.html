@@ -688,23 +688,35 @@ X + Y + Z = S<br>
         </div>
 
 
-        <!-- ================= DROIT CIVIL ================= -->
-        <div class="matiere">
-            <h3>⚖️ Droit civil</h3>
-            <p>
-                Programme et cours de droit civil
-                de la 2nde Comptabilité.
-            </p>
-            <button class="btn" onclick="afficherCours('droit')">
-                👀 Voir les cours
-            </button>
+       ```html
+<!-- ================= DROIT CIVIL ================= -->
+<div class="matiere">
+    <h3>⚖️ Droit civil</h3>
+    <p>
+        Programme et cours de droit civil
+        de la 2nde Comptabilité.
+    </p>
 
-          
-                <button class="btn btn-fermer" onclick="fermerCours('droit')">
-                    ✖ Fermer les cours
-                </button>
-            </div>
+    <button class="btn" onclick="afficherCours('droit')">
+        👀 Voir les cours
+    </button>
+
+    <div id="droit" class="cours">
+
+        <h4>⚖️ Droit civil</h4>
+
+        <div class="chapitre">
+            <h4>Chapitre 1</h4>
+            <p>Le cours de droit civil sera ajouté ici.</p>
         </div>
+
+        <button class="btn btn-fermer" onclick="fermerCours('droit')">
+            ✖ Fermer les cours
+        </button>
+
+    </div>
+</div>
+```
 
 
         <!-- ================= FRANÇAIS ================= -->
