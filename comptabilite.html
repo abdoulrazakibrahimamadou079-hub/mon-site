@@ -294,8 +294,8 @@
             background: #115293;
         }
 
-        /* Le contenu est masqué par défaut */
-        #cours-container {
+        /* Le conteneur entier est caché par défaut grâce à la classe .cours */
+        .cours {
             display: none;
         }
 
@@ -315,7 +315,7 @@
 <body>
     <header>
         <h1>Mathématiques Financières</h1>
-        <p>Programme de révision - 2nde Comptabilité[cite: 1]</p>
+        <p>Programme de révision - 2nde Comptabilité</p>
     </header>
 
     <nav class="navbar">
@@ -326,241 +326,56 @@
     </nav>
 
     <div class="container">
-        <!-- Sommaire du Programme et Bouton d'affichage -->
-        <div class="card">
-            <h2>Programme de Mathématique Financière 2nde Comptabilité[cite: 1]</h2>
-            <ul>
-                <li>Chapitre 1 : Opération sur les fractions[cite: 1]</li>
-                <li>Chapitre 2 : Grandeurs proportionnelles[cite: 1]</li>
-                <li>Chapitre 3 : Intérêt simples[cite: 1]</li>
-                <li>Chapitre 4 : Escompte commercial des effets de commerce[cite: 1]</li>
-            </ul>
-            <button class="btn" onclick="toggleCours()">👀 Voir les cours</button>
+        <!-- Bouton d'accès unique visible sur la page d'accueil de la matière -->
+        <div class="card" style="text-align: center;">
+            <h2>Mathématiques Financières - 2nde Comptabilité</h2>
+            <p>Cliquez sur le bouton ci-dessous pour afficher le programme complet et les cours.</p>
+            <button class="btn" onclick="afficherCours('cours-mathematiques')">👀 Voir les cours</button>
         </div>
 
-        <!-- Tout le contenu du cours (Masqué au démarrage) -->
-        <div id="cours-container">
+        <!-- Tout le contenu (Sommaire + Chapitres) est masqué par défaut -->
+        <div id="cours-mathematiques" class="cours">
+            
+            <!-- Sommaire -->
+            <div class="card">
+                <h2>Programme du Cours</h2>
+                <ul>
+                    <li>Chapitre 1 : Opération sur les fractions</li>
+                    <li>Chapitre 2 : Grandeurs proportionnelles</li>
+                    <li>Chapitre 3 : Intérêts simples</li>
+                    <li>Chapitre 4 : Escompte commercial des effets de commerce</li>
+                </ul>
+            </div>
+
             <!-- Chapitre 1 -->
             <div class="card">
-                <h2>Chapitre 1 : Opération sur les fractions[cite: 1]</h2>
-                
-                <h3>I. Rappel :[cite: 1]</h3>
+                <h2>Chapitre 1 : Opération sur les fractions</h2>
+                <h3>I. Rappel :</h3>
                 <p><strong>1. Le plus petit multiple commun :</strong><br>
-                Le PPMC est le Plus Petit Multiple Commun, le plus petit nombre exact divisible par chacun de ces nombres. Pour calculer le PPMC il existe trois 3 étapes :[cite: 1]</p>
-                <ul>
-                    <li>Décomposer chacun de ces nombres en facteur premier ;[cite: 1]</li>
-                    <li>Prendre tous les facteurs premier commun et non commun, apparaissent dans la décomposition des nombres en prenant la puissance la plus élevée ;[cite: 1]</li>
-                    <li>De les multiplier entre eux.[cite: 1]</li>
-                </ul>
-                <div class="math-block">Exemple : calculer le PPMC des nombres (6 ; 20 ; 18), (12 ;15 ;27)[cite: 1]
-Correction :
-Calculons le PPMC des nombres : 
-PPMC de (6 ; 20 ; 18)
-6  | 2             20  | 2             18  | 2
-3  | 3             10  | 2              9  | 3
-1                  5   | 5              3  | 3
-                   1                       1
-6 = 2 x 3          20 = 2² x 5     18 = 3² x 2
-PPMC de (6 ;20 ;18) = 2² x 3² x 5 = 180
-
-PPMC de (12 ;15 ;27)
-12 | 2             15  | 3             27  | 3
- 6 | 2              5  | 5              9  | 3
- 3 | 3              1                       3  | 3
- 1                                          1
-12 = 2² x 3        15 = 3 x 5      27 = 3² x 3
-PPMC de (12 ;15 ;27) = 2² x 3² x 5 = 540</div>
-                
-                <p><strong>2. Les fractions :</strong>[cite: 1]</p>
-                
-                <h4>a. Règle de l’addition sur les fractions :[cite: 1]</h4>
-                <p>Une fraction représente une portion de quelque chose. Pour additionner une fraction il faut que les dénominateurs soient les mêmes. Donc on cherche un dénominateur commun pour chacun des fractions.[cite: 1]</p>
-                <div class="math-block">Exemple : calculer les fractions : 2/3 + 5/3 ; 4/5 + 1/4 
-Correction :
-Calculons les fractions : 2/3 + 5/3 ; 4/5 + 1/4
-2/3 + 5/3 = (2+5)/3 = 7/3
-4/5 + 1/4 = (4×4 + 1×5)/(5×4) = (16+5)/20 = 21/20</div>
-
-                <h4>b. Règle de soustraction sur les fractions :[cite: 1]</h4>
-                <p>Pour soustraire deux (2) fractions on multiplie le numérateur du premier par le dénominateur du second. De moins le numérateur du second par le dénominateur du premier.[cite: 1]</p>
-                <div class="math-block">Exemple : 7/6 - 1/4 ; 2/5 - 3/6
-Correction :
-7/6 - 1/4 = (7×4 - 1×6)/(6×4) = (28-6)/24 = 22/24 = (22:2)/(24:2) = 11/12
-2/5 - 3/6 = (2×6 - 3×5)/(5×6) = (12-15)/30 = -3/30 = (-3:3)/(30:3) = -1/10</div>
-
-                <h4>c. Règle de multiplication sur les fractions :[cite: 1]</h4>
-                <p>Pour multiplier deux fractions, on multiplie le numérateur entre eux et le dénominateur entre eux.[cite: 1]</p>
-                <div class="math-block">Exemple : 5/3 × 4/6 ; -7/3 × -5/2 
-Correction :
-5/3 × 4/6 = (5×4)/(3×6) = 20/18 = (20:2)/(18:2) = 10/9
--7/3 × -5/2 = (-7×-5)/(3×2) = 35/6</div>
-
-                <h3>II. Le pourcentage :[cite: 1]</h3>
-                <p>Un pourcentage est une notion composée de deux (2) petits ronds et qui permet d’exprimer la proportion d’une chose par rapport à l’autre.[cite: 1]<br>
-                Considérons que : P → Pourcentage | N → Total de chiffre exprimé | n → Le nombre souhaité en %[cite: 1]<br>
-                On a : P = n / N (ou N/n selon l'application)[cite: 1]</p>
-                <div class="math-block">Exemple 1 : Une classe est composée de 480 élèves dont 108 sont externes. Calculer le nombre de pourcentage des élèves d’externes.
-Correction 1 :
-Calculons le pourcentage : P = 108/480 = 0,225
-En % : 0,225 x 100 = 22,5
-P = 22,5%
-
-Exemple 2 : Une citée composée d’un ensemble d’étudiants dont 40% sont des élèves et 60% sont des garçons. Exprimer le chiffre en %
-Correction 2 :
-Exprimons le chiffre en pourcentage : P = n x N 
-n = 40% ⇒ 40/100 = 0,4
-N = 60% ⇒ 60/100 = 0,6
-P = n x N ⇒ P = 0,4 x 0,6 = 0,24
-P = 0,24 x 100 = 24 
-P = 24%</div>
+                Le PPMC est le Plus Petit Multiple Commun, le plus petit nombre exact divisible par chacun de ces nombres.</p>
             </div>
 
-            <!-- Chapitre 2 -->
-            <div class="card">
-                <h2>Chapitre 2 : Grandeurs proportionnelles[cite: 1]</h2>
-                <p><strong>Introduction :</strong> On appelle grandeurs proportionnelles, la répartition d’une part dans un ensemble. On distingue deux (2) types de partage : Le partage proportionnel simple ; Le partage proportionnel complexe.[cite: 1]</p>
-                
-                <h3>I. Les partages proportionnels simples :[cite: 1]</h3>
-                
-                <h4>a. Partage directement proportionnel :[cite: 1]</h4>
-                <p>Partager une somme S proportionnellement aux réels x, y, z si et seulement si a, b et c sont des coefficients de proportionnalité.[cite: 1]<br>
-                x/a = y/b = z/c = S / (a + b + c) = K ; K est le coefficient[cite: 1]</p>
-                <div class="math-block">Exemple 1 : Partagée une somme de 30 000f en part proportionnelle au 2, 4 et 6.
-Correction 1 :
-S = 30 000F ; a = 2 ; b = 4 ; et c = 6 
-x/2 = y/4 = z/6 = 30 000 / (2 + 4 + 6)
-2 + 4 + 6 = K ⇒ K = 12 
-30 000 / 12 = K ⇒ K = 2 500
-x/2 = K ⇒ x = 2K ⇒ 2 x 2 500 = 5 000
-y/4 = K ⇒ y = 4K ⇒ 4 x 2 500 = 10 000
-z/6 = K ⇒ z = 6K ⇒ 6 x 2 500 = 15 000
-X = 5 000 ; Y = 10 000 et Z = 15 000
-
-Exemple 2 : Mr Farouk décide de partager une prime de 50 000F à ses trois employés Amina, Fati et Ali respectivement proportionnelle au nombre 20 ; 13 et 7.
-Correction 2 :
-S = 50 000F ; a = 20 ; b = 13 et c = 7
-x/20 = y/13 = z/7 = 50 000 / (20 + 13 + 7)
-20 + 13 + 7 = 40 (K = 40)
-50 000 / 40 = 1 250 (K = 1 250)
-X = 20 x 1 250 = 25 000
-Y = 13 x 1 250 = 16 250
-Z = 7 x 1 250 = 8 750</div>
-
-                <h4>b. Partage inversement proportionnel :[cite: 1]</h4>
-                <p>Un partage inversement proportionnel est un partage directement proportionnel à l'inverse des nombres proportionnels.[cite: 1]<br>
-                Partagée une somme S en partie inversement proportionnelle aux nombres a, b et c revient à trouver x, y et z avec : x = 1/a ; y = 1/b et z = 1/c[cite: 1]</p>
-                <div class="math-block">Exemple 1 : Partagée une somme de 350 000F à x et y en part inversement proportionnel à 2 et 5.
-Solution 1 :
-S = 350 000F ; a = 2 et b = 5
-(x / (1/2)) = (y / (1/5)) = K 
-350 000 / (1/2 + 1/5) = K 
-1/2 + 1/5 = 7/10
-K = 350 000 / (7/10) = 350 000 × 10 / 7 = 3 500 000 / 7 = 500 000
-X = (1/2)K = 0,5 x 500 000 = 250 000
-Y = (1/5)K = (1/5) x 500 000 = 100 000
-
-Exemple 2 : Fati décide de partager une prime de 1 770 800f à ses Trois (3) meilleurs Ouvriers : Aïcha, Ali et Moussa, en part inversement proportionnel au 5, 4 et 2.
-Solution 2 :
-S = 1 770 800 ; a = 5 ; b = 4 ; c = 2
-(x / (1/5)) = (y / (1/4)) = (z / (1/2)) = K 
-1 770 800 / (1/5 + 1/4 + 1/2) = K 
-1/5 + 1/4 = (1×4 + 1×5)/(5×4) = 9/20
-9/20 + 1/2 = (9×2 + 20×1)/(20×2) = (18+20)/40 = 38/40 = 19/20
-K = 1 770 800 × 20 / 19 = 1 864 000 
-X = (1/5)K = 1 × 1 864 000 / 5 = 372 800
-Y = (1/4)K = 1 × 1 864 000 / 4 = 466 000
-Z = (1/2)K = 1 × 1 864 000 / 2 = 932 000</div>
-
-                <h3>II. Partage proportionnel complexe :[cite: 1]</h3>
-                <p>On distingue trois (3) partages : Partage proportionnel composé ; Partage proportionnel mixte ; Partage proportionnel cronée.[cite: 1]</p>
-                
-                <h4>1. Partage proportionnel composé :[cite: 1]</h4>
-                <p>Il y a un partage composé lorsqu’une somme est partagée de manière directement proportionnelle aux grandeurs A, B et C et à la fois aux grandeurs D, E et F.[cite: 1]<br>
-                X / (A×D) = Y / (B×E) = Z / (C×F) = K[cite: 1]</p>
-                <div class="math-block">Exemple : Un employeur partage une somme de 7 260 000 entre trois (3) employés de manière directement proportionnelle à leurs âges et à leurs anciennetés.
-Employés : X | Y | Z
-Âges (A) : 21 | 25 | 30
-Anciennetés (D) : 5 | 8 | 10
-
-Solution :
-S = 7 260 000
-X / (21×5) = Y / (25×8) = Z / (30×10) = K 
-X / 105 = Y / 200 = Z / 300 = K 
-X = 105K | Y = 200K | Z = 300K 
-105K + 200K + 300K = 605K
-K = 7 260 000 / 605 = 12 000 
-X = 105 x 12 000 = 1 260 000 
-Y = 200 x 12 000 = 2 400 000 
-Z = 300 x 12 000 = 3 600 000</div>
-
-                <h4>2. Partage proportionnel mixte :[cite: 1]</h4>
-                <p>Il y a un partage mixte lorsqu’une somme S est partagée de manière directement proportionnelle aux réels a, b et c et à la fois inversement proportionnelle aux réels d, e et f.[cite: 1]<br>
-                X / (a × 1/d) = Y / (b × 1/e) = Z / (c × 1/f) = K[cite: 1]</p>
-            </div>
-
-            <!-- Chapitre 3 -->
-            <div class="card">
-                <h2>Chapitre 3 : Intérêts simples[cite: 1]</h2>
-                
-                <h3>I. Généralité :[cite: 1]</h3>
-                <p>L’intérêt est la rémunération d’un prêt ou d’un capital pendant une durée déterminée. C’est le loyer de l’argent ou le prix payé par l’emprunteur au prêteur pour l’utilisation d’un capital pendant une durée donnée.[cite: 1]</p>
-                <ul>
-                    <li>Pour l’emprunteur, l’intérêt constitue une dépense et correspond à la rémunération du capital emprunté.[cite: 1]</li>
-                    <li>Pour le prêteur, l’intérêt constitue un revenu du capital prêté.[cite: 1]</li>
-                    <li>Les intérêts utilisés pour les placements à court terme s’appellent Intérêts Simples : c’est-à-dire pour une durée inférieure à 1 an.[cite: 1]</li>
-                </ul>
-
-                <h3>II. Calcul de l’intérêt simple :[cite: 1]</h3>
-                <p>Soit C le montant du capital placé, t le taux de placement, n la durée du placement et I l’intérêt rapporté par ce placement :[cite: 1]</p>
-                <ul>
-                    <li>I = (C × t × n) / 36 000 (n en jours)[cite: 1]</li>
-                    <li>I = (C × t × n) / 1 200 (n en mois)[cite: 1]</li>
-                    <li>I = (C × t × n) / 100 (n en année)[cite: 1]</li>
-                </ul>
-                <div class="math-block">Exemple : Calculer l’intérêt produit par un capital de 54 000 à 5% du 9 septembre N au 27 janvier N de l’année suivante.[cite: 1]
-Correction :
-C = 54 000 ; t = 5% ; n = ? 
-n = Septembre (30 – 9 = 21) + Octobre (31) + Novembre (30) + Décembre (31) + Janvier (27) = 140 jours.
-I = (54 000 × 5 × 140) / 36 000 = 1 050</div>
-
-                <p><em>Remarque :</em> Dans la formule de l’intérêt I = (C × t × n) / 36 000, on retient l’année commerciale c’est-à-dire 360 jours, soit chaque mois compte 30 jours. Si l’année est bissextile (366 jours), on considère que le mois de février fait 29 jours.[cite: 1]</p>
-
-                <h3>1. Calcul du capital :[cite: 1]</h3>
-                <div class="math-block">Formule : C = (I × 36 000) / (n × t)[cite: 1]
-Exemple : Un capital a produit un intérêt de 620f au taux de 10% l’an du 16 août au 14 novembre, calculer le montant du capital.[cite: 1]
-Correction :
-n = Août (31 - 16 = 15) + Septembre (30) + Octobre (31) + Novembre (14) = 90 jours.
-C = (620 × 36 000) / (90 × 10) = 22 320 000 / 900 = 24 800</div>
-
-                <h3>2. Calcul du taux de placement :[cite: 1]</h3>
-                <div class="math-block">Formule : t = (I × 36 000) / (C × n)[cite: 1]
-Exemple : Un capital de 94 000f a produit du 16 octobre au 03 mars 2020 un intérêt de 180,95. Calculer le taux de placement.[cite: 1]
-Correction :
-n = Oct (15) + Nov (30) + Déc (31) + Jan (31) + Fév (29) + Mars (3) = 139 jours.
-t = (180,95 × 36 000) / (94 000 × 139) = 6 514 200 / 13 066 000 = 4,98%</div>
-
-                <h3>3. Calcul de la durée de placement :[cite: 1]</h3>
-                <div class="math-block">Formule : n = (I × 36 000) / (C × t)[cite: 1]
-Exemple : Un capital de 10 000F placé le 10 septembre au taux de 12% a produit un intérêt de 100. À quelle date cet intérêt a-t-il été retiré ?[cite: 1]
-Correction :
-n = (100 × 36 000) / (10 000 × 12) = 3 600 000 / 120 000 = 30 jours.</div>
+            <!-- Bouton pour refermer le tout -->
+            <div style="text-align: center; margin-bottom: 30px;">
+                <button class="btn" style="background: #d32f2f;" onclick="fermerCours('cours-mathematiques')">❌ Fermer les cours</button>
             </div>
         </div>
-
     </div>
 
-    <!-- Script JavaScript pour afficher/masquer le cours au clic -->
+    <!-- Script JavaScript -->
     <script>
-        function toggleCours() {
-            var cours = document.getElementById("cours-container");
-            var btn = document.querySelector(".btn");
+        function afficherCours(idElement) {
+            var cours = document.getElementById(idElement);
             if (cours.style.display === "block") {
                 cours.style.display = "none";
-                btn.innerHTML = "👀 Voir les cours";
             } else {
                 cours.style.display = "block";
-                btn.innerHTML = "❌ Fermer les cours";
             }
+        }
+
+        function fermerCours(idElement) {
+            var cours = document.getElementById(idElement);
+            cours.style.display = "none";
         }
     </script>
 </body>
