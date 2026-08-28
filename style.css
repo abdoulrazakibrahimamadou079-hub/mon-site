@@ -1,342 +1,78 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-background-color: #f2f5ff;
-font-family: Arial, sans-serif;
-text-align: center;
-margin: 0;
-padding: 60px 20px;
-}
-
-/* Titres */
-h1 {
-color: #1e3a8a;
-font-size: 48px;
-margin-bottom: 20px;
-}
-
-p {
-color: #444;
-font-size: 20px;
-}
-
-/* Boutons */
-button {
-background-color: #1e3a8a;
-color: white;
-border: none;
-padding: 15px 30px;
-font-size: 18px;
-border-radius: 8px;
-cursor: pointer;
-}
-
-/* Navigation */
-nav {
-background-color: #1e3a8a;
-padding: 15px;
-margin-bottom: 50px;
-border-radius: 10px;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-margin: 0 20px;
-font-size: 18px;
-}
-
-nav a:hover {
-text-decoration: underline;
-}
-
-/* Sections */
-section {
-margin-top: 60px;
-padding: 30px;
-background-color: white;
-border-radius: 15px;
-max-width: 700px;
-margin-left: auto;
-margin-right: auto;
-}
-
-section h2 {
-color: #1e3a8a;
-font-size: 32px;
-}
-
-section p {
-color: #555;
-line-height: 1.6;
-}
-
-/* Page d'accueil */
-#accueil {
-padding: 80px 20px;
-margin-bottom: 40px;
-}
-
-#accueil h1 {
-font-size: 52px;
-margin-bottom: 20px;
-}
-
-#accueil p {
-font-size: 20px;
-color: #555;
-}
-
-/* Boutons avec lien */
-.btn {
-display: inline-block;
-margin-top: 25px;
-padding: 15px 30px;
-background-color: #1e3a8a;
-color: white;
-text-decoration: none;
-border-radius: 8px;
-font-size: 18px;
-transition: transform 0.3s;
-}
-
-.btn:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Photo de profil */
-.photo-profil {
-width: 100px;
-height: 100px;
-object-fit: cover;
-border-radius: 50%;
-margin-bottom: 25px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Compétences */
-#competences {
-margin-top: 60px;
-}
-
-.competences-container {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
-margin-top: 30px;
-}
-
-.competence {
-background-color: white;
-padding: 25px;
-border-radius: 15px;
-width: 220px;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-transition: transform 0.3s;
-}
-
-.competence h3 {
-color: #1e3a8a;
-font-size: 24px;
-}
-
-.competence p {
-font-size: 16px;
-line-height: 1.5;
-}
-
-.competence:hover {
-transform: translateY(-8px);
-}
-
-/* Projets */
-#projets {
-margin-top: 60px;
-}
-
-.projets-container {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
-margin-top: 30px;
-}
-
-.projet {
-background-color: white;
-padding: 25px;
-border-radius: 15px;
-width: 220px;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-transition: transform 0.3s;
-}
-
-.projet h3 {
-color: #1e3a8a;
-font-size: 22px;
-}
-
-.projet p {
-font-size: 16px;
-line-height: 1.5;
-}
-
-.projet:hover {
-transform: translateY(-8px);
-}
-
-/* Formulaire de contact */
-#contactForm {
-display: flex;
-flex-direction: column;
-gap: 10px;
-max-width: 500px;
-margin: 20px auto 0;
-text-align: left;
-}
-
-#contactForm label {
-font-weight: bold;
-color: #333;
-}
-
-#contactForm input,
-#contactForm textarea {
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 8px;
-font-size: 16px;
-font-family: Arial, sans-serif;
-}
-
-#contactForm textarea {
-resize: vertical;
-}
-
-#contactForm button {
-margin-top: 10px;
-}
-
 /* ========================================
-PAGE COMPTABILITÉ
+   COURS DE DROIT : ALIGNEMENT
 ======================================== */
 
-.cours {
-background-color: #f8faff;
-padding: 25px;
-margin: 25px auto;
-border-radius: 15px;
-max-width: 650px;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cours:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.cours h3 {
-color: #1e3a8a;
-font-size: 24px;
-margin-top: 0;
-}
-
+/* Les paragraphes du cours à gauche */
 .cours p {
-font-size: 17px;
-line-height: 1.6;
+    text-align: left;
 }
 
-.cours .btn {
-margin-top: 15px;
+/* Les listes du cours à gauche */
+.cours li {
+    text-align: left;
 }
 
-/* En-tête de la page Comptabilité */
-header {
-margin-bottom: 30px;
+/* Le programme / plan du cours au centre */
+.programme-summary {
+    text-align: center;
 }
 
-header h1 {
-margin-bottom: 10px;
+.programme-summary h3 {
+    text-align: center;
 }
 
-header p {
-font-size: 20px;
+.programme-summary ul,
+.programme-summary li {
+    text-align: center;
+    list-style-position: inside;
 }
 
-/* Pied de page */
-footer {
-margin-top: 60px;
-padding: 25px;
-background-color: #1e3a8a;
-color: white;
-border-radius: 10px;
+/* Le titre principal du cours au centre */
+.cours > h1 {
+    text-align: center;
 }
 
-footer p {
-color: white;
-font-size: 16px;
-margin: 0;
+/* Les titres de grandes parties au centre */
+.cours > h2 {
+    text-align: center;
 }
 
-/* Animation */
-@keyframes apparition {
-from {
-opacity: 0;
-transform: translateY(20px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
+/* Les titres à l'intérieur des sections à gauche */
+.cours .section h2,
+.cours .section h3,
+.cours .section h4,
+.cours .section h5,
+.cours .section h6 {
+    text-align: left;
 }
 
-#accueil {
-animation: apparition 3s ease-out;
+/* Les définitions à gauche */
+.definition,
+.definition p {
+    text-align: left;
 }
 
-.photo-profil {
-animation: apparition 1.2s ease-out;
+/* Tableau */
+.cours table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px auto;
 }
 
-/* Adaptation aux téléphones */
-@media (max-width: 600px) {
-body {
-    padding: 30px 10px;
+.cours th,
+.cours td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
 }
 
-nav a {
+.cours th {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+/* Bouton fermer au centre */
+.cours .btn-fermer {
     display: block;
-    margin: 10px 0;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-#accueil h1 {
-    font-size: 36px;
-}
-
-section {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
-}
-
-.cours {
-    padding: 20px;
-}
-
-.cours h3 {
-    font-size: 21px;
-}
-
-.cours p {
-    font-size: 16px;
-}
+    margin: 30px auto 0;
 }
