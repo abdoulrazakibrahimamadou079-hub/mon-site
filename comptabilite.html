@@ -1,11 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Révision Scolaire - 2nde Comptabilité</title>
 
     <style>
@@ -177,572 +175,283 @@
 
     <div class="matieres">
 
-
         <!-- ================= COMPTABILITÉ ================= -->
-
         <div class="matiere">
-
             <h3>📘 Comptabilité</h3>
-
             <p>
                 Cours de comptabilité générale,
                 exercices et documents.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('comptabilite')">
+            <button class="btn" onclick="afficherCours('comptabilite')">
                 👀 Voir les cours
             </button>
 
             <div id="comptabilite" class="cours">
-
-                <h4>📘 Comptabilité</h4>
-
+                <h4>📘 Comptabilité Générale</h4>
                 <div class="chapitre">
                     <h4>Chapitre 1</h4>
-                    <p>
-                        Le cours de comptabilité sera ajouté ici.
-                    </p>
+                    <p>Le cours de comptabilité générale sera ajouté ici.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('comptabilite')">
+                <button class="btn btn-fermer" onclick="fermerCours('comptabilite')">
                     ✖ Fermer les cours
                 </button>
-
-            </div>
-
-        </div>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathématiques Financières - 2nde Comptabilité</title>
-    <style>
-        * { box-sizing: border-box; }
-        
-        body { 
-            margin: 0; 
-            font-family: Arial, sans-serif; 
-            background: #f4f7fb; 
-            color: #222; 
-            line-height: 1.6;
-        }
-
-        header { 
-            background: linear-gradient(135deg, #1565c0, #42a5f5); 
-            color: white; 
-            text-align: center; 
-            padding: 35px 20px; 
-        }
-        header h1 { margin: 0 0 10px; font-size: 32px; }
-        header p { margin: 0; font-size: 16px; opacity: 0.9; }
-
-        .navbar { 
-            background: #ffffff; 
-            padding: 12px 20px; 
-            text-align: center; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-            margin-bottom: 20px; 
-        }
-        .navbar a { 
-            text-decoration: none; 
-            color: #1565c0; 
-            font-weight: bold; 
-            margin: 0 15px; 
-            font-size: 15px; 
-        }
-
-        .container { 
-            max-width: 900px; 
-            margin: 30px auto; 
-            padding: 0 20px; 
-        }
-
-        .card { 
-            background: white; 
-            border-radius: 12px; 
-            padding: 25px; 
-            margin-bottom: 25px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        }
-        .card h2 { 
-            color: #1565c0; 
-            border-bottom: 2px solid #f4f7fb; 
-            padding-bottom: 10px; 
-            margin-top: 0;
-        }
-        .card h3 { color: #333; margin-top: 25px; }
-        .card h4 { color: #555; margin-top: 20px; }
-        
-        .btn {
-            display: inline-block;
-            background: #1976d2;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-
-        .btn:hover {
-            background: #115293;
-        }
-
-        /* Le conteneur entier est caché par défaut grâce à la classe .cours */
-        .cours {
-            display: none;
-        }
-
-        .math-block { 
-            background: #f9f9f9; 
-            padding: 15px; 
-            border-left: 4px solid #42a5f5; 
-            margin: 15px 0; 
-            font-family: monospace; 
-            font-size: 14px; 
-            overflow-x: auto; 
-            color: #333;
-            white-space: pre-line;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Mathématiques Financières</h1>
-        <p>Programme de révision - 2nde Comptabilité</p>
-    </header>
-
-    <nav class="navbar">
-        <a href="index.html">🏠 Accueil</a>
-        <a href="matieres.html">📚 Matières</a>
-        <a href="quiz.html">🎯 Quiz</a>
-        <a href="progression.html">📈 Progression</a>
-    </nav>
-
-    <div class="container">
-        <!-- Bouton d'accès unique visible sur la page d'accueil de la matière -->
-        <div class="card" style="text-align: center;">
-            <h2>Mathématiques Financières - 2nde Comptabilité</h2>
-            <p>Cliquez sur le bouton ci-dessous pour afficher le programme complet et les cours.</p>
-            <button class="btn" onclick="afficherCours('cours-mathematiques')">👀 Voir les cours</button>
-        </div>
-
-        <!-- Tout le contenu (Sommaire + Chapitres) est masqué par défaut -->
-        <div id="cours-mathematiques" class="cours">
-            
-            <!-- Sommaire -->
-            <div class="card">
-                <h2>Programme du Cours</h2>
-                <ul>
-                    <li>Chapitre 1 : Opération sur les fractions</li>
-                    <li>Chapitre 2 : Grandeurs proportionnelles</li>
-                    <li>Chapitre 3 : Intérêts simples</li>
-                    <li>Chapitre 4 : Escompte commercial des effets de commerce</li>
-                </ul>
-            </div>
-
-            <!-- Chapitre 1 -->
-            <div class="card">
-                <h2>Chapitre 1 : Opération sur les fractions</h2>
-                <h3>I. Rappel :</h3>
-                <p><strong>1. Le plus petit multiple commun :</strong><br>
-                Le PPMC est le Plus Petit Multiple Commun, le plus petit nombre exact divisible par chacun de ces nombres.</p>
-            </div>
-
-            <!-- Bouton pour refermer le tout -->
-            <div style="text-align: center; margin-bottom: 30px;">
-                <button class="btn" style="background: #d32f2f;" onclick="fermerCours('cours-mathematiques')">❌ Fermer les cours</button>
             </div>
         </div>
-    </div>
 
-    <!-- Script JavaScript -->
-    <script>
-        function afficherCours(idElement) {
-            var cours = document.getElementById(idElement);
-            if (cours.style.display === "block") {
-                cours.style.display = "none";
-            } else {
-                cours.style.display = "block";
-            }
-        }
 
-        function fermerCours(idElement) {
-            var cours = document.getElementById(idElement);
-            cours.style.display = "none";
-        }
-    </script>
-</body>
-</html>
+        <!-- ================= MATHÉMATIQUES FINANCIÈRES ================= -->
+        <div class="matiere">
+            <h3>📈 Maths Financières</h3>
+            <p>
+                Programme d'opérations sur les fractions, intérêts simples et escompte.
+            </p>
+            <button class="btn" onclick="afficherCours('maths-financieres')">
+                👀 Voir les cours
+            </button>
+
+            <div id="maths-financieres" class="cours">
+                <h4>📈 Mathématiques Financières</h4>
+                
+                <div class="chapitre">
+                    <h4>Programme du Cours</h4>
+                    <ul>
+                        <li>Chapitre 1 : Opération sur les fractions</li>
+                        <li>Chapitre 2 : Grandeurs proportionnelles</li>
+                        <li>Chapitre 3 : Intérêts simples</li>
+                        <li>Chapitre 4 : Escompte commercial des effets de commerce</li>
+                    </ul>
+                </div>
+
+                <div class="chapitre">
+                    <h4>Chapitre 1 : Opération sur les fractions</h4>
+                    <p><strong>1. Le plus petit multiple commun :</strong><br>
+                    Le PPMC est le Plus Petit Multiple Commun, le plus petit nombre exact divisible par chacun de ces nombres.</p>
+                </div>
+
+                <button class="btn btn-fermer" onclick="fermerCours('maths-financieres')">
+                    ✖ Fermer les cours
+                </button>
             </div>
-
         </div>
 
 
         <!-- ================= MATHÉMATIQUES ================= -->
-
         <div class="matiere">
-
             <h3>📐 Mathématiques</h3>
-
             <p>
                 Cours et exercices de mathématiques
                 pour la 2nde Comptabilité.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('mathematiques')">
+            <button class="btn" onclick="afficherCours('mathematiques')">
                 👀 Voir les cours
             </button>
 
             <div id="mathematiques" class="cours">
-
                 <h4>📐 Mathématiques</h4>
-
                 <div class="chapitre">
                     <h4>Chapitre I : Calcul dans IR</h4>
-                    <p>
-                        Le cours sera placé ici.
-                    </p>
+                    <p>Le cours sera placé ici.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('mathematiques')">
+                <button class="btn btn-fermer" onclick="fermerCours('mathematiques')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
 
         <!-- ================= CORRESPONDANCE COMMERCIALE ================= -->
-
         <div class="matiere">
-
             <h3>✉️ Correspondance commerciale</h3>
-
             <p>
                 Cours de communication et
                 de correspondance professionnelle.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('correspondance')">
+            <button class="btn" onclick="afficherCours('correspondance')">
                 👀 Voir les cours
             </button>
 
             <div id="correspondance" class="cours">
-
                 <h4>✉️ Correspondance commerciale</h4>
-
                 <div class="chapitre">
                     <h4>Chapitre 1</h4>
-                    <p>
-                        Le cours sera placé ici.
-                    </p>
+                    <p>Le cours sera placé ici.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('correspondance')">
+                <button class="btn btn-fermer" onclick="fermerCours('correspondance')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
 
         <!-- ================= ÉCONOMIE GÉNÉRALE ================= -->
-
         <div class="matiere">
-
             <h3>💼 Économie générale</h3>
-
             <p>
                 Cours d'économie générale
                 pour la 2nde Comptabilité.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('economie')">
+            <button class="btn" onclick="afficherCours('economie')">
                 👀 Voir les cours
             </button>
 
             <div id="economie" class="cours">
-
                 <h4>💼 Économie générale</h4>
-
                 <div class="chapitre">
                     <h4>Chapitre 1 : Les ménages</h4>
-
-                    <p>
-                        L'économie est une science qui étudie
-                        la coordination entre les agents économiques.
-                    </p>
+                    <p>L'économie est une science qui étudie la coordination entre les agents économiques.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('economie')">
+                <button class="btn btn-fermer" onclick="fermerCours('economie')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
 
         <!-- ================= E.O.E. ================= -->
-
         <div class="matiere">
-
             <h3>🏢 E.O.E.</h3>
-
             <p>
                 Économie et Organisation
                 des Entreprises.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('eoe')">
+            <button class="btn" onclick="afficherCours('eoe')">
                 👀 Voir les cours
             </button>
 
             <div id="eoe" class="cours">
-
                 <h4>🏢 Économie et Organisation des Entreprises</h4>
-
                 <div class="chapitre">
                     <h4>Chapitre 1</h4>
-                    <p>
-                        Le cours sera placé ici.
-                    </p>
+                    <p>Le cours sera placé ici.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('eoe')">
+                <button class="btn btn-fermer" onclick="fermerCours('eoe')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
 
         <!-- ================= DROIT CIVIL ================= -->
-
         <div class="matiere">
-
             <h3>⚖️ Droit civil</h3>
-
             <p>
                 Programme et cours de droit civil
                 de la 2nde Comptabilité.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('droit')">
+            <button class="btn" onclick="afficherCours('droit')">
                 👀 Voir les cours
             </button>
 
             <div id="droit" class="cours">
-
                 <h4>⚖️ Droit civil</h4>
-
                 <div class="chapitre">
-
                     <h4>Introduction générale</h4>
-
                     <h4>1ère Partie : Le droit objectif</h4>
-
-                    <h4>
-                        Titre 1 : Les sources directes
-                        de la règle de droit
-                    </h4>
-
+                    <h4>Titre 1 : Les sources directes de la règle de droit</h4>
                     <ul>
                         <li>Chapitre 1 : La loi</li>
                         <li>Chapitre 2 : La coutume</li>
                     </ul>
-
-                    <h4>
-                        Titre 2 : Les sources indirectes
-                        du droit
-                    </h4>
-
+                    <h4>Titre 2 : Les sources indirectes du droit</h4>
                     <ul>
                         <li>Chapitre 1 : La jurisprudence</li>
                         <li>Chapitre 2 : La doctrine</li>
                     </ul>
-
                     <h4>2ème Partie : Le droit subjectif</h4>
-
                     <ul>
-                        <li>
-                            Chapitre 1 :
-                            Les titulaires des droits subjectifs
-                        </li>
-
-                        <li>
-                            Chapitre 2 :
-                            Objet et contenu des droits subjectifs
-                        </li>
+                        <li>Chapitre 1 : Les titulaires des droits subjectifs</li>
+                        <li>Chapitre 2 : Objet et contenu des droits subjectifs</li>
                     </ul>
-
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('droit')">
+                <button class="btn btn-fermer" onclick="fermerCours('droit')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
 
         <!-- ================= FRANÇAIS ================= -->
-
         <div class="matiere">
-
             <h3>📚 Français</h3>
-
             <p>
                 Cours de français,
                 expression et communication.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('francais')">
+            <button class="btn" onclick="afficherCours('francais')">
                 👀 Voir les cours
             </button>
 
             <div id="francais" class="cours">
-
                 <h4>📚 Français</h4>
-
                 <div class="chapitre">
-
                     <h4>Chapitre 1</h4>
-
-                    <p>
-                        Le cours sera placé ici.
-                    </p>
-
+                    <p>Le cours sera placé ici.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('francais')">
+                <button class="btn btn-fermer" onclick="fermerCours('francais')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
 
         <!-- ================= MONDE CONTEMPORAIN ================= -->
-
         <div class="matiere">
-
             <h3>🌍 Monde contemporain</h3>
-
             <p>
                 Programme de Monde contemporain
                 pour la 2nde Comptabilité.
             </p>
-
-            <button class="btn"
-                    onclick="afficherCours('monde')">
+            <button class="btn" onclick="afficherCours('monde')">
                 👀 Voir les cours
             </button>
 
             <div id="monde" class="cours">
-
                 <h4>🌍 Monde contemporain</h4>
-
                 <div class="chapitre">
-
                     <h4>Chapitre 1</h4>
-
-                    <p>
-                        Le cours sera placé ici.
-                    </p>
-
+                    <p>Le cours sera placé ici.</p>
                 </div>
-
-                <button class="btn btn-fermer"
-                        onclick="fermerCours('monde')">
+                <button class="btn btn-fermer" onclick="fermerCours('monde')">
                     ✖ Fermer les cours
                 </button>
-
             </div>
-
         </div>
 
     </div>
 
 </main>
 
-
 <footer>
-
-    <p>
-        📚 Révision Scolaire — 2nde Comptabilité
-    </p>
-
-    <p>
-        Bon courage pour tes révisions ! 💪
-    </p>
-
+    <p>📚 Révision Scolaire — 2nde Comptabilité</p>
+    <p>Bon courage pour tes révisions ! 💪</p>
 </footer>
 
-
 <script>
-
     function afficherCours(id) {
-
         // Fermer tous les cours
         const tousLesCours = document.querySelectorAll(".cours");
-
         tousLesCours.forEach(function(cours) {
             cours.style.display = "none";
         });
 
         // Ouvrir uniquement le cours choisi
         const cours = document.getElementById(id);
-
         if (cours) {
-
             cours.style.display = "block";
-
             cours.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
-
         }
     }
 
-
     function fermerCours(id) {
-
         const cours = document.getElementById(id);
-
         if (cours) {
             cours.style.display = "none";
         }
-
     }
-
 </script>
 
 </body>
 </html>
-```
