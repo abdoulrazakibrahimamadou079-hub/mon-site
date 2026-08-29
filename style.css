@@ -371,4 +371,20 @@ section {
 .tableau-cours th {
     font-weight: bold;
     text-align: center;
+}.tableau-cours {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tableau-cours th,
+.tableau-cours td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+.tableau-cours th {
+    font-weight: bold;
+    text-align: center;
 }
