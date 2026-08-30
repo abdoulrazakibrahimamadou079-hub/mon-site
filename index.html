@@ -1,127 +1,94 @@
-<!DOCTYPE html>  
-<html lang="fr">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Abdoul Razak Site Personnel</title>  
-    <link rel="stylesheet" href="style.css">  
-</head>  
-<body>  
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdoul Razak Site Personnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<nav>  
-    <a href="#">Accueil</a>  
-    <a href="#apropos">À propos</a>  
-    <a href="#competences">Compétences</a>  
-    <a href="#projets">Projets</a>  
-    <a href="#quiz">Quiz</a>             <!-- Ajouté ici -->
-    <a href="#progression">Progression</a> <!-- Ajouté ici -->
-    <a href="#contact">Contact</a>  
-    <a href="comptabilite.html">Comptabilité</a>  
-</nav>  
+<body>
 
-<section id="accueil">  
-    <img src="IMG-20240205-WA0007.jpg" alt="Photo de profil" class="photo-profil">  
-    <h1>Bienvenue, je suis Abdoul Razak</h1>  
-    <p>Bienvenue sur mon site personnel.</p>  
-    <p>Je découvre le développement web et je construis mes premiers projets.</p>  
-    <a href="#projets" class="btn">Découvrir mes projets</a>  
-</section>  
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+        <a href="comptabilite.html">Comptabilité</a>
+    </nav>
 
-<section id="apropos">  
-    <h2>À propos de moi</h2>  
-    <p>Bienvenue sur mon espace personnel. Je suis en train d'apprendre à créer des sites web.</p>  
-</section>  
+    <section id="accueil">
+        <img src="IMG-20240205-WA0007.jpg" alt="Photo de profil" class="photo-profil">
+        <h1>Bienvenue, je suis Abdoul Razak</h1>
+        <p>Bienvenue sur mon site personnel.</p>
+        <p>Je découvre le développement web et je construis mes premiers projets.</p>
+        <a href="#projets" class="btn">Découvrir mes projets</a>
+    </section>
 
-<section id="competences">  
-    <h2>Mes compétences</h2>  
-    <div class="competences-container">  
-        <div class="competence">  
-            <h3>HTML</h3>  
-            <p>Je commence à apprendre la création de pages web.</p>  
-        </div>  
-        <div class="competence">  
-            <h3>CSS</h3>  
-            <p>Je découvre comment créer le design et la mise en page.</p>  
-        </div>  
-        <div class="competence">  
-            <h3>JavaScript</h3>  
-            <p>J'apprends à rendre les sites interactifs.</p>  
-        </div>  
-    </div>  
-</section>  
+    <section id="apropos">
+        <h2>À propos de moi</h2>
+        <p>Bienvenue sur mon espace personnel. Je suis en train d'apprendre à créer des sites web.</p>
+    </section>
 
-<section id="projets">  
-    <h2>Mes projets</h2>  
-    <div class="projets-container">  
-        <div class="projet">  
-            <h3>Mon premier site</h3>  
-            <p>Une page web créée avec HTML et CSS.</p>  
-        </div>  
-        <div class="projet">  
-            <h3>Formulaire de contact</h3>  
-            <p>Un formulaire interactif réalisé avec HTML, CSS et JavaScript.</p>  
-        </div>  
-        <div class="projet">  
-            <h3>Projet à venir</h3>  
-            <p>Un nouveau projet que je réaliserai prochainement.</p>  
-        </div>  
-    </div>  
-</section>  
-
-<!-- Section Quiz ajoutée -->
-<section id="quiz" class="section-container">
-    <h2>Espace Quiz 🧠</h2>
-    <div id="quiz-box">
-        <div id="question-container">
-            <p id="question-text">Chargement de la question...</p>
-            <div id="options-container" class="options-grid">
-                <!-- Les options seront injectées ici par JavaScript -->
+    <section id="competences">
+        <h2>Mes compétences</h2>
+        <div class="competences-container">
+            <div class="competence">
+                <h3>HTML</h3>
+                <p>Je commence à apprendre la création de pages web.</p>
+            </div>
+            <div class="competence">
+                <h3>CSS</h3>
+                <p>Je découvre comment créer le design et la mise en page.</p>
+            </div>
+            <div class="competence">
+                <h3>JavaScript</h3>
+                <p>J'apprends à rendre les sites interactifs.</p>
             </div>
         </div>
-        <button id="next-btn" class="btn" style="display: none;">Question suivante</button>
-        <div id="result-container" style="display: none;">
-            <h3>Quiz terminé !</h3>
-            <p id="score-text"></p>
-            <button id="restart-btn" class="btn">Recommencer</button>
+    </section>
+
+    <section id="projets">
+        <h2>Mes projets</h2>
+        <div class="projets-container">
+            <div class="projet">
+                <h3>Mon premier site</h3>
+                <p>Une page web créée avec HTML et CSS.</p>
+            </div>
+            <div class="projet">
+                <h3>Formulaire de contact</h3>
+                <p>Un formulaire interactif réalisé avec HTML, CSS et JavaScript.</p>
+            </div>
+            <div class="projet">
+                <h3>Projet à venir</h3>
+                <p>Un nouveau projet que je réaliserai prochainement.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Section Progression ajoutée -->
-<section id="progression" class="section-container">
-    <h2>Ta Progression 📈</h2>
-    <div class="progress-stats">
-        <p>Modules terminés : <span id="completed-modules">0</span> / 5</p>
-        <div class="progress-bar-background">
-            <div id="progress-bar-fill" style="width: 0%;"></div>
-        </div>
-        <p>Dernier score au quiz : <span id="last-score">-</span></p>
-    </div>
-    <button id="complete-lesson-btn" class="btn">Marquer une leçon comme lue (+20%)</button>
-</section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Tu peux m'envoyer un message grâce à ce formulaire.</p>
+        <form id="contactForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
 
-<section id="contact">  
-    <h2>Contact</h2>  
-    <p>Tu peux m'envoyer un message grâce à ce formulaire.</p>  
-    <form id="contactForm">  
-        <label for="nom">Nom :</label>  
-        <input type="text" id="nom" name="nom" required>  
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="email">E-mail :</label>  
-        <input type="email" id="email" name="email" required>  
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-        <label for="message">Message :</label>  
-        <textarea id="message" name="message" rows="5" required></textarea>  
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 
-        <button type="submit">Envoyer</button>  
-    </form>  
-</section>  
+    <footer>
+        <p>© 2026 Abdoul Razak — Tous droits réservés.</p>
+    </footer>
 
-<footer>  
-    <p>© 2026 Abdoul Razak — Tous droits réservés.</p>  
-</footer>  
+    <script src="script.js"></script>
 
-<script src="script.js"></script>
-
-</body>  
+</body>
 </html>
