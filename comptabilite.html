@@ -750,37 +750,392 @@ Opposé de 5 = -5</p>
 <h4>c. La division :</h4>
 <p>Soient a, b, c et d tous non nuls<br>
 On a :</p>
-<ul>
-    <li><span class="fraction"><span>a / b</span><span>c / d</span></span> = <span class="fraction"><span>a</span><span>b</span></span> × <span class="fraction"><span>d</span><span>c</span></span> = <span class="fraction"><span>a × d</span><span>b × c</span></span></li>
-    <li><span class="fraction"><span>a / b</span><span>c</span></span> = <span class="fraction"><span>a</span><span>b</span></span> × <span class="fraction"><span>1</span><span>c</span></span> = <span class="fraction"><span>a</span><span>b × c</span></span></li>
-    <li><span class="fraction"><span>a</span><span>b / c</span></span> = a × <span class="fraction"><span>c</span><span>b</span></span> = <span class="fraction"><span>a × c</span><span>b</span></span></li>
-    <li><span class="fraction"><span>a / c</span><span>b / c</span></span> = <span class="fraction"><span>a</span><span>c</span></span> × <span class="fraction"><span>c</span><span>b</span></span> = <span class="fraction"><span>a</span><span>b</span></span></li>
-</ul>
-                <p>v <span class="fraction"><span>a</span><span>b</span></span> = <span class="fraction"><span>a × k</span><span>b × k</span></span> = <span class="fraction"><span>a / k</span><span>b / k</span></span></p>
+<p>
+    <math>
+        <mfrac>
+            <mi>a</mi>
+            <mi>b</mi>
+        </mfrac>
+    </math>
+    +
+    <math>
+        <mfrac>
+            <mi>c</mi>
+            <mi>d</mi>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow>
+                <mi>a</mi><mi>d</mi> + <mi>c</mi><mi>b</mi>
+            </mrow>
+            <mi>b</mi><mi>d</mi>
+        </mfrac>
+    </math>
+</p>
 
-<p><strong>Exemple :</strong><br>
-Calculer : <span class="fraction"><span>12</span><span>18</span></span> ; <span class="fraction"><span>45</span><span>15</span></span> ; <span class="fraction"><span>36</span><span>6</span></span></p>
+<p>
+    <math>
+        <mfrac>
+            <mi>a</mi>
+            <mi>b</mi>
+        </mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac>
+            <mi>c</mi>
+            <mi>d</mi>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow><mi>a</mi> × <mi>c</mi></mrow>
+            <mrow><mi>b</mi> × <mi>d</mi></mrow>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow><mi>a</mi><mi>c</mi></mrow>
+            <mrow><mi>b</mi><mi>d</mi></mrow>
+        </mfrac>
+    </math>
+</p>
 
-<p><strong>Solution :</strong><br>
-Calculons : <span class="fraction"><span>12</span><span>18</span></span> ; <span class="fraction"><span>45</span><span>15</span></span> ; <span class="fraction"><span>36</span><span>6</span></span></p>
+<p>
+    <math>
+        <mfrac>
+            <mfrac>
+                <mi>a</mi>
+                <mi>b</mi>
+            </mfrac>
+            <mfrac>
+                <mi>c</mi>
+                <mi>d</mi>
+            </mfrac>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mi>a</mi>
+            <mi>b</mi>
+        </mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac>
+            <mi>d</mi>
+            <mi>c</mi>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow><mi>a</mi><mi>d</mi></mrow>
+            <mrow><mi>b</mi><mi>c</mi></mrow>
+        </mfrac>
+    </math>
+</p>
 
-<p>Ø <span class="fraction"><span>12</span><span>18</span></span> = <span class="fraction"><span>12 ÷ 6</span><span>18 ÷ 6</span></span> = <span class="fraction"><span>2</span><span>3</span></span></p>
+<p>
+    <math>
+        <mfrac>
+            <mfrac>
+                <mn>1</mn>
+                <mi>c</mi>
+            </mfrac>
+            <mi>d</mi>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mi>c</mi>
+        </mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mi>d</mi>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mrow><mi>c</mi><mi>d</mi></mrow>
+        </mfrac>
+    </math>
+</p>
 
-<p>Ø <span class="fraction"><span>45</span><span>15</span></span> = <span class="fraction"><span>3</span><span>1</span></span> = 3</p>
+<p>
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mfrac>
+                <mi>c</mi>
+                <mi>d</mi>
+            </mfrac>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mn>1</mn>
+            <mn>1</mn>
+        </mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac>
+            <mi>d</mi>
+            <mi>c</mi>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mi>d</mi>
+            <mi>C</mi>
+        </mfrac>
+    </math>
+</p>
+<p><strong>Exemple :</strong></p>
 
-<p>Ø <span class="fraction"><span>36</span><span>6</span></span> = <span class="fraction"><span>36 ÷ 6</span><span>6 ÷ 6</span></span> = <span class="fraction"><span>6</span><span>1</span></span> = <span class="fraction"><span>6</span><span>1</span></span> = 6</p>
+<p>
+    Calculer :
+    <math>
+        <mfrac><mn>7</mn><mn>8</mn></mfrac>
+    </math>
+    +
+    <math>
+        <mfrac><mn>5</mn><mn>3</mn></mfrac>
+    </math>
+    &nbsp; ; &nbsp;
 
-<p>v <strong>Égalité de deux (2) quotients :</strong> soient a, b, c et d avec c et d non nuls <span class="fraction"><span>a</span><span>b</span></span> = <span class="fraction"><span>c</span><span>d</span></span> &hArr; ad = bc<br>
-Le produit des extrêmes est égal au produit des moyens.</p>
+    <math>
+        <mfrac><mn>11</mn><mn>20</mn></mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac><mn>17</mn><mn>5</mn></mfrac>
+    </math>
+    &nbsp; ; &nbsp;
 
-<p><strong>Exemples :</strong> <span class="fraction"><span>18</span><span>27</span></span> et <span class="fraction"><span>32</span><span>48</span></span></p>
+    <math>
+        <mfrac>
+            <mfrac><mn>21</mn><mn>2</mn></mfrac>
+            <mfrac><mn>7</mn><mn>4</mn></mfrac>
+        </mfrac>
+    </math>
+</p>
+<!-- Solution -->
+<h4>Solution :</h4>
 
-<p><span class="fraction"><span>18</span><span>27</span></span> = <span class="fraction"><span>32</span><span>48</span></span> &hArr; 27 x 32 = 18 x 48<br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 864 = 864</p>
+<p>
+    <strong>Calculons :</strong>
+    <math>
+        <mfrac><mn>7</mn><mn>8</mn></mfrac>
+    </math>
+    +
+    <math>
+        <mfrac><mn>5</mn><mn>3</mn></mfrac>
+    </math>
+    ;
+    <math>
+        <mfrac><mn>11</mn><mn>20</mn></mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac><mn>17</mn><mn>5</mn></mfrac>
+    </math>
+    ;
+    <math>
+        <mfrac>
+            <mfrac><mn>21</mn><mn>2</mn></mfrac>
+            <mfrac><mn>7</mn><mn>4</mn></mfrac>
+        </mfrac>
+    </math>
+</p>
 
-<p>v <strong>Simplification d’un quotient :</strong> soient a, b et c des réels, avec a et b non nuls : <span class="fraction"><span>a × c</span><span>b × c</span></span> = <span class="fraction"><span>a</span><span>b</span></span></p>
+<p>
+    <math>
+        <mfrac><mn>7</mn><mn>8</mn></mfrac>
+    </math>
+    +
+    <math>
+        <mfrac><mn>5</mn><mn>3</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow>
+                (7 × 3) + (5 × 8)
+            </mrow>
+            <mrow>
+                8 × 3
+            </mrow>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow>21 + 40</mrow>
+            <mn>24</mn>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>61</mn><mn>24</mn></mfrac>
+    </math>
+</p>
 
-<p><strong>Exemple :</strong> <span class="fraction"><span>5 × 7</span><span>4 × 7</span></span> = <span class="fraction"><span>5</span><span>4</span></span></p>
+<p>
+    <math>
+        <mfrac><mn>11</mn><mn>20</mn></mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac><mn>17</mn><mn>5</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow>11 × 17</mrow>
+            <mrow>20 × 5</mrow>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>187</mn><mn>100</mn></mfrac>
+    </math>
+</p>
+
+<p>
+    <math>
+        <mfrac>
+            <mfrac><mn>21</mn><mn>2</mn></mfrac>
+            <mfrac><mn>7</mn><mn>4</mn></mfrac>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>21</mn><mn>2</mn></mfrac>
+    </math>
+    ×
+    <math>
+        <mfrac><mn>4</mn><mn>7</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>84</mn><mn>14</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>42</mn><mn>7</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>6</mn><mn>1</mn></mfrac>
+    </math>
+    = 6
+</p>
+
+<h4>Égalité de deux (2) quotients :</h4>
+
+<p>
+    Soient <strong>a, b, c</strong> et <strong>d</strong> avec
+    <strong>c</strong> et <strong>d</strong> non nuls :
+    
+    <math>
+        <mfrac><mi>a</mi><mi>b</mi></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mi>c</mi><mi>d</mi></mfrac>
+    </math>
+    ⟹
+    <strong>ad = bc</strong>
+</p>
+
+<p>
+    <strong>Le produit des extrêmes est égal au produit des moyens.</strong>
+</p>
+<p><strong>Exemples :</strong></p>
+
+<p>
+    <math>
+        <mfrac><mn>27</mn><mn>48</mn></mfrac>
+    </math>
+    et
+    <math>
+        <mfrac><mn>18</mn><mn>32</mn></mfrac>
+    </math>
+</p>
+
+<p>
+    <math>
+        <mfrac><mn>27</mn><mn>48</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>18</mn><mn>32</mn></mfrac>
+    </math>
+    ⟹
+    27 × 32 = 18 × 48
+</p>
+
+<p>
+    864 = 864
+</p>
+
+<h4>Simplification d’un quotient :</h4>
+
+<p>
+    Soient <strong>a, b</strong> et <strong>c</strong> des réels,
+    avec <strong>a</strong> et <strong>b</strong> non nuls :
+</p>
+
+<p>
+    <math>
+        <mfrac>
+            <mrow>a × c</mrow>
+            <mrow>b × c</mrow>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mi>a</mi>
+            <mi>b</mi>
+        </mfrac>
+    </math>
+</p>
+
+<p><strong>Exemple :</strong></p>
+
+<p>
+    <math>
+        <mfrac><mn>35</mn><mn>15</mn></mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mrow>7 × 5</mrow>
+            <mrow>3 × 5</mrow>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac><mn>7</mn><mn>3</mn></mfrac>
+    </math>
+</p>
 
 <h4>d. Les puissances :</h4>
 <p>Soient a un réel et n un entier naturel, on appelle puissance nième de a le nombre réel noté a<sup>n</sup> tel que : a<sup>n</sup> = a x a x a x a x a ...<br>
@@ -793,22 +1148,114 @@ Le produit des extrêmes est égal au produit des moyens.</p>
 <p>Ø <strong>Les produits des puissances :</strong><br>
 Soient a et b des réels et n et p des entiers relatifs on a :</p>
 <ul>
-    <li>a<sup>n</sup> x b<sup>n</sup> = (a x b)<sup>n</sup></li>
-    <li>a<sup>n</sup> x b<sup>p</sup> = (a x b)<sup>n+p</sup></li>
-    <li>a<sup>n</sup> x a<sup>p</sup> = a<sup>n+p</sup></li>
-    <li><span class="fraction"><span>a<sup>n</sup></span><span>b<sup>n</sup></span></span> = (<span class="fraction"><span>a</span><span>b</span></span>)<sup>n</sup></li>
-    <li><span class="fraction"><span>a<sup>n</sup></span><span>a<sup>p</sup></span></span> = a<sup>n-p</sup></li>
-    <li>(a<sup>n</sup>)<sup>p</sup> = a<sup>n×p</sup></li>
-</ul>
+    <p>
+    a<sup>n</sup> × b<sup>n</sup> = (a × b)<sup>n</sup>
+</p>
 
-<p><strong>Exemple :</strong><br>
-Calculons : 3<sup>-2</sup> x 3<sup>7</sup> ; (2<sup>5</sup>)<sup>3</sup> ; (3 x 7)<sup>5</sup> ; <span class="fraction"><span>3<sup>4</sup></span><span>3<sup>2</sup></span></span></p>
-<ul>
-    <li>3<sup>-2</sup> x 3<sup>7</sup> = 3<sup>5</sup> = 3 x 3 x 3 x 3 x 3 = 243</li>
-    <li>(2<sup>5</sup>)<sup>3</sup> = 2<sup>15</sup> = 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 = 32768</li>
-    <li>(3 x 7)<sup>5</sup> = 3<sup>5</sup> x 7<sup>5</sup> = 21<sup>5</sup> = 4 084 101</li>
-    <li><span class="fraction"><span>3<sup>4</sup></span><span>3<sup>2</sup></span></span> = 3<sup>4-2</sup> = 3<sup>2</sup> = 9</li>
-</ul>
+<p>
+    a<sup>n</sup> × b<sup>p</sup> = (a × b)<sup>n+p</sup>
+</p>
+
+<p>
+    a<sup>n</sup> × a<sup>p</sup> = a<sup>n+p</sup>
+</p>
+
+<p>
+    <math>
+        <mfrac>
+            <msup><mi>a</mi><mi>n</mi></msup>
+            <msup><mi>b</mi><mi>n</mi></msup>
+        </mfrac>
+    </math>
+    =
+    (
+    <math>
+        <mfrac>
+            <mi>a</mi>
+            <mi>b</mi>
+        </mfrac>
+    </math>
+    )<sup>n</sup>
+</p>
+
+<p>
+    <math>
+        <mfrac>
+            <msup><mi>a</mi><mi>n</mi></msup>
+            <msup><mi>a</mi><mi>p</mi></msup>
+        </mfrac>
+    </math>
+    =
+    a<sup>n-p</sup>
+</p>
+
+<p>
+    (a<sup>n</sup>)<sup>x</sup> = a<sup>n×x</sup>
+</p>
+
+<p><strong>Exemple :</strong></p>
+
+<p>
+    <strong>Calculons :</strong>
+    3<sup>-2</sup> × 3<sup>7</sup> ;
+    (2<sup>5</sup>)<sup>3</sup> ;
+    (3 × 7)<sup>5</sup> ;
+    <math>
+        <mfrac>
+            <msup>
+                <mrow>(-4)</mrow>
+                <mn>3</mn>
+            </msup>
+            <msup>
+                <mn>5</mn>
+                <mn>3</mn>
+            </msup>
+        </mfrac>
+    </math>
+</p>
+
+<p>
+    3<sup>-2</sup> × 3<sup>7</sup>
+    = 3<sup>5</sup>
+    = 3 × 3 × 3 × 3 × 3
+    = 243
+</p>
+
+<p>
+    (2<sup>5</sup>)<sup>3</sup>
+    = 2<sup>15</sup>
+    = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
+    = 32768
+</p>
+
+<p>
+    (3 × 7)<sup>5</sup>
+    = 3<sup>5</sup> × 7<sup>5</sup>
+    = 21<sup>5</sup>
+    = 4 084 101
+</p>
+
+<p>
+    <math>
+        <mfrac>
+            <msup>
+                <mrow>(-4)</mrow>
+                <mn>3</mn>
+            </msup>
+            <msup>
+                <mn>5</mn>
+                <mn>3</mn>
+            </msup>
+        </mfrac>
+    </math>
+    =
+    <math>
+        <mfrac>
+            <mn>-64</mn>
+            <mn>125</mn>
+        </mfrac>
+    </math>
+</p>
                 <h2>Chapitre II : Equations et inéquations à une variable dans IR</h2>
 
 <h3>I. Equation du premier degré à une inconnue :</h3>
